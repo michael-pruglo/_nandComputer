@@ -23,3 +23,8 @@ bool LogicGates::_or(bool a, bool b)
 {
     return _nand(_not(a), _not(b));
 }
+
+bool LogicGates::_xor(bool a, bool b)
+{
+    return _and(_or(a, b), _nand(a, b));
+}

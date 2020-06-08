@@ -6,6 +6,32 @@
 #include "TestLogicGates.hpp"
 #include "../hardware/LogicGates.hpp"
 
+
+bool TestLogicGates::test(const std::string& name,
+                          const GateFunction& fun,
+                          const TestLogicGates::TruthTable& table,
+                          bool verbose)
+{
+    if (verbose) std::cout<<"\ttesting "<<name<<" : ";
+    bool res = testGate(fun, table);
+    if (verbose) std::cout<<(res? "SUCCESS" : "FAILURE")<<"\n";
+    return res;
+}
+
+bool TestLogicGates::testGate(const GateFunction& fun, const TestLogicGates::TruthTable& table)
+{
+    for (auto& [in, expected]: table)
+    {
+        auto out = fun(in);
+        if (out != expected)
+        {
+            std::cout<<"\t\tFAILED TEST: ("; for (auto x:in) std::cout<<x<<","; std::cout<<")->"<<out<<", expected "<<expected<<"\n";
+            return false;
+        }
+    }
+    return true;
+}
+
 bool TestLogicGates::full(bool verbose)
 {
     std::cout<<"TestLogicGates::full scan: ";
@@ -17,7 +43,8 @@ bool TestLogicGates::full(bool verbose)
         test_nand,
         test_not,
         test_and,
-        test_or
+        test_or,
+        test_xor,
         })
     {
         goodNo += fun(verbose);
@@ -45,7 +72,7 @@ bool TestLogicGates::test_nand(bool verbose)
             {{0, 0}, 1},
             {{0, 1}, 1},
             {{1, 0}, 1},
-            {{1, 1}, 0},
+            {{1, 1}, 0}
         }, verbose);
 }
 
@@ -63,7 +90,7 @@ bool TestLogicGates::test_and(bool verbose)
             {{0, 0}, 0},
             {{0, 1}, 0},
             {{1, 0}, 0},
-            {{1, 1}, 1},
+            {{1, 1}, 1}
     }, verbose);
 }
 
@@ -73,31 +100,16 @@ bool TestLogicGates::test_or(bool verbose)
             {{0, 0}, 0},
             {{0, 1}, 1},
             {{1, 0}, 1},
-            {{1, 1}, 1},
+            {{1, 1}, 1}
     }, verbose);
 }
 
-bool TestLogicGates::test(const std::string& name,
-                          const GateFunction& fun,
-                          const TestLogicGates::TruthTable& table,
-                          bool verbose)
+bool TestLogicGates::test_xor(bool verbose)
 {
-    if (verbose) std::cout<<"\ttesting "<<name<<" : ";
-    bool res = testGate(fun, table);
-    if (verbose) std::cout<<(res? "SUCCESS" : "FAILURE")<<"\n";
-    return res;
-}
-
-bool TestLogicGates::testGate(const GateFunction& fun, const TestLogicGates::TruthTable& table)
-{
-    for (auto& [in, expected]: table)
-    {
-        auto out = fun(in);
-        if (out != expected)
-        {
-            std::cout<<"\t\tFAILED TEST: ("; for (auto x:in) std::cout<<x<<","; std::cout<<")->"<<out<<", expected "<<expected<<"\n";
-            return false;
-        }
-    }
-    return true;
+    return test("_xor", GateFunction(LogicGates::_xor), {
+            {{0, 0}, 0},
+            {{0, 1}, 1},
+            {{1, 0}, 1},
+            {{1, 1}, 0}
+    }, verbose);
 }

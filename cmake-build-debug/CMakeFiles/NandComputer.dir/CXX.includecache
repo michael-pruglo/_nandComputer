@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
+array
+-
 
 C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.cpp
 iostream

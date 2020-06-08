@@ -17,6 +17,7 @@ public:
     static bool test_not(bool verbose = false);
     static bool test_and(bool verbose = false);
     static bool test_or(bool verbose = false);
+    static bool test_xor(bool verbose = false);
 
 private:
     struct GateFunction
