@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
+
+C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.cpp
+iostream
+-
+TestLogicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
+../hardware/LogicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
+
+C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
+vector
+-
+functional
+-
+

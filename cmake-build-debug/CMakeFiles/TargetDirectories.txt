@@ -1,0 +1,3 @@
+C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/NandComputer.dir
+C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
