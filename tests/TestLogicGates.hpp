@@ -37,6 +37,7 @@ private:
         }
     };
 
+    static const int EXHAUSTIVE_TIME_N = 1'000'000;
     typedef std::vector<std::pair<std::vector<bool>, bool>> TruthTable;
     static bool test(const std::string& name,
                      const GateFunction& fun,

@@ -15,7 +15,7 @@ bool TestLogicGates::test(const std::string& name,
 {
     if (verbose) std::cout<<"\ttesting "<<name<<" : ";
     bool res = testGate(fun, table);
-    if (verbose) std::cout<<(res? "SUCCESS" : "FAILURE")<<"\ttime:"<<Timer<std::chrono::nanoseconds>::exhaustive(10'000'000, fun, table[0].first)<<"ns\n";
+    if (verbose) std::cout<<(res? "SUCCESS" : "FAILURE")<<"\n";
     return res;
 }
 
@@ -70,6 +70,8 @@ bool TestLogicGates::full(bool verbose)
 
 bool TestLogicGates::test_nand(bool verbose)
 {
+    std::cout<<"\ttesting time: "<<Timer<std::chrono::nanoseconds>::exhaustive(
+            EXHAUSTIVE_TIME_N, LogicGates::_nand, 0, 0)<<"ns\n";
     return test("_nand", GateFunction(LogicGates::_nand), {
             {{0, 0}, 1},
             {{0, 1}, 1},
@@ -80,6 +82,8 @@ bool TestLogicGates::test_nand(bool verbose)
 
 bool TestLogicGates::test_not(bool verbose)
 {
+    std::cout<<"\ttesting time: "<<Timer<std::chrono::nanoseconds>::exhaustive(
+            EXHAUSTIVE_TIME_N, LogicGates::_not, 0)<<"ns\n";
     return test("_not", GateFunction(LogicGates::_not), {
             {{0}, 1},
             {{1}, 0}
@@ -88,6 +92,8 @@ bool TestLogicGates::test_not(bool verbose)
 
 bool TestLogicGates::test_and(bool verbose)
 {
+    std::cout<<"\ttesting time: "<<Timer<std::chrono::nanoseconds>::exhaustive(
+            EXHAUSTIVE_TIME_N, LogicGates::_and, 0, 0)<<"ns\n";
     return test("_and", GateFunction(LogicGates::_and), {
             {{0, 0}, 0},
             {{0, 1}, 0},
@@ -98,6 +104,8 @@ bool TestLogicGates::test_and(bool verbose)
 
 bool TestLogicGates::test_or(bool verbose)
 {
+    std::cout<<"\ttesting time: "<<Timer<std::chrono::nanoseconds>::exhaustive(
+            EXHAUSTIVE_TIME_N, LogicGates::_or, 0, 0)<<"ns\n";
     return test("_or", GateFunction(LogicGates::_or), {
             {{0, 0}, 0},
             {{0, 1}, 1},
@@ -108,6 +116,8 @@ bool TestLogicGates::test_or(bool verbose)
 
 bool TestLogicGates::test_xor(bool verbose)
 {
+    std::cout<<"\ttesting time: "<<Timer<std::chrono::nanoseconds>::exhaustive(
+            EXHAUSTIVE_TIME_N, LogicGates::_xor, 0, 0)<<"ns\n";
     return test("_xor", GateFunction(LogicGates::_xor), {
             {{0, 0}, 0},
             {{0, 1}, 1},
@@ -118,6 +128,8 @@ bool TestLogicGates::test_xor(bool verbose)
 
 bool TestLogicGates::test_mux(bool verbose)
 {
+    std::cout<<"\ttesting time: "<<Timer<std::chrono::nanoseconds>::exhaustive(
+            EXHAUSTIVE_TIME_N, LogicGates::_mux, 0, 0, 0)<<"ns\n";
     return test("_mux", GateFunction(LogicGates::_mux), {
             {{0, 0, 0}, 0},
             {{0, 1, 0}, 0},
