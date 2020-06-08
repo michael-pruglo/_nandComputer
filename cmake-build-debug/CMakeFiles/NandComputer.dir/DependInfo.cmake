@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.obj"
   "C:/Users/mickl/ClionProjects/NandComputer/main.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/NandComputer.dir/main.cpp.obj"
   "C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj"
+  "C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

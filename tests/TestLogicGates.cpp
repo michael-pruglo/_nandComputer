@@ -5,6 +5,7 @@
 #include <iostream>
 #include "TestLogicGates.hpp"
 #include "../hardware/LogicGates.hpp"
+#include "Timer.hpp"
 
 
 bool TestLogicGates::test(const std::string& name,
@@ -14,7 +15,7 @@ bool TestLogicGates::test(const std::string& name,
 {
     if (verbose) std::cout<<"\ttesting "<<name<<" : ";
     bool res = testGate(fun, table);
-    if (verbose) std::cout<<(res? "SUCCESS" : "FAILURE")<<"\n";
+    if (verbose) std::cout<<(res? "SUCCESS" : "FAILURE")<<"\ttime:"<<Timer<std::chrono::nanoseconds>::exhaustive(10'000'000, fun, table[0].first)<<"ns\n";
     return res;
 }
 

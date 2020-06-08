@@ -11,3 +11,7 @@ CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj
  C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
  C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.cpp
  C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
+ C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp
+CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj
+ C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.cpp
+ C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp

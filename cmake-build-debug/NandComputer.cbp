@@ -95,6 +95,12 @@
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp">
 			<Option target="NandComputer"/>
 		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.cpp">
+			<Option target="NandComputer"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp">
+			<Option target="NandComputer"/>
+		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

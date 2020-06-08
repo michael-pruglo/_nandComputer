@@ -17,10 +17,18 @@ TestLogicGates.hpp
 C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
 ../hardware/LogicGates.hpp
 C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
+Timer.hpp
+C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp
 
 C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
 vector
 -
 functional
+-
+
+C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp
+chrono
+-
+utility
 -
 

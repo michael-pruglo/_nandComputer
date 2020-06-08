@@ -10,4 +10,8 @@ CMakeFiles/NandComputer.dir/main.cpp.obj: ../tests/TestLogicGates.hpp
 CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj: ../hardware/LogicGates.hpp
 CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj: ../tests/TestLogicGates.cpp
 CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj: ../tests/TestLogicGates.hpp
+CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj: ../tests/Timer.hpp
+
+CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj: ../tests/Timer.cpp
+CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj: ../tests/Timer.hpp
 
