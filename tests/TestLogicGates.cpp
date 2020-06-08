@@ -45,6 +45,7 @@ bool TestLogicGates::full(bool verbose)
         test_and,
         test_or,
         test_xor,
+        test_mux,
         })
     {
         goodNo += fun(verbose);
@@ -111,5 +112,19 @@ bool TestLogicGates::test_xor(bool verbose)
             {{0, 1}, 1},
             {{1, 0}, 1},
             {{1, 1}, 0}
+    }, verbose);
+}
+
+bool TestLogicGates::test_mux(bool verbose)
+{
+    return test("_mux", GateFunction(LogicGates::_mux), {
+            {{0, 0, 0}, 0},
+            {{0, 1, 0}, 0},
+            {{1, 0, 0}, 1},
+            {{1, 1, 0}, 1},
+            {{0, 0, 1}, 0},
+            {{0, 1, 1}, 1},
+            {{1, 0, 1}, 0},
+            {{1, 1, 1}, 1}
     }, verbose);
 }
