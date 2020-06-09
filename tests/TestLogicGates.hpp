@@ -26,10 +26,23 @@ public:
     static bool test_or32(bool verbose = false);
     static bool test_mux32(bool verbose = false);
 
-private:
-    static const int RANDOM_AMOUNT_N = 1'000'00;
-    static const int EXHAUSTIVE_TIME_N = 1'000'00;
+    static bool test_and8way(bool verbose = false);
+    static bool test_or8way(bool verbose = false);
+    static bool test_mux4way32(bool verbose = false);
+    static bool test_mux8way32(bool verbose = false);
+    static bool test_dmux4way(bool verbose = false);
+    static bool test_dmux8way(bool verbose = false);
 
+private:
+    static const int RANDOM_AMOUNT_N = 100'000;
+    static const int EXHAUSTIVE_TIME_N = 1'000'000;
+
+    template<typename F, typename ...Args>
+    static auto timens(F&& foo, Args&&... args)
+    {
+        return Timer<std::chrono::nanoseconds>::exhaustive(EXHAUSTIVE_TIME_N,
+                                                               foo, args...);
+    }
     template<typename F>
     static auto timens1arg(F&& foo)
     {

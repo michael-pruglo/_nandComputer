@@ -44,13 +44,15 @@ public:
                             bool sel0, bool sel1);
     static Bus32 _mux8way32(Bus32 a, Bus32 b, Bus32 c, Bus32 d,
                             Bus32 e, Bus32 f, Bus32 g, Bus32 h,
-                            bool sel0, bool sel2, bool sel3);
+                            bool sel0, bool sel1, bool sel2);
     static std::array<bool, 4> _dmux4way(bool in, bool sel0, bool sel1);
     static std::array<bool, 8> _dmux8way(bool in, bool sel0, bool sel1, bool sel2);
 
 private:
     static inline void setbit(Bus32& n, unsigned i, bool val) { n = n & ~(1u<<i) | val << i; }
+    static inline void setbit(Bus8& n, unsigned i, bool val) { n = n & ~(1u<<i) | val << i; }
     static inline bool getbit(Bus32& n, unsigned i) { return n>>i&1u; }
+    static inline bool getbit(Bus8& n, unsigned i) { return n>>i&1u; }
 };
 
 
