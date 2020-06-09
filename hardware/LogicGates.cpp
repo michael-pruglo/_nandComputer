@@ -43,7 +43,7 @@ std::array<bool, 2> LogicGates::_dmux(bool in, bool sel)
 std::string bits(uint32_t n)
 {
     std::string res;
-    for (unsigned i = 31; i; --i) {
+    for (unsigned i = 32; i--; ) {
         res.push_back(n & (1u << i) ? '1' : '0');
         if (i%8==0) res.push_back(' ');
     }
@@ -53,6 +53,27 @@ std::string bits(uint32_t n)
 LogicGates::Bus32 LogicGates::_not32(LogicGates::Bus32 in)
 {
     for (unsigned i = 32; i--; )
-        in = in & ~(1u<<i) | _not(in>>i&1u) << i;
+        setbit(in, i, _not(getbit(in,i)));
     return in;
+}
+
+LogicGates::Bus32 LogicGates::_and32(LogicGates::Bus32 a, LogicGates::Bus32 b)
+{
+    for (unsigned i = 32; i--; )
+        setbit(a, i, _and(getbit(a,i), getbit(b,i)));
+    return a;
+}
+
+LogicGates::Bus32 LogicGates::_or32(LogicGates::Bus32 a, LogicGates::Bus32 b)
+{
+    for (unsigned i = 32; i--; )
+        setbit(a, i, _or(getbit(a,i), getbit(b,i)));
+    return a;
+}
+
+LogicGates::Bus32 LogicGates::_mux32(LogicGates::Bus32 a, LogicGates::Bus32 b, bool sel)
+{
+    for (unsigned i = 32; i--; )
+        setbit(a, i, _mux(getbit(a,i), getbit(b,i), sel));
+    return a;
 }

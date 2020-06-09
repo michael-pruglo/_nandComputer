@@ -47,6 +47,10 @@ public:
                             bool sel0, bool sel2, bool sel3);
     static std::array<bool, 4> _dmux4way(bool in, bool sel0, bool sel1);
     static std::array<bool, 8> _dmux8way(bool in, bool sel0, bool sel1, bool sel2);
+
+private:
+    static inline void setbit(Bus32& n, unsigned i, bool val) { n = n & ~(1u<<i) | val << i; }
+    static inline bool getbit(Bus32& n, unsigned i) { return n>>i&1u; }
 };
 
 

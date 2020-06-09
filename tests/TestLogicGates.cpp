@@ -24,6 +24,9 @@ bool TestLogicGates::full(bool verbose)
         test_mux,
         test_dmux,
         test_not32,
+        test_and32,
+        test_or32,
+        test_mux32,
         })
     {
         fun(verbose);
@@ -138,5 +141,48 @@ bool TestLogicGates::test_not32(bool verbose)
         assert (gate(n) == ~n);
     }
     if (verbose) std::cout<<"OK.\ttesting time: "<<timens1arg(gate)<<"ns\n";
+    return true;
+}
+
+bool TestLogicGates::test_and32(bool verbose)
+{
+    if (verbose) std::cout<<"\ttesting _and32: ";
+    auto gate = LogicGates::_and32;
+    auto rng = Random<uint32_t>();
+    for (int i = 0; i < RANDOM_AMOUNT_N; ++i) {
+        uint32_t a = rng.get();
+        uint32_t b = rng.get();
+        assert (gate(a, b) == (a&b));
+    }
+    if (verbose) std::cout<<"OK.\ttesting time: "<<timens2arg(gate)<<"ns\n";
+    return true;
+}
+
+bool TestLogicGates::test_or32(bool verbose)
+{
+    if (verbose) std::cout<<"\ttesting _or32: ";
+    auto gate = LogicGates::_or32;
+    auto rng = Random<uint32_t>();
+    for (int i = 0; i < RANDOM_AMOUNT_N; ++i) {
+        uint32_t a = rng.get();
+        uint32_t b = rng.get();
+        assert (gate(a, b) == (a|b));
+    }
+    if (verbose) std::cout<<"OK.\ttesting time: "<<timens2arg(gate)<<"ns\n";
+    return true;
+}
+
+bool TestLogicGates::test_mux32(bool verbose)
+{
+    if (verbose) std::cout<<"\ttesting _mux32: ";
+    auto gate = LogicGates::_mux32;
+    auto rng = Random<uint32_t>();
+    for (int i = 0; i < RANDOM_AMOUNT_N; ++i) {
+        uint32_t a = rng.get();
+        uint32_t b = rng.get();
+        assert (gate(a, b, 0) == a);
+        assert (gate(a, b, 1) == b);
+    }
+    if (verbose) std::cout<<"OK.\ttesting time: "<<timens3arg(gate)<<"ns\n";
     return true;
 }
