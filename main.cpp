@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "tests/TestLogicGates.hpp"
 
 int main()

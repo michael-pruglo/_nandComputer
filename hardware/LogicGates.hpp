@@ -21,6 +21,7 @@ public:
     static bool _or(bool a, bool b);
 
     static bool _xor(bool a, bool b);
+    static bool _xor_v2(bool a, bool b);
 
     static bool _mux(bool a, bool b, bool sel);
     static std::array<bool, 2> _dmux(bool in, bool sel);
@@ -29,6 +30,10 @@ public:
     ///32 bit
     static Bus32 _not32(Bus32 in);
     static Bus32 _and32(Bus32 a, Bus32 b);
+    static Bus32 _and32_v2(Bus32 a, Bus32 b);
+    static Bus32 _and32_v3(Bus32 a, Bus32 b);
+    static Bus32 _and32_v4(Bus32 a, Bus32 b);
+    static Bus32 _and32_v5(Bus32 a, Bus32 b);
     static Bus32 _or32(Bus32 a, Bus32 b);
 
     static Bus32 _mux32(Bus32 a, Bus32 b, bool sel);

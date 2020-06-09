@@ -10,6 +10,14 @@ C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
 array
 -
 
+C:/Users/mickl/ClionProjects/NandComputer/main.cpp
+iostream
+-
+iomanip
+-
+tests/TestLogicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
+
 C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp
 random
 -

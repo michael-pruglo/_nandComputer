@@ -99,13 +99,19 @@ bool TestLogicGates::test_or(bool verbose)
 
 bool TestLogicGates::test_xor(bool verbose)
 {
-    if (verbose) std::cout<<"\ttesting _xor: ";
-    auto gate = LogicGates::_xor;
-    assert(gate(0, 0) == 0);
-    assert(gate(0, 1) == 1);
-    assert(gate(1, 0) == 1);
-    assert(gate(1, 1) == 0);
-    if (verbose) std::cout<<"OK.\ttesting time: "<<timens2arg(gate)<<"ns\n";
+    if (verbose) std::cout<<"\ttesting _xor: \n";
+    int v = 1;
+    for (auto gate : {
+        LogicGates::_xor,
+        LogicGates::_xor_v2
+    }) {
+        if(verbose) std::cout<<"\t\t_v"<<v++<<": ";
+        assert(gate(0, 0) == 0);
+        assert(gate(0, 1) == 1);
+        assert(gate(1, 0) == 1);
+        assert(gate(1, 1) == 0);
+        if (verbose) std::cout<<"OK.\ttesting time: "<<timens2arg(gate)<<"ns\n";
+    }
     return true;
 }
 
@@ -152,15 +158,25 @@ bool TestLogicGates::test_not32(bool verbose)
 
 bool TestLogicGates::test_and32(bool verbose)
 {
-    if (verbose) std::cout<<"\ttesting _and32: ";
-    auto gate = LogicGates::_and32;
-    auto rng = Random<uint32_t>();
-    for (int i = 0; i < RANDOM_AMOUNT_N; ++i) {
-        uint32_t a = rng.get();
-        uint32_t b = rng.get();
-        assert (gate(a, b) == (a&b));
+    if (verbose) std::cout<<"\ttesting _and32: \n";
+    int v = 1;
+    for (auto gate : {
+        LogicGates::_and32,
+        LogicGates::_and32_v2,
+        LogicGates::_and32_v3,
+        LogicGates::_and32_v4,
+        LogicGates::_and32_v5
+    }) {
+        if(verbose) std::cout<<"\t\t_v"<<v++<<": ";
+        auto rng = Random<uint32_t>();
+        for (int i = 0; i < RANDOM_AMOUNT_N; ++i) {
+            uint32_t a = rng.get();
+            uint32_t b = rng.get();
+            assert (gate(a, b) == (a&b));
+        }
+        if (verbose) std::cout<<"OK.\ttesting time: "<<timens2arg(gate)<<"ns\n";
+
     }
-    if (verbose) std::cout<<"OK.\ttesting time: "<<timens2arg(gate)<<"ns\n";
     return true;
 }
 
