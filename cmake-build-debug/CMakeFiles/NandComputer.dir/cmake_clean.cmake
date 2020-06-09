@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.obj"
   "CMakeFiles/NandComputer.dir/main.cpp.obj"
+  "CMakeFiles/NandComputer.dir/tests/Random.cpp.obj"
   "CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj"
   "CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj"
   "NandComputer.exe"

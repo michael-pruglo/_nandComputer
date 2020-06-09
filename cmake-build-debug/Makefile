@@ -176,6 +176,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+tests/Random.obj: tests/Random.cpp.obj
+
+.PHONY : tests/Random.obj
+
+# target to build an object file
+tests/Random.cpp.obj:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/Random.cpp.obj
+.PHONY : tests/Random.cpp.obj
+
+tests/Random.i: tests/Random.cpp.i
+
+.PHONY : tests/Random.i
+
+# target to preprocess a source file
+tests/Random.cpp.i:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/Random.cpp.i
+.PHONY : tests/Random.cpp.i
+
+tests/Random.s: tests/Random.cpp.s
+
+.PHONY : tests/Random.s
+
+# target to generate assembly for a file
+tests/Random.cpp.s:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/Random.cpp.s
+.PHONY : tests/Random.cpp.s
+
 tests/TestLogicGates.obj: tests/TestLogicGates.cpp.obj
 
 .PHONY : tests/TestLogicGates.obj
@@ -245,6 +272,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... tests/Random.obj
+	@echo ... tests/Random.i
+	@echo ... tests/Random.s
 	@echo ... tests/TestLogicGates.obj
 	@echo ... tests/TestLogicGates.i
 	@echo ... tests/TestLogicGates.s

@@ -7,8 +7,13 @@ CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.obj
 CMakeFiles/NandComputer.dir/main.cpp.obj
  C:/Users/mickl/ClionProjects/NandComputer/main.cpp
  C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
+ C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp
+CMakeFiles/NandComputer.dir/tests/Random.cpp.obj
+ C:/Users/mickl/ClionProjects/NandComputer/tests/Random.cpp
+ C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp
 CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj
  C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
+ C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp
  C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.cpp
  C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
  C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp

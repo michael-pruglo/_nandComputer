@@ -5,8 +5,8 @@
 #ifndef NANDCOMPUTER_TESTLOGICGATES_HPP
 #define NANDCOMPUTER_TESTLOGICGATES_HPP
 
-#include <vector>
-#include <functional>
+#include <chrono>
+#include "Timer.hpp"
 
 class TestLogicGates
 {
@@ -19,31 +19,44 @@ public:
     static bool test_or(bool verbose = false);
     static bool test_xor(bool verbose = false);
     static bool test_mux(bool verbose = false);
+    static bool test_dmux(bool verbose = false);
+
+    static bool test_not32(bool verbose = false);
 
 private:
-    struct GateFunction
-    {
-        std::function<bool(bool)> foo1;
-        std::function<bool(bool,bool)> foo2;
-        std::function<bool(bool,bool,bool)> foo3;
-        GateFunction(std::function<bool(bool)> f1) : foo1(std::move(f1)) {}
-        GateFunction(std::function<bool(bool,bool)> f2) : foo2(std::move(f2)) {}
-        GateFunction(std::function<bool(bool,bool,bool)> f3) : foo3(std::move(f3)) {}
-        bool operator()(std::vector<bool> args) const
-        {
-            if (args.size()==1) return foo1(args[0]);
-            if (args.size()==2) return foo2(args[0], args[1]);
-            if (args.size()==3) return foo3(args[0], args[1], args[2]);
-        }
-    };
+    static const int RANDOM_AMOUNT_N = 1'000'00;
+    static const int EXHAUSTIVE_TIME_N = 1'000'00;
 
-    static const int EXHAUSTIVE_TIME_N = 1'000'000;
-    typedef std::vector<std::pair<std::vector<bool>, bool>> TruthTable;
-    static bool test(const std::string& name,
-                     const GateFunction& fun,
-                     const TestLogicGates::TruthTable& table,
-                     bool verbose = false);
-    static bool testGate(const GateFunction& fun, const TestLogicGates::TruthTable& table);
+    template<typename F>
+    static auto timens1arg(F&& foo)
+    {
+        long long res = 0;
+        for (auto arg1: {0, 1})
+            res += Timer<std::chrono::nanoseconds>::exhaustive(EXHAUSTIVE_TIME_N,
+                    foo, arg1);
+        return res/2;
+    }
+    template<typename F>
+    static auto timens2arg(F&& foo)
+    {
+        long long res = 0;
+        for (auto arg1: {0, 1})
+        for (auto arg2: {0, 1})
+            res += Timer<std::chrono::nanoseconds>::exhaustive(EXHAUSTIVE_TIME_N,
+                    foo, arg1, arg2);
+        return res/4;
+    }
+    template<typename F>
+    static auto timens3arg(F&& foo)
+    {
+        long long res = 0;
+        for (auto arg1: {0, 1})
+        for (auto arg2: {0, 1})
+        for (auto arg3: {0, 1})
+            res += Timer<std::chrono::nanoseconds>::exhaustive(EXHAUSTIVE_TIME_N,
+                    foo, arg1, arg2, arg3);
+        return res/8;
+    }
 };
 
 

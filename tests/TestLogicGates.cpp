@@ -3,35 +3,10 @@
 //
 
 #include <iostream>
+#include <cassert>
 #include "TestLogicGates.hpp"
+#include "Random.hpp"
 #include "../hardware/LogicGates.hpp"
-#include "Timer.hpp"
-
-
-bool TestLogicGates::test(const std::string& name,
-                          const GateFunction& fun,
-                          const TestLogicGates::TruthTable& table,
-                          bool verbose)
-{
-    if (verbose) std::cout<<"\ttesting "<<name<<" : ";
-    bool res = testGate(fun, table);
-    if (verbose) std::cout<<(res? "SUCCESS" : "FAILURE")<<"\n";
-    return res;
-}
-
-bool TestLogicGates::testGate(const GateFunction& fun, const TestLogicGates::TruthTable& table)
-{
-    for (auto& [in, expected]: table)
-    {
-        auto out = fun(in);
-        if (out != expected)
-        {
-            std::cout<<"\t\tFAILED TEST: ("; for (auto x:in) std::cout<<x<<","; std::cout<<")->"<<out<<", expected "<<expected<<"\n";
-            return false;
-        }
-    }
-    return true;
-}
 
 bool TestLogicGates::full(bool verbose)
 {
@@ -39,7 +14,7 @@ bool TestLogicGates::full(bool verbose)
     if (verbose) std::cout<<"\n";
 
 
-    int testNo = 0, goodNo = 0;
+    int testNo = 0;
     for (auto& fun: {
         test_nand,
         test_not,
@@ -47,97 +22,121 @@ bool TestLogicGates::full(bool verbose)
         test_or,
         test_xor,
         test_mux,
+        test_dmux,
+        test_not32,
         })
     {
-        goodNo += fun(verbose);
+        fun(verbose);
         ++testNo;
     }
 
 
     if (!verbose)
-        std::cout<<(goodNo==testNo?"SUCCESS":"FAILURE")<<"\n";
+        std::cout<<"OK\n";
     else
     {
         std::cout<<"====TestLogicGates::full scan finished====\n";
-        std::cout<<"RESULTS:\n";
-        std::cout<<"    #  "<<testNo<<"\n";
-        std::cout<<"    +  "<<goodNo<<"\n";
-        std::cout<<"    -  "<<testNo-goodNo<<"\n";
+        std::cout<<"    # of tests passed: "<<testNo<<"\n";
     }
 
-    return goodNo == testNo;
+    return true;
 }
 
 bool TestLogicGates::test_nand(bool verbose)
 {
-    std::cout<<"\ttesting time: "<<Timer<std::chrono::nanoseconds>::exhaustive(
-            EXHAUSTIVE_TIME_N, LogicGates::_nand, 0, 0)<<"ns\n";
-    return test("_nand", GateFunction(LogicGates::_nand), {
-            {{0, 0}, 1},
-            {{0, 1}, 1},
-            {{1, 0}, 1},
-            {{1, 1}, 0}
-        }, verbose);
+    if (verbose) std::cout<<"\ttesting _nand: ";
+    auto gate = LogicGates::_nand;
+    assert(gate(0, 0) == 1);
+    assert(gate(0, 1) == 1);
+    assert(gate(1, 0) == 1);
+    assert(gate(1, 1) == 0);
+    if (verbose) std::cout<<"OK.\ttesting time: "<<timens2arg(gate)<<"ns\n";
+    return true;
 }
 
 bool TestLogicGates::test_not(bool verbose)
 {
-    std::cout<<"\ttesting time: "<<Timer<std::chrono::nanoseconds>::exhaustive(
-            EXHAUSTIVE_TIME_N, LogicGates::_not, 0)<<"ns\n";
-    return test("_not", GateFunction(LogicGates::_not), {
-            {{0}, 1},
-            {{1}, 0}
-    }, verbose);
+    if (verbose) std::cout<<"\ttesting _not: ";
+    auto gate = LogicGates::_not;
+    assert(gate(0) == 1);
+    assert(gate(1) == 0);
+    if (verbose) std::cout<<"OK.\ttesting time: "<<timens1arg(gate)<<"ns\n";
+    return true;
 }
 
 bool TestLogicGates::test_and(bool verbose)
 {
-    std::cout<<"\ttesting time: "<<Timer<std::chrono::nanoseconds>::exhaustive(
-            EXHAUSTIVE_TIME_N, LogicGates::_and, 0, 0)<<"ns\n";
-    return test("_and", GateFunction(LogicGates::_and), {
-            {{0, 0}, 0},
-            {{0, 1}, 0},
-            {{1, 0}, 0},
-            {{1, 1}, 1}
-    }, verbose);
+    if (verbose) std::cout<<"\ttesting _and: ";
+    auto gate = LogicGates::_and;
+    assert(gate(0, 0) == 0);
+    assert(gate(0, 1) == 0);
+    assert(gate(1, 0) == 0);
+    assert(gate(1, 1) == 1);
+    if (verbose) std::cout<<"OK.\ttesting time: "<<timens2arg(gate)<<"ns\n";
+    return true;
 }
 
 bool TestLogicGates::test_or(bool verbose)
 {
-    std::cout<<"\ttesting time: "<<Timer<std::chrono::nanoseconds>::exhaustive(
-            EXHAUSTIVE_TIME_N, LogicGates::_or, 0, 0)<<"ns\n";
-    return test("_or", GateFunction(LogicGates::_or), {
-            {{0, 0}, 0},
-            {{0, 1}, 1},
-            {{1, 0}, 1},
-            {{1, 1}, 1}
-    }, verbose);
+    if (verbose) std::cout<<"\ttesting _or: ";
+    auto gate = LogicGates::_or;
+    assert(gate(0, 0) == 0);
+    assert(gate(0, 1) == 1);
+    assert(gate(1, 0) == 1);
+    assert(gate(1, 1) == 1);
+    if (verbose) std::cout<<"OK.\ttesting time: "<<timens2arg(gate)<<"ns\n";
+    return true;
 }
 
 bool TestLogicGates::test_xor(bool verbose)
 {
-    std::cout<<"\ttesting time: "<<Timer<std::chrono::nanoseconds>::exhaustive(
-            EXHAUSTIVE_TIME_N, LogicGates::_xor, 0, 0)<<"ns\n";
-    return test("_xor", GateFunction(LogicGates::_xor), {
-            {{0, 0}, 0},
-            {{0, 1}, 1},
-            {{1, 0}, 1},
-            {{1, 1}, 0}
-    }, verbose);
+    if (verbose) std::cout<<"\ttesting _xor: ";
+    auto gate = LogicGates::_xor;
+    assert(gate(0, 0) == 0);
+    assert(gate(0, 1) == 1);
+    assert(gate(1, 0) == 1);
+    assert(gate(1, 1) == 0);
+    if (verbose) std::cout<<"OK.\ttesting time: "<<timens2arg(gate)<<"ns\n";
+    return true;
 }
 
 bool TestLogicGates::test_mux(bool verbose)
 {
-    std::cout<<"\ttesting time: "<<Timer<std::chrono::nanoseconds>::exhaustive(
-            EXHAUSTIVE_TIME_N, LogicGates::_mux, 0, 0, 0)<<"ns\n";
-    return test("_mux", GateFunction(LogicGates::_mux), {
-            {{0, 0, 0}, 0},
-            {{0, 1, 0}, 0},
-            {{1, 0, 0}, 1},
-            {{1, 1, 0}, 1},
-            {{0, 0, 1}, 0},
-            {{0, 1, 1}, 1},
-            {{1, 0, 1}, 0},
-            {{1, 1, 1}, 1}
-    }, verbose);
+    if (verbose) std::cout<<"\ttesting _mux: ";
+    auto gate = LogicGates::_mux;
+    assert(gate(0, 0, 0) == 0);
+    assert(gate(0, 1, 0) == 0);
+    assert(gate(1, 0, 0) == 1);
+    assert(gate(1, 1, 0) == 1);
+    assert(gate(0, 0, 1) == 0);
+    assert(gate(0, 1, 1) == 1);
+    assert(gate(1, 0, 1) == 0);
+    assert(gate(1, 1, 1) == 1);
+    if (verbose) std::cout<<"OK.\ttesting time: "<<timens3arg(gate)<<"ns\n";
+    return true;
+}
+
+bool TestLogicGates::test_dmux(bool verbose)
+{
+    if (verbose) std::cout<<"\ttesting _dmux: ";
+    auto gate = LogicGates::_dmux;
+    assert((gate(0, 0) == std::array<bool, 2>{0, 0}));
+    assert((gate(0, 1) == std::array<bool, 2>{0, 0}));
+    assert((gate(1, 0) == std::array<bool, 2>{1, 0}));
+    assert((gate(1, 1) == std::array<bool, 2>{0, 1}));
+    if (verbose) std::cout<<"OK.\ttesting time: "<<timens2arg(gate)<<"ns\n";
+    return true;
+}
+
+bool TestLogicGates::test_not32(bool verbose)
+{
+    if (verbose) std::cout<<"\ttesting _not32: ";
+    auto gate = LogicGates::_not32;
+    auto rng = Random<uint32_t>();
+    for (int i = 0; i < RANDOM_AMOUNT_N; ++i) {
+        uint32_t n = rng.get();
+        assert (gate(n) == ~n);
+    }
+    if (verbose) std::cout<<"OK.\ttesting time: "<<timens1arg(gate)<<"ns\n";
+    return true;
 }

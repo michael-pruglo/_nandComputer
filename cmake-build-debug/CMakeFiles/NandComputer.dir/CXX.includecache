@@ -10,27 +10,27 @@ C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
 array
 -
 
-C:/Users/mickl/ClionProjects/NandComputer/main.cpp
-iostream
+C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp
+random
 -
-tests/TestLogicGates.hpp
-C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
 
 C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.cpp
 iostream
 -
+cassert
+-
 TestLogicGates.hpp
 C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
+Random.hpp
+C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp
 ../hardware/LogicGates.hpp
 C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
-Timer.hpp
-C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp
 
 C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
-vector
+chrono
 -
-functional
--
+Timer.hpp
+C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp
 
 C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp
 chrono

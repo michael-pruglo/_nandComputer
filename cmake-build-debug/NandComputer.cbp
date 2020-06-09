@@ -89,6 +89,12 @@
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/main.cpp">
 			<Option target="NandComputer"/>
 		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/tests/Random.cpp">
+			<Option target="NandComputer"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp">
+			<Option target="NandComputer"/>
+		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.cpp">
 			<Option target="NandComputer"/>
 		</Unit>
