@@ -35,7 +35,7 @@ public:
 
 private:
     static const int RANDOM_AMOUNT_N = 100'000;
-    static const int EXHAUSTIVE_TIME_N = 50'000'000;
+    static const int EXHAUSTIVE_TIME_N = 2'000'000;
 
     template<typename F, typename ...Args>
     static auto timens(F&& foo, Args&&... args)

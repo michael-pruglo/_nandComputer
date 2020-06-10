@@ -29,10 +29,6 @@ bool LogicGates::_xor(bool a, bool b)
 {
     return _and(_or(a, b), _nand(a, b));
 }
-bool LogicGates::_xor_v2(bool a, bool b)
-{
-    return _or(_and(a, _not(b)), _and(_not(a), b));
-}
 
 bool LogicGates::_mux(bool a, bool b, bool sel)
 {
@@ -41,7 +37,10 @@ bool LogicGates::_mux(bool a, bool b, bool sel)
 
 std::array<bool, 2> LogicGates::_dmux(bool in, bool sel)
 {
-    return {_and(_not(sel), in), _and(sel, in)};
+    return {
+        _and(_not(sel), in),
+        _and(     sel , in)
+    };
 }
 
 std::string bits(uint32_t n)
@@ -56,129 +55,174 @@ std::string bits(uint32_t n)
 
 LogicGates::Bus32 LogicGates::_not32(LogicGates::Bus32 in)
 {
-    for (unsigned i = 32; i--; )
-        setbit(in, i, _not(getbit(in,i)));
-    return in;
+    return    _not(  in &0x80000000u  ) <<31u
+            | _not(  in &0x40000000u  ) <<30u
+            | _not(  in &0x20000000u  ) <<29u
+            | _not(  in &0x10000000u  ) <<28u
+            | _not(  in & 0x8000000u  ) <<27u
+            | _not(  in & 0x4000000u  ) <<26u
+            | _not(  in & 0x2000000u  ) <<25u
+            | _not(  in & 0x1000000u  ) <<24u
+            | _not(  in &  0x800000u  ) <<23u
+            | _not(  in &  0x400000u  ) <<22u
+            | _not(  in &  0x200000u  ) <<21u
+            | _not(  in &  0x100000u  ) <<20u
+            | _not(  in &   0x80000u  ) <<19u
+            | _not(  in &   0x40000u  ) <<18u
+            | _not(  in &   0x20000u  ) <<17u
+            | _not(  in &   0x10000u  ) <<16u
+            | _not(  in &    0x8000u  ) <<15u
+            | _not(  in &    0x4000u  ) <<14u
+            | _not(  in &    0x2000u  ) <<13u
+            | _not(  in &    0x1000u  ) <<12u
+            | _not(  in &     0x800u  ) <<11u
+            | _not(  in &     0x400u  ) <<10u
+            | _not(  in &     0x200u  ) << 9u
+            | _not(  in &     0x100u  ) << 8u
+            | _not(  in &      0x80u  ) << 7u
+            | _not(  in &      0x40u  ) << 6u
+            | _not(  in &      0x20u  ) << 5u
+            | _not(  in &      0x10u  ) << 4u
+            | _not(  in &       0x8u  ) << 3u
+            | _not(  in &       0x4u  ) << 2u
+            | _not(  in &       0x2u  ) << 1u
+            | _not(  in &       0x1u  ) << 0u
+            ;
 }
-
 
 LogicGates::Bus32 LogicGates::_and32(LogicGates::Bus32 a, LogicGates::Bus32 b)
 {
-    for (unsigned i = 32; i--; )
-        setbit(a, i, _and(getbit(a,i), getbit(b,i)));
-    return a;
-}
-LogicGates::Bus32 LogicGates::_and32_v2(LogicGates::Bus32 a, LogicGates::Bus32 b)
-{
-    for (unsigned i = 32; i--; )
-        a = a & ~(1u<<i) | _and(a>>i&1u, b>>i&1u) << i;
-    return a;
-}
-LogicGates::Bus32 LogicGates::_and32_v3(LogicGates::Bus32 a, LogicGates::Bus32 b)
-{
-    a = a & ~(1u<<31u) | _and(a>>31u&1u, b>>31u&1u) << 31u;
-    a = a & ~(1u<<30u) | _and(a>>30u&1u, b>>30u&1u) << 30u;
-    a = a & ~(1u<<29u) | _and(a>>29u&1u, b>>29u&1u) << 29u;
-    a = a & ~(1u<<28u) | _and(a>>28u&1u, b>>28u&1u) << 28u;
-    a = a & ~(1u<<27u) | _and(a>>27u&1u, b>>27u&1u) << 27u;
-    a = a & ~(1u<<26u) | _and(a>>26u&1u, b>>26u&1u) << 26u;
-    a = a & ~(1u<<25u) | _and(a>>25u&1u, b>>25u&1u) << 25u;
-    a = a & ~(1u<<24u) | _and(a>>24u&1u, b>>24u&1u) << 24u;
-    a = a & ~(1u<<23u) | _and(a>>23u&1u, b>>23u&1u) << 23u;
-    a = a & ~(1u<<22u) | _and(a>>22u&1u, b>>22u&1u) << 22u;
-    a = a & ~(1u<<21u) | _and(a>>21u&1u, b>>21u&1u) << 21u;
-    a = a & ~(1u<<20u) | _and(a>>20u&1u, b>>20u&1u) << 20u;
-    a = a & ~(1u<<19u) | _and(a>>19u&1u, b>>19u&1u) << 19u;
-    a = a & ~(1u<<18u) | _and(a>>18u&1u, b>>18u&1u) << 18u;
-    a = a & ~(1u<<17u) | _and(a>>17u&1u, b>>17u&1u) << 17u;
-    a = a & ~(1u<<16u) | _and(a>>16u&1u, b>>16u&1u) << 16u;
-    a = a & ~(1u<<15u) | _and(a>>15u&1u, b>>15u&1u) << 15u;
-    a = a & ~(1u<<14u) | _and(a>>14u&1u, b>>14u&1u) << 14u;
-    a = a & ~(1u<<13u) | _and(a>>13u&1u, b>>13u&1u) << 13u;
-    a = a & ~(1u<<12u) | _and(a>>12u&1u, b>>12u&1u) << 12u;
-    a = a & ~(1u<<11u) | _and(a>>11u&1u, b>>11u&1u) << 11u;
-    a = a & ~(1u<<10u) | _and(a>>10u&1u, b>>10u&1u) << 10u;
-    a = a & ~(1u<<9u) | _and(a>>9u&1u, b>>9u&1u) << 9u;
-    a = a & ~(1u<<8u) | _and(a>>8u&1u, b>>8u&1u) << 8u;
-    a = a & ~(1u<<7u) | _and(a>>7u&1u, b>>7u&1u) << 7u;
-    a = a & ~(1u<<6u) | _and(a>>6u&1u, b>>6u&1u) << 6u;
-    a = a & ~(1u<<5u) | _and(a>>5u&1u, b>>5u&1u) << 5u;
-    a = a & ~(1u<<4u) | _and(a>>4u&1u, b>>4u&1u) << 4u;
-    a = a & ~(1u<<3u) | _and(a>>3u&1u, b>>3u&1u) << 3u;
-    a = a & ~(1u<<2u) | _and(a>>2u&1u, b>>2u&1u) << 2u;
-    a = a & ~(1u<<1u) | _and(a>>1u&1u, b>>1u&1u) << 1u;
-    a = a & ~(1u<<0u) | _and(a>>0u&1u, b>>0u&1u) << 0u;
-    return a;
-}
-LogicGates::Bus32 LogicGates::_and32_v4(LogicGates::Bus32 a, LogicGates::Bus32 b)
-{
-    a = a & 0x7fffffff | _and(a>>31u&1u, b>>31u&1u) << 31u;
-    a = a & 0xbfffffff | _and(a>>30u&1u, b>>30u&1u) << 30u;
-    a = a & 0xdfffffff | _and(a>>29u&1u, b>>29u&1u) << 29u;
-    a = a & 0xefffffff | _and(a>>28u&1u, b>>28u&1u) << 28u;
-    a = a & 0xf7ffffff | _and(a>>27u&1u, b>>27u&1u) << 27u;
-    a = a & 0xfbffffff | _and(a>>26u&1u, b>>26u&1u) << 26u;
-    a = a & 0xfdffffff | _and(a>>25u&1u, b>>25u&1u) << 25u;
-    a = a & 0xfeffffff | _and(a>>24u&1u, b>>24u&1u) << 24u;
-    a = a & 0xff7fffff | _and(a>>23u&1u, b>>23u&1u) << 23u;
-    a = a & 0xffbfffff | _and(a>>22u&1u, b>>22u&1u) << 22u;
-    a = a & 0xffdfffff | _and(a>>21u&1u, b>>21u&1u) << 21u;
-    a = a & 0xffefffff | _and(a>>20u&1u, b>>20u&1u) << 20u;
-    a = a & 0xfff7ffff | _and(a>>19u&1u, b>>19u&1u) << 19u;
-    a = a & 0xfffbffff | _and(a>>18u&1u, b>>18u&1u) << 18u;
-    a = a & 0xfffdffff | _and(a>>17u&1u, b>>17u&1u) << 17u;
-    a = a & 0xfffeffff | _and(a>>16u&1u, b>>16u&1u) << 16u;
-    a = a & 0xffff7fff | _and(a>>15u&1u, b>>15u&1u) << 15u;
-    a = a & 0xffffbfff | _and(a>>14u&1u, b>>14u&1u) << 14u;
-    a = a & 0xffffdfff | _and(a>>13u&1u, b>>13u&1u) << 13u;
-    a = a & 0xffffefff | _and(a>>12u&1u, b>>12u&1u) << 12u;
-    a = a & 0xfffff7ff | _and(a>>11u&1u, b>>11u&1u) << 11u;
-    a = a & 0xfffffbff | _and(a>>10u&1u, b>>10u&1u) << 10u;
-    a = a & 0xfffffdff | _and(a>>9u&1u, b>>9u&1u) << 9u;
-    a = a & 0xfffffeff | _and(a>>8u&1u, b>>8u&1u) << 8u;
-    a = a & 0xffffff7f | _and(a>>7u&1u, b>>7u&1u) << 7u;
-    a = a & 0xffffffbf | _and(a>>6u&1u, b>>6u&1u) << 6u;
-    a = a & 0xffffffdf | _and(a>>5u&1u, b>>5u&1u) << 5u;
-    a = a & 0xffffffef | _and(a>>4u&1u, b>>4u&1u) << 4u;
-    a = a & 0xfffffff7 | _and(a>>3u&1u, b>>3u&1u) << 3u;
-    a = a & 0xfffffffb | _and(a>>2u&1u, b>>2u&1u) << 2u;
-    a = a & 0xfffffffd | _and(a>>1u&1u, b>>1u&1u) << 1u;
-    a = a & 0xfffffffe | _and(a>>0u&1u, b>>0u&1u) << 0u;
-    return a;
-}
-LogicGates::Bus32 LogicGates::_and32_v5(LogicGates::Bus32 a, LogicGates::Bus32 b)
-{
-    return a&b;
+    return    _and(  a &0x80000000u,  b &0x80000000u  ) <<31u
+            | _and(  a &0x40000000u,  b &0x40000000u  ) <<30u
+            | _and(  a &0x20000000u,  b &0x20000000u  ) <<29u
+            | _and(  a &0x10000000u,  b &0x10000000u  ) <<28u
+            | _and(  a & 0x8000000u,  b & 0x8000000u  ) <<27u
+            | _and(  a & 0x4000000u,  b & 0x4000000u  ) <<26u
+            | _and(  a & 0x2000000u,  b & 0x2000000u  ) <<25u
+            | _and(  a & 0x1000000u,  b & 0x1000000u  ) <<24u
+            | _and(  a &  0x800000u,  b &  0x800000u  ) <<23u
+            | _and(  a &  0x400000u,  b &  0x400000u  ) <<22u
+            | _and(  a &  0x200000u,  b &  0x200000u  ) <<21u
+            | _and(  a &  0x100000u,  b &  0x100000u  ) <<20u
+            | _and(  a &   0x80000u,  b &   0x80000u  ) <<19u
+            | _and(  a &   0x40000u,  b &   0x40000u  ) <<18u
+            | _and(  a &   0x20000u,  b &   0x20000u  ) <<17u
+            | _and(  a &   0x10000u,  b &   0x10000u  ) <<16u
+            | _and(  a &    0x8000u,  b &    0x8000u  ) <<15u
+            | _and(  a &    0x4000u,  b &    0x4000u  ) <<14u
+            | _and(  a &    0x2000u,  b &    0x2000u  ) <<13u
+            | _and(  a &    0x1000u,  b &    0x1000u  ) <<12u
+            | _and(  a &     0x800u,  b &     0x800u  ) <<11u
+            | _and(  a &     0x400u,  b &     0x400u  ) <<10u
+            | _and(  a &     0x200u,  b &     0x200u  ) << 9u
+            | _and(  a &     0x100u,  b &     0x100u  ) << 8u
+            | _and(  a &      0x80u,  b &      0x80u  ) << 7u
+            | _and(  a &      0x40u,  b &      0x40u  ) << 6u
+            | _and(  a &      0x20u,  b &      0x20u  ) << 5u
+            | _and(  a &      0x10u,  b &      0x10u  ) << 4u
+            | _and(  a &       0x8u,  b &       0x8u  ) << 3u
+            | _and(  a &       0x4u,  b &       0x4u  ) << 2u
+            | _and(  a &       0x2u,  b &       0x2u  ) << 1u
+            | _and(  a &       0x1u,  b &       0x1u  ) << 0u
+            ;
 }
 
 LogicGates::Bus32 LogicGates::_or32(LogicGates::Bus32 a, LogicGates::Bus32 b)
 {
-    for (unsigned i = 32; i--; )
-        setbit(a, i, _or(getbit(a,i), getbit(b,i)));
-    return a;
+    return    _or(  a &0x80000000u,  b &0x80000000u  ) <<31u
+            | _or(  a &0x40000000u,  b &0x40000000u  ) <<30u
+            | _or(  a &0x20000000u,  b &0x20000000u  ) <<29u
+            | _or(  a &0x10000000u,  b &0x10000000u  ) <<28u
+            | _or(  a & 0x8000000u,  b & 0x8000000u  ) <<27u
+            | _or(  a & 0x4000000u,  b & 0x4000000u  ) <<26u
+            | _or(  a & 0x2000000u,  b & 0x2000000u  ) <<25u
+            | _or(  a & 0x1000000u,  b & 0x1000000u  ) <<24u
+            | _or(  a &  0x800000u,  b &  0x800000u  ) <<23u
+            | _or(  a &  0x400000u,  b &  0x400000u  ) <<22u
+            | _or(  a &  0x200000u,  b &  0x200000u  ) <<21u
+            | _or(  a &  0x100000u,  b &  0x100000u  ) <<20u
+            | _or(  a &   0x80000u,  b &   0x80000u  ) <<19u
+            | _or(  a &   0x40000u,  b &   0x40000u  ) <<18u
+            | _or(  a &   0x20000u,  b &   0x20000u  ) <<17u
+            | _or(  a &   0x10000u,  b &   0x10000u  ) <<16u
+            | _or(  a &    0x8000u,  b &    0x8000u  ) <<15u
+            | _or(  a &    0x4000u,  b &    0x4000u  ) <<14u
+            | _or(  a &    0x2000u,  b &    0x2000u  ) <<13u
+            | _or(  a &    0x1000u,  b &    0x1000u  ) <<12u
+            | _or(  a &     0x800u,  b &     0x800u  ) <<11u
+            | _or(  a &     0x400u,  b &     0x400u  ) <<10u
+            | _or(  a &     0x200u,  b &     0x200u  ) << 9u
+            | _or(  a &     0x100u,  b &     0x100u  ) << 8u
+            | _or(  a &      0x80u,  b &      0x80u  ) << 7u
+            | _or(  a &      0x40u,  b &      0x40u  ) << 6u
+            | _or(  a &      0x20u,  b &      0x20u  ) << 5u
+            | _or(  a &      0x10u,  b &      0x10u  ) << 4u
+            | _or(  a &       0x8u,  b &       0x8u  ) << 3u
+            | _or(  a &       0x4u,  b &       0x4u  ) << 2u
+            | _or(  a &       0x2u,  b &       0x2u  ) << 1u
+            | _or(  a &       0x1u,  b &       0x1u  ) << 0u
+            ;
 }
 
 LogicGates::Bus32 LogicGates::_mux32(LogicGates::Bus32 a, LogicGates::Bus32 b, bool sel)
 {
-    for (unsigned i = 32; i--; )
-        setbit(a, i, _mux(getbit(a,i), getbit(b,i), sel));
-    return a;
+    return    _mux(  a &0x80000000u,  b &0x80000000u,  sel  ) <<31u
+            | _mux(  a &0x40000000u,  b &0x40000000u,  sel  ) <<30u
+            | _mux(  a &0x20000000u,  b &0x20000000u,  sel  ) <<29u
+            | _mux(  a &0x10000000u,  b &0x10000000u,  sel  ) <<28u
+            | _mux(  a & 0x8000000u,  b & 0x8000000u,  sel  ) <<27u
+            | _mux(  a & 0x4000000u,  b & 0x4000000u,  sel  ) <<26u
+            | _mux(  a & 0x2000000u,  b & 0x2000000u,  sel  ) <<25u
+            | _mux(  a & 0x1000000u,  b & 0x1000000u,  sel  ) <<24u
+            | _mux(  a &  0x800000u,  b &  0x800000u,  sel  ) <<23u
+            | _mux(  a &  0x400000u,  b &  0x400000u,  sel  ) <<22u
+            | _mux(  a &  0x200000u,  b &  0x200000u,  sel  ) <<21u
+            | _mux(  a &  0x100000u,  b &  0x100000u,  sel  ) <<20u
+            | _mux(  a &   0x80000u,  b &   0x80000u,  sel  ) <<19u
+            | _mux(  a &   0x40000u,  b &   0x40000u,  sel  ) <<18u
+            | _mux(  a &   0x20000u,  b &   0x20000u,  sel  ) <<17u
+            | _mux(  a &   0x10000u,  b &   0x10000u,  sel  ) <<16u
+            | _mux(  a &    0x8000u,  b &    0x8000u,  sel  ) <<15u
+            | _mux(  a &    0x4000u,  b &    0x4000u,  sel  ) <<14u
+            | _mux(  a &    0x2000u,  b &    0x2000u,  sel  ) <<13u
+            | _mux(  a &    0x1000u,  b &    0x1000u,  sel  ) <<12u
+            | _mux(  a &     0x800u,  b &     0x800u,  sel  ) <<11u
+            | _mux(  a &     0x400u,  b &     0x400u,  sel  ) <<10u
+            | _mux(  a &     0x200u,  b &     0x200u,  sel  ) << 9u
+            | _mux(  a &     0x100u,  b &     0x100u,  sel  ) << 8u
+            | _mux(  a &      0x80u,  b &      0x80u,  sel  ) << 7u
+            | _mux(  a &      0x40u,  b &      0x40u,  sel  ) << 6u
+            | _mux(  a &      0x20u,  b &      0x20u,  sel  ) << 5u
+            | _mux(  a &      0x10u,  b &      0x10u,  sel  ) << 4u
+            | _mux(  a &       0x8u,  b &       0x8u,  sel  ) << 3u
+            | _mux(  a &       0x4u,  b &       0x4u,  sel  ) << 2u
+            | _mux(  a &       0x2u,  b &       0x2u,  sel  ) << 1u
+            | _mux(  a &       0x1u,  b &       0x1u,  sel  ) << 0u
+            ;
 }
 
 bool LogicGates::_and8way(LogicGates::Bus8 in)
 {
-    bool res = getbit(in, 7);
-    for (unsigned i = 7; i--; )
-        res = _and(res, getbit(in, i));
-    return res;
+    return  _and(in &0x80u,
+            _and(in &0x40u,
+            _and(in &0x20u,
+            _and(in &0x10u,
+            _and(in & 0x8u,
+            _and(in & 0x4u,
+            _and(in & 0x2u,
+                 in & 0x1u )))))));
 }
 
 bool LogicGates::_or8way(LogicGates::Bus8 in)
 {
-    bool res = getbit(in, 7);
-    for (unsigned i = 7; i--; )
-        res = _or(res, getbit(in, i));
-    return res;
+    return  _or(in &0x80u,
+            _or(in &0x40u,
+            _or(in &0x20u,
+            _or(in &0x10u,
+            _or(in & 0x8u,
+            _or(in & 0x4u,
+            _or(in & 0x2u,
+                in & 0x1u )))))));
 }
 
 LogicGates::Bus32
@@ -190,32 +234,34 @@ LogicGates::_mux4way32(LogicGates::Bus32 a, LogicGates::Bus32 b, LogicGates::Bus
 
 LogicGates::Bus32
 LogicGates::_mux8way32(LogicGates::Bus32 a, LogicGates::Bus32 b, LogicGates::Bus32 c, LogicGates::Bus32 d,
-                       LogicGates::Bus32 e, LogicGates::Bus32 f, LogicGates::Bus32 g, LogicGates::Bus32 h, bool sel0,
-                       bool sel1, bool sel2)
+                       LogicGates::Bus32 e, LogicGates::Bus32 f, LogicGates::Bus32 g, LogicGates::Bus32 h,
+                       bool sel0, bool sel1, bool sel2)
 {
     return _mux32(_mux4way32(a,b,c,d,sel0,sel1), _mux4way32(e,f,g,h,sel0,sel1), sel2);
 }
 
 std::array<bool, 4> LogicGates::_dmux4way(bool in, bool sel0, bool sel1)
 {
+    auto [v0, v1] = _dmux(in, sel0);
     return {
-            _mux(_dmux(in, sel0)[0], 0, sel1),
-            _mux(_dmux(in, sel0)[1], 0, sel1),
-            _mux(0, _dmux(in, sel0)[0], sel1),
-            _mux(0, _dmux(in, sel0)[1], sel1)
+            _mux(v0, 0, sel1),
+            _mux(v1, 0, sel1),
+            _mux(0, v0, sel1),
+            _mux(0, v1, sel1)
     };
 }
 
 std::array<bool, 8> LogicGates::_dmux8way(bool in, bool sel0, bool sel1, bool sel2)
 {
+    auto [v0, v1, v2, v3] = _dmux4way(in, sel0, sel1);
     return {
-            _mux(_dmux4way(in, sel0, sel1)[0], 0, sel2),
-            _mux(_dmux4way(in, sel0, sel1)[1], 0, sel2),
-            _mux(_dmux4way(in, sel0, sel1)[2], 0, sel2),
-            _mux(_dmux4way(in, sel0, sel1)[3], 0, sel2),
-            _mux(0, _dmux4way(in, sel0, sel1)[0], sel2),
-            _mux(0, _dmux4way(in, sel0, sel1)[1], sel2),
-            _mux(0, _dmux4way(in, sel0, sel1)[2], sel2),
-            _mux(0, _dmux4way(in, sel0, sel1)[3], sel2)
+            _mux(v0, 0, sel2),
+            _mux(v1, 0, sel2),
+            _mux(v2, 0, sel2),
+            _mux(v3, 0, sel2),
+            _mux(0, v0, sel2),
+            _mux(0, v1, sel2),
+            _mux(0, v2, sel2),
+            _mux(0, v3, sel2)
     };
 }

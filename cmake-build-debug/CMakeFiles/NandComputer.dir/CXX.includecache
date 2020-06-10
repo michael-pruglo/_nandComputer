@@ -9,14 +9,8 @@
 C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
 array
 -
-
-C:/Users/mickl/ClionProjects/NandComputer/main.cpp
-iostream
+bitset
 -
-iomanip
--
-tests/TestLogicGates.hpp
-C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
 
 C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp
 random
@@ -26,6 +20,8 @@ C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.cpp
 iostream
 -
 cassert
+-
+iomanip
 -
 TestLogicGates.hpp
 C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
