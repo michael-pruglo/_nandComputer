@@ -69,35 +69,9 @@ CMakeFiles/NandComputer.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NandComputer.dir/main.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mickl\ClionProjects\NandComputer\main.cpp -o CMakeFiles\NandComputer.dir\main.cpp.s
 
-CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.obj: CMakeFiles/NandComputer.dir/flags.make
-CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.obj: ../hardware/LogicGates.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.obj"
-	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NandComputer.dir\hardware\LogicGates.cpp.obj -c C:\Users\mickl\ClionProjects\NandComputer\hardware\LogicGates.cpp
-
-CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mickl\ClionProjects\NandComputer\hardware\LogicGates.cpp > CMakeFiles\NandComputer.dir\hardware\LogicGates.cpp.i
-
-CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mickl\ClionProjects\NandComputer\hardware\LogicGates.cpp -o CMakeFiles\NandComputer.dir\hardware\LogicGates.cpp.s
-
-CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj: CMakeFiles/NandComputer.dir/flags.make
-CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj: ../tests/TestLogicGates.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj"
-	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NandComputer.dir\tests\TestLogicGates.cpp.obj -c C:\Users\mickl\ClionProjects\NandComputer\tests\TestLogicGates.cpp
-
-CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mickl\ClionProjects\NandComputer\tests\TestLogicGates.cpp > CMakeFiles\NandComputer.dir\tests\TestLogicGates.cpp.i
-
-CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mickl\ClionProjects\NandComputer\tests\TestLogicGates.cpp -o CMakeFiles\NandComputer.dir\tests\TestLogicGates.cpp.s
-
 CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj: CMakeFiles/NandComputer.dir/flags.make
 CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj: ../tests/Timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj"
 	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NandComputer.dir\tests\Timer.cpp.obj -c C:\Users\mickl\ClionProjects\NandComputer\tests\Timer.cpp
 
 CMakeFiles/NandComputer.dir/tests/Timer.cpp.i: cmake_force
@@ -110,7 +84,7 @@ CMakeFiles/NandComputer.dir/tests/Timer.cpp.s: cmake_force
 
 CMakeFiles/NandComputer.dir/tests/Random.cpp.obj: CMakeFiles/NandComputer.dir/flags.make
 CMakeFiles/NandComputer.dir/tests/Random.cpp.obj: ../tests/Random.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NandComputer.dir/tests/Random.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NandComputer.dir/tests/Random.cpp.obj"
 	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NandComputer.dir\tests\Random.cpp.obj -c C:\Users\mickl\ClionProjects\NandComputer\tests\Random.cpp
 
 CMakeFiles/NandComputer.dir/tests/Random.cpp.i: cmake_force
@@ -123,7 +97,7 @@ CMakeFiles/NandComputer.dir/tests/Random.cpp.s: cmake_force
 
 CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj: CMakeFiles/NandComputer.dir/flags.make
 CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj: ../hardware/Adders.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj"
 	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NandComputer.dir\hardware\Adders.cpp.obj -c C:\Users\mickl\ClionProjects\NandComputer\hardware\Adders.cpp
 
 CMakeFiles/NandComputer.dir/hardware/Adders.cpp.i: cmake_force
@@ -134,24 +108,50 @@ CMakeFiles/NandComputer.dir/hardware/Adders.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NandComputer.dir/hardware/Adders.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mickl\ClionProjects\NandComputer\hardware\Adders.cpp -o CMakeFiles\NandComputer.dir\hardware\Adders.cpp.s
 
+CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj: CMakeFiles/NandComputer.dir/flags.make
+CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj: ../hardware/BasicGates.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj"
+	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NandComputer.dir\hardware\BasicGates.cpp.obj -c C:\Users\mickl\ClionProjects\NandComputer\hardware\BasicGates.cpp
+
+CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mickl\ClionProjects\NandComputer\hardware\BasicGates.cpp > CMakeFiles\NandComputer.dir\hardware\BasicGates.cpp.i
+
+CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mickl\ClionProjects\NandComputer\hardware\BasicGates.cpp -o CMakeFiles\NandComputer.dir\hardware\BasicGates.cpp.s
+
+CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: CMakeFiles/NandComputer.dir/flags.make
+CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: ../tests/TestBasicGates.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj"
+	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NandComputer.dir\tests\TestBasicGates.cpp.obj -c C:\Users\mickl\ClionProjects\NandComputer\tests\TestBasicGates.cpp
+
+CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mickl\ClionProjects\NandComputer\tests\TestBasicGates.cpp > CMakeFiles\NandComputer.dir\tests\TestBasicGates.cpp.i
+
+CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mickl\ClionProjects\NandComputer\tests\TestBasicGates.cpp -o CMakeFiles\NandComputer.dir\tests\TestBasicGates.cpp.s
+
 # Object files for target NandComputer
 NandComputer_OBJECTS = \
 "CMakeFiles/NandComputer.dir/main.cpp.obj" \
-"CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.obj" \
-"CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj" \
 "CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj" \
 "CMakeFiles/NandComputer.dir/tests/Random.cpp.obj" \
-"CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj"
+"CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj" \
+"CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj" \
+"CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj"
 
 # External object files for target NandComputer
 NandComputer_EXTERNAL_OBJECTS =
 
 NandComputer.exe: CMakeFiles/NandComputer.dir/main.cpp.obj
-NandComputer.exe: CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.obj
-NandComputer.exe: CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj
 NandComputer.exe: CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj
 NandComputer.exe: CMakeFiles/NandComputer.dir/tests/Random.cpp.obj
 NandComputer.exe: CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj
+NandComputer.exe: CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj
+NandComputer.exe: CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj
 NandComputer.exe: CMakeFiles/NandComputer.dir/build.make
 NandComputer.exe: CMakeFiles/NandComputer.dir/linklibs.rsp
 NandComputer.exe: CMakeFiles/NandComputer.dir/objects1.rsp

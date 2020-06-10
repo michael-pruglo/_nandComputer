@@ -1,14 +1,14 @@
 //
-// Created by Michael on 06/08/20.
+// Created by Michael on 06/10/20.
 //
 
-#ifndef NANDCOMPUTER_TESTLOGICGATES_HPP
-#define NANDCOMPUTER_TESTLOGICGATES_HPP
+#ifndef NANDCOMPUTER_TESTBASICGATES_HPP
+#define NANDCOMPUTER_TESTBASICGATES_HPP
 
 #include <chrono>
 #include "Timer.hpp"
 
-class TestLogicGates
+class TestBasicGates
 {
 public:
     static bool full(bool verbose = false);
@@ -73,7 +73,8 @@ private:
                     foo, arg1, arg2, arg3);
         return res/8;
     }
+
 };
 
 
-#endif //NANDCOMPUTER_TESTLOGICGATES_HPP
+#endif //NANDCOMPUTER_TESTBASICGATES_HPP

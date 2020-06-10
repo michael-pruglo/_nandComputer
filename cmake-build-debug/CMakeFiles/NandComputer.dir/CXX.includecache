@@ -6,21 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/mickl/ClionProjects/NandComputer/hardware/Adders.cpp
-Adders.hpp
-C:/Users/mickl/ClionProjects/NandComputer/hardware/Adders.hpp
-
-C:/Users/mickl/ClionProjects/NandComputer/hardware/Adders.hpp
-array
--
-LogicGates.hpp
-C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
-
-C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.cpp
-LogicGates.hpp
-C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
-
-C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/hardware/BasicGates.hpp
 array
 -
 
@@ -28,21 +14,21 @@ C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp
 random
 -
 
-C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.cpp
+C:/Users/mickl/ClionProjects/NandComputer/tests/TestBasicGates.cpp
+TestBasicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/tests/TestBasicGates.hpp
 iostream
 -
 cassert
 -
 iomanip
 -
-TestLogicGates.hpp
-C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
 Random.hpp
 C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp
-../hardware/LogicGates.hpp
-C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
+../hardware/BasicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/hardware/BasicGates.hpp
 
-C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/tests/TestBasicGates.hpp
 chrono
 -
 Timer.hpp

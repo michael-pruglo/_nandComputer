@@ -1,10 +1,11 @@
 //
-// Created by Michael on 06/08/20.
+// Created by Michael on 06/10/20.
 //
 
-#include "LogicGates.hpp"
-namespace LogicGates {
-    
+#include "BasicGates.hpp"
+
+namespace Hardware::BasicGates {
+
 bool _nand(bool a, bool b)
 {
     return !(a&b);

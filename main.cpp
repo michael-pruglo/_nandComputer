@@ -1,8 +1,8 @@
-#include "tests/TestLogicGates.hpp"
+#include "tests/TestBasicGates.hpp"
 
 int main()
 {
-    TestLogicGates::full(true);
+    TestBasicGates::full(true);
 
     return 0;
 }

@@ -4,22 +4,22 @@
 CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj
  C:/Users/mickl/ClionProjects/NandComputer/hardware/Adders.cpp
  C:/Users/mickl/ClionProjects/NandComputer/hardware/Adders.hpp
- C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
-CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.obj
- C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.cpp
- C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
+ C:/Users/mickl/ClionProjects/NandComputer/hardware/BasicGates.hpp
+CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj
+ C:/Users/mickl/ClionProjects/NandComputer/hardware/BasicGates.cpp
+ C:/Users/mickl/ClionProjects/NandComputer/hardware/BasicGates.hpp
 CMakeFiles/NandComputer.dir/main.cpp.obj
  C:/Users/mickl/ClionProjects/NandComputer/main.cpp
- C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
+ C:/Users/mickl/ClionProjects/NandComputer/tests/TestBasicGates.hpp
  C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp
 CMakeFiles/NandComputer.dir/tests/Random.cpp.obj
  C:/Users/mickl/ClionProjects/NandComputer/tests/Random.cpp
  C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp
-CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj
- C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
+CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj
+ C:/Users/mickl/ClionProjects/NandComputer/hardware/BasicGates.hpp
  C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp
- C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.cpp
- C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
+ C:/Users/mickl/ClionProjects/NandComputer/tests/TestBasicGates.cpp
+ C:/Users/mickl/ClionProjects/NandComputer/tests/TestBasicGates.hpp
  C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp
 CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj
  C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.cpp

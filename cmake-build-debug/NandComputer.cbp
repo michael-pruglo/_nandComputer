@@ -86,10 +86,10 @@
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/hardware/Adders.hpp">
 			<Option target="NandComputer"/>
 		</Unit>
-		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.cpp">
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/hardware/BasicGates.cpp">
 			<Option target="NandComputer"/>
 		</Unit>
-		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp">
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/hardware/BasicGates.hpp">
 			<Option target="NandComputer"/>
 		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/main.cpp">
@@ -101,10 +101,10 @@
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp">
 			<Option target="NandComputer"/>
 		</Unit>
-		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.cpp">
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/tests/TestBasicGates.cpp">
 			<Option target="NandComputer"/>
 		</Unit>
-		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp">
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/tests/TestBasicGates.hpp">
 			<Option target="NandComputer"/>
 		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.cpp">

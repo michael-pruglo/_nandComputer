@@ -3,23 +3,23 @@
 
 CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj: ../hardware/Adders.cpp
 CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj: ../hardware/Adders.hpp
-CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj: ../hardware/LogicGates.hpp
+CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj: ../hardware/BasicGates.hpp
 
-CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.obj: ../hardware/LogicGates.cpp
-CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.obj: ../hardware/LogicGates.hpp
+CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj: ../hardware/BasicGates.cpp
+CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj: ../hardware/BasicGates.hpp
 
 CMakeFiles/NandComputer.dir/main.cpp.obj: ../main.cpp
-CMakeFiles/NandComputer.dir/main.cpp.obj: ../tests/TestLogicGates.hpp
+CMakeFiles/NandComputer.dir/main.cpp.obj: ../tests/TestBasicGates.hpp
 CMakeFiles/NandComputer.dir/main.cpp.obj: ../tests/Timer.hpp
 
 CMakeFiles/NandComputer.dir/tests/Random.cpp.obj: ../tests/Random.cpp
 CMakeFiles/NandComputer.dir/tests/Random.cpp.obj: ../tests/Random.hpp
 
-CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj: ../hardware/LogicGates.hpp
-CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj: ../tests/Random.hpp
-CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj: ../tests/TestLogicGates.cpp
-CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj: ../tests/TestLogicGates.hpp
-CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj: ../tests/Timer.hpp
+CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: ../hardware/BasicGates.hpp
+CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: ../tests/Random.hpp
+CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: ../tests/TestBasicGates.cpp
+CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: ../tests/TestBasicGates.hpp
+CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: ../tests/Timer.hpp
 
 CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj: ../tests/Timer.cpp
 CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj: ../tests/Timer.hpp

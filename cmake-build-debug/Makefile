@@ -149,32 +149,32 @@ hardware/Adders.cpp.s:
 	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/Adders.cpp.s
 .PHONY : hardware/Adders.cpp.s
 
-hardware/LogicGates.obj: hardware/LogicGates.cpp.obj
+hardware/BasicGates.obj: hardware/BasicGates.cpp.obj
 
-.PHONY : hardware/LogicGates.obj
+.PHONY : hardware/BasicGates.obj
 
 # target to build an object file
-hardware/LogicGates.cpp.obj:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.obj
-.PHONY : hardware/LogicGates.cpp.obj
+hardware/BasicGates.cpp.obj:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj
+.PHONY : hardware/BasicGates.cpp.obj
 
-hardware/LogicGates.i: hardware/LogicGates.cpp.i
+hardware/BasicGates.i: hardware/BasicGates.cpp.i
 
-.PHONY : hardware/LogicGates.i
+.PHONY : hardware/BasicGates.i
 
 # target to preprocess a source file
-hardware/LogicGates.cpp.i:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.i
-.PHONY : hardware/LogicGates.cpp.i
+hardware/BasicGates.cpp.i:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.i
+.PHONY : hardware/BasicGates.cpp.i
 
-hardware/LogicGates.s: hardware/LogicGates.cpp.s
+hardware/BasicGates.s: hardware/BasicGates.cpp.s
 
-.PHONY : hardware/LogicGates.s
+.PHONY : hardware/BasicGates.s
 
 # target to generate assembly for a file
-hardware/LogicGates.cpp.s:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/LogicGates.cpp.s
-.PHONY : hardware/LogicGates.cpp.s
+hardware/BasicGates.cpp.s:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.s
+.PHONY : hardware/BasicGates.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -230,32 +230,32 @@ tests/Random.cpp.s:
 	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/Random.cpp.s
 .PHONY : tests/Random.cpp.s
 
-tests/TestLogicGates.obj: tests/TestLogicGates.cpp.obj
+tests/TestBasicGates.obj: tests/TestBasicGates.cpp.obj
 
-.PHONY : tests/TestLogicGates.obj
+.PHONY : tests/TestBasicGates.obj
 
 # target to build an object file
-tests/TestLogicGates.cpp.obj:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.obj
-.PHONY : tests/TestLogicGates.cpp.obj
+tests/TestBasicGates.cpp.obj:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj
+.PHONY : tests/TestBasicGates.cpp.obj
 
-tests/TestLogicGates.i: tests/TestLogicGates.cpp.i
+tests/TestBasicGates.i: tests/TestBasicGates.cpp.i
 
-.PHONY : tests/TestLogicGates.i
+.PHONY : tests/TestBasicGates.i
 
 # target to preprocess a source file
-tests/TestLogicGates.cpp.i:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.i
-.PHONY : tests/TestLogicGates.cpp.i
+tests/TestBasicGates.cpp.i:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.i
+.PHONY : tests/TestBasicGates.cpp.i
 
-tests/TestLogicGates.s: tests/TestLogicGates.cpp.s
+tests/TestBasicGates.s: tests/TestBasicGates.cpp.s
 
-.PHONY : tests/TestLogicGates.s
+.PHONY : tests/TestBasicGates.s
 
 # target to generate assembly for a file
-tests/TestLogicGates.cpp.s:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestLogicGates.cpp.s
-.PHONY : tests/TestLogicGates.cpp.s
+tests/TestBasicGates.cpp.s:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.s
+.PHONY : tests/TestBasicGates.cpp.s
 
 tests/Timer.obj: tests/Timer.cpp.obj
 
@@ -296,18 +296,18 @@ help:
 	@echo ... hardware/Adders.obj
 	@echo ... hardware/Adders.i
 	@echo ... hardware/Adders.s
-	@echo ... hardware/LogicGates.obj
-	@echo ... hardware/LogicGates.i
-	@echo ... hardware/LogicGates.s
+	@echo ... hardware/BasicGates.obj
+	@echo ... hardware/BasicGates.i
+	@echo ... hardware/BasicGates.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... tests/Random.obj
 	@echo ... tests/Random.i
 	@echo ... tests/Random.s
-	@echo ... tests/TestLogicGates.obj
-	@echo ... tests/TestLogicGates.i
-	@echo ... tests/TestLogicGates.s
+	@echo ... tests/TestBasicGates.obj
+	@echo ... tests/TestBasicGates.i
+	@echo ... tests/TestBasicGates.s
 	@echo ... tests/Timer.obj
 	@echo ... tests/Timer.i
 	@echo ... tests/Timer.s

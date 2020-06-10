@@ -5,13 +5,13 @@ Based on [Nand2Tetris](https://www.nand2tetris.org/) <p>
 
 ## Hardware
 Currently the most basic chips are implemented: Nand, Not, And, Or, Xor, Mux, DMux as well as their multi-bit and multi-way versions.
-The implementation is in the namespace `LogicGates`. <p>
-Testing capacities are provided as well - in form of the class `TestLogicGates`.
+The implementation is in the namespace `BasicGates`. <p>
+Testing capacities are provided as well - in form of the class `TestBasicGates`.
 There are 2 parameters: `RANDOM_AMOUNT_N`, which specifies how thoroughly the functions are tested (higher = more tests),
 and `EXHAUSTIVE_TIME_N`, which allows to measure time more precisely (higher = more precise).<p>
 Current results: <p>
 ```
-TestLogicGates::full scan:
+TestBasicGates::full scan:
         testing _nand: OK.      testing time:         52 ns
         testing _not: OK.       testing time:         54 ns
         testing _and: OK.       testing time:         56 ns
@@ -29,6 +29,6 @@ TestLogicGates::full scan:
         testing _mux8way32: OK. testing time:       2670 ns
         testing _dmux4way: OK.  testing time:        128 ns
         testing _dmux8way: OK.  testing time:        251 ns
-====TestLogicGates::full scan finished====
+====TestBasicGates::full scan finished====
     # of tests passed: 17
 ```

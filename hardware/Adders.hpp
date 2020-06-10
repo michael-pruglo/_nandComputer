@@ -6,15 +6,16 @@
 #define NANDCOMPUTER_ADDERS_HPP
 
 #include <array>
-#include "LogicGates.hpp"
+#include "BasicGates.hpp"
 
+namespace Hardware {
 namespace Adders
 {
-    using namespace LogicGates;
+    using namespace BasicGates;
 
     static std::array<bool, 2> _half_adder(bool a, bool b);
     //static _full_adder();
 };
-
+};
 
 #endif //NANDCOMPUTER_ADDERS_HPP

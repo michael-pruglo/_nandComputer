@@ -1,13 +1,13 @@
 //
-// Created by Michael on 06/08/20.
+// Created by Michael on 06/10/20.
 //
 
-#ifndef NANDCOMPUTER_LOGICGATES_HPP
-#define NANDCOMPUTER_LOGICGATES_HPP
+#ifndef NANDCOMPUTER_BASICGATES_HPP
+#define NANDCOMPUTER_BASICGATES_HPP
 
 #include <array>
-
-namespace LogicGates
+namespace Hardware {
+namespace BasicGates
 {
     typedef uint8_t     Bus8;
     typedef uint32_t    Bus32;
@@ -47,6 +47,6 @@ namespace LogicGates
     std::array<bool, 4> _dmux4way (bool in, bool sel0, bool sel1);
     std::array<bool, 8> _dmux8way (bool in, bool sel0, bool sel1, bool sel2);
 };
+};
 
-
-#endif //NANDCOMPUTER_LOGICGATES_HPP
+#endif //NANDCOMPUTER_BASICGATES_HPP
