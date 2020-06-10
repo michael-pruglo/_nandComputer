@@ -122,6 +122,33 @@ NandComputer/fast:
 	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/build
 .PHONY : NandComputer/fast
 
+hardware/Adders.obj: hardware/Adders.cpp.obj
+
+.PHONY : hardware/Adders.obj
+
+# target to build an object file
+hardware/Adders.cpp.obj:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj
+.PHONY : hardware/Adders.cpp.obj
+
+hardware/Adders.i: hardware/Adders.cpp.i
+
+.PHONY : hardware/Adders.i
+
+# target to preprocess a source file
+hardware/Adders.cpp.i:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/Adders.cpp.i
+.PHONY : hardware/Adders.cpp.i
+
+hardware/Adders.s: hardware/Adders.cpp.s
+
+.PHONY : hardware/Adders.s
+
+# target to generate assembly for a file
+hardware/Adders.cpp.s:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/Adders.cpp.s
+.PHONY : hardware/Adders.cpp.s
+
 hardware/LogicGates.obj: hardware/LogicGates.cpp.obj
 
 .PHONY : hardware/LogicGates.obj
@@ -266,6 +293,9 @@ help:
 	@echo ... NandComputer
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... hardware/Adders.obj
+	@echo ... hardware/Adders.i
+	@echo ... hardware/Adders.s
 	@echo ... hardware/LogicGates.obj
 	@echo ... hardware/LogicGates.i
 	@echo ... hardware/LogicGates.s

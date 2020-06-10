@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/hardware/Adders.cpp">
+			<Option target="NandComputer"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/hardware/Adders.hpp">
+			<Option target="NandComputer"/>
+		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.cpp">
 			<Option target="NandComputer"/>
 		</Unit>

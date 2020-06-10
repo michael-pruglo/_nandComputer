@@ -6,15 +6,23 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/mickl/ClionProjects/NandComputer/hardware/Adders.cpp
+Adders.hpp
+C:/Users/mickl/ClionProjects/NandComputer/hardware/Adders.hpp
+
+C:/Users/mickl/ClionProjects/NandComputer/hardware/Adders.hpp
+array
+-
+LogicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
+
+C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.cpp
+LogicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
+
 C:/Users/mickl/ClionProjects/NandComputer/hardware/LogicGates.hpp
 array
 -
-bitset
--
-
-C:/Users/mickl/ClionProjects/NandComputer/main.cpp
-tests/TestLogicGates.hpp
-C:/Users/mickl/ClionProjects/NandComputer/tests/TestLogicGates.hpp
 
 C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp
 random
