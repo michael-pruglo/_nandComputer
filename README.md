@@ -5,7 +5,7 @@ Based on [Nand2Tetris](https://www.nand2tetris.org/) <p>
 
 ## Hardware
 Currently the most basic chips are implemented: Nand, Not, And, Or, Xor, Mux, DMux as well as their multi-bit and multi-way versions.
-The implementation is in the class `LogicGates`. <p>
+The implementation is in the namespace `LogicGates`. <p>
 Testing capacities are provided as well - in form of the class `TestLogicGates`.
 There are 2 parameters: `RANDOM_AMOUNT_N`, which specifies how thoroughly the functions are tested (higher = more tests),
 and `EXHAUSTIVE_TIME_N`, which allows to measure time more precisely (higher = more precise).<p>
