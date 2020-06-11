@@ -230,6 +230,33 @@ tests/Random.cpp.s:
 	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/Random.cpp.s
 .PHONY : tests/Random.cpp.s
 
+tests/TestAdders.obj: tests/TestAdders.cpp.obj
+
+.PHONY : tests/TestAdders.obj
+
+# target to build an object file
+tests/TestAdders.cpp.obj:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.obj
+.PHONY : tests/TestAdders.cpp.obj
+
+tests/TestAdders.i: tests/TestAdders.cpp.i
+
+.PHONY : tests/TestAdders.i
+
+# target to preprocess a source file
+tests/TestAdders.cpp.i:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.i
+.PHONY : tests/TestAdders.cpp.i
+
+tests/TestAdders.s: tests/TestAdders.cpp.s
+
+.PHONY : tests/TestAdders.s
+
+# target to generate assembly for a file
+tests/TestAdders.cpp.s:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.s
+.PHONY : tests/TestAdders.cpp.s
+
 tests/TestBasicGates.obj: tests/TestBasicGates.cpp.obj
 
 .PHONY : tests/TestBasicGates.obj
@@ -256,6 +283,33 @@ tests/TestBasicGates.s: tests/TestBasicGates.cpp.s
 tests/TestBasicGates.cpp.s:
 	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.s
 .PHONY : tests/TestBasicGates.cpp.s
+
+tests/TestHardware.obj: tests/TestHardware.cpp.obj
+
+.PHONY : tests/TestHardware.obj
+
+# target to build an object file
+tests/TestHardware.cpp.obj:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.obj
+.PHONY : tests/TestHardware.cpp.obj
+
+tests/TestHardware.i: tests/TestHardware.cpp.i
+
+.PHONY : tests/TestHardware.i
+
+# target to preprocess a source file
+tests/TestHardware.cpp.i:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.i
+.PHONY : tests/TestHardware.cpp.i
+
+tests/TestHardware.s: tests/TestHardware.cpp.s
+
+.PHONY : tests/TestHardware.s
+
+# target to generate assembly for a file
+tests/TestHardware.cpp.s:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.s
+.PHONY : tests/TestHardware.cpp.s
 
 tests/Timer.obj: tests/Timer.cpp.obj
 
@@ -305,9 +359,15 @@ help:
 	@echo ... tests/Random.obj
 	@echo ... tests/Random.i
 	@echo ... tests/Random.s
+	@echo ... tests/TestAdders.obj
+	@echo ... tests/TestAdders.i
+	@echo ... tests/TestAdders.s
 	@echo ... tests/TestBasicGates.obj
 	@echo ... tests/TestBasicGates.i
 	@echo ... tests/TestBasicGates.s
+	@echo ... tests/TestHardware.obj
+	@echo ... tests/TestHardware.i
+	@echo ... tests/TestHardware.s
 	@echo ... tests/Timer.obj
 	@echo ... tests/Timer.i
 	@echo ... tests/Timer.s

@@ -6,12 +6,10 @@
 #define NANDCOMPUTER_BASICGATES_HPP
 
 #include <array>
-namespace Hardware {
-namespace BasicGates
-{
-    typedef uint8_t     Bus8;
-    typedef uint32_t    Bus32;
+#include "Hardware.hpp"
 
+namespace Hardware::BasicGates
+{
     ///1 bit
                    bool _nand(bool a,  bool b);
 
@@ -46,7 +44,6 @@ namespace BasicGates
                                    bool sel0, bool sel1, bool sel2);
     std::array<bool, 4> _dmux4way (bool in, bool sel0, bool sel1);
     std::array<bool, 8> _dmux8way (bool in, bool sel0, bool sel1, bool sel2);
-};
 };
 
 #endif //NANDCOMPUTER_BASICGATES_HPP

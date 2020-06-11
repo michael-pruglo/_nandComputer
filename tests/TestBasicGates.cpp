@@ -8,6 +8,7 @@
 #include <cassert>
 #include <iomanip>
 #include "Random.hpp"
+#include "Timer.hpp"
 #include "../hardware/BasicGates.hpp"
 
 using namespace Hardware;
@@ -63,7 +64,7 @@ bool TestBasicGates::test_nand(bool verbose)
     assert(gate(0, 1) == 1);
     assert(gate(1, 0) == 1);
     assert(gate(1, 1) == 0);
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens2arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens2arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -73,7 +74,7 @@ bool TestBasicGates::test_not(bool verbose)
     auto gate = BasicGates::_not;
     assert(gate(0) == 1);
     assert(gate(1) == 0);
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens1arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens1arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -85,7 +86,7 @@ bool TestBasicGates::test_and(bool verbose)
     assert(gate(0, 1) == 0);
     assert(gate(1, 0) == 0);
     assert(gate(1, 1) == 1);
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens2arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens2arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -97,7 +98,7 @@ bool TestBasicGates::test_or(bool verbose)
     assert(gate(0, 1) == 1);
     assert(gate(1, 0) == 1);
     assert(gate(1, 1) == 1);
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens2arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens2arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -110,7 +111,7 @@ bool TestBasicGates::test_xor(bool verbose)
     assert(gate(0, 1) == 1);
     assert(gate(1, 0) == 1);
     assert(gate(1, 1) == 0);
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens2arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens2arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -126,7 +127,7 @@ bool TestBasicGates::test_mux(bool verbose)
     assert(gate(0, 1, 1) == 1);
     assert(gate(1, 0, 1) == 0);
     assert(gate(1, 1, 1) == 1);
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens3arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens3arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -138,7 +139,7 @@ bool TestBasicGates::test_dmux(bool verbose)
     assert((gate(0, 1) == std::array<bool, 2>{0, 0}));
     assert((gate(1, 0) == std::array<bool, 2>{1, 0}));
     assert((gate(1, 1) == std::array<bool, 2>{0, 1}));
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens2arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens2arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -151,7 +152,7 @@ bool TestBasicGates::test_not32(bool verbose)
         uint32_t n = rng.get();
         assert (gate(n) == ~n);
     }
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens1arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens1arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -165,7 +166,7 @@ bool TestBasicGates::test_and32(bool verbose)
         uint32_t b = rng.get();
         assert (gate(a, b) == (a&b));
     }
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens2arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens2arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -179,7 +180,7 @@ bool TestBasicGates::test_or32(bool verbose)
         uint32_t b = rng.get();
         assert (gate(a, b) == (a|b));
     }
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens2arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens2arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -194,7 +195,7 @@ bool TestBasicGates::test_mux32(bool verbose)
         assert (gate(a, b, 0) == a);
         assert (gate(a, b, 1) == b);
     }
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens3arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens3arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -207,7 +208,7 @@ bool TestBasicGates::test_and8way(bool verbose)
         uint8_t a = rng.get();
         assert (gate(a) == (__builtin_popcount(a)==8));
     }
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens1arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens1arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -220,7 +221,7 @@ bool TestBasicGates::test_or8way(bool verbose)
         uint8_t a = rng.get();
         assert (gate(a) == (__builtin_popcount(a)>0));
     }
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens1arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens1arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -239,7 +240,7 @@ bool TestBasicGates::test_mux4way32(bool verbose)
         assert (gate(a, b, c, d, 1, 0) == b);
         assert (gate(a, b, c, d, 1, 1) == d);
     }
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens(gate, 0,0,0,0,0,0)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens(EXHAUSTIVE_TIME_N, gate, 0,0,0,0,0,0)<<" ns\n";
     return true;
 }
 
@@ -266,7 +267,7 @@ bool TestBasicGates::test_mux8way32(bool verbose)
         assert (gate(a, b, c, d, e, f, g, h, 1, 1, 0) == d);
         assert (gate(a, b, c, d, e, f, g, h, 1, 1, 1) == h);
     }
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens(gate, 0,0,0,0,0,0,0,0,0,0,0)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens(EXHAUSTIVE_TIME_N, gate, 0,0,0,0,0,0,0,0,0,0,0)<<" ns\n";
     return true;
 }
 
@@ -282,7 +283,7 @@ bool TestBasicGates::test_dmux4way(bool verbose)
     assert((gate(1, 0, 1) == std::array<bool, 4>{0, 0, 1, 0}));
     assert((gate(1, 1, 0) == std::array<bool, 4>{0, 1, 0, 0}));
     assert((gate(1, 1, 1) == std::array<bool, 4>{0, 0, 0, 1}));
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens3arg(gate)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens3arg(EXHAUSTIVE_TIME_N, gate)<<" ns\n";
     return true;
 }
 
@@ -306,6 +307,6 @@ bool TestBasicGates::test_dmux8way(bool verbose)
     assert((gate(1, 1, 0, 1) == std::array<bool, 8>{0, 0, 0, 0, 0, 1, 0, 0}));
     assert((gate(1, 1, 1, 0) == std::array<bool, 8>{0, 0, 0, 1, 0, 0, 0, 0}));
     assert((gate(1, 1, 1, 1) == std::array<bool, 8>{0, 0, 0, 0, 0, 0, 0, 1}));
-    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<timens(gate, 0,0,0,0)<<" ns\n";
+    if (verbose) std::cout<<"OK.\ttesting time: "<<std::setw(10)<<Timer<std::chrono::nanoseconds>::timens(EXHAUSTIVE_TIME_N, gate, 0,0,0,0)<<" ns\n";
     return true;
 }

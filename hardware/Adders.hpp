@@ -8,14 +8,16 @@
 #include <array>
 #include "BasicGates.hpp"
 
-namespace Hardware {
-namespace Adders
+namespace Hardware::Adders
 {
-    using namespace BasicGates;
+    ///return {sum, carry}
+    std::array<bool, 2> _half_adder(bool a, bool b);
+    std::array<bool, 2> _full_adder(bool a, bool b, bool c);
+    std::array<bool, 2> _full_adder_v2(bool a, bool b, bool c);
 
-    static std::array<bool, 2> _half_adder(bool a, bool b);
-    //static _full_adder();
-};
+                  Bus32 _add32(Bus32 a, Bus32 b);
+                  Bus32 _add32_v2(Bus32 a, Bus32 b);
+                  Bus32 _inc32(Bus32 a);
 };
 
 #endif //NANDCOMPUTER_ADDERS_HPP

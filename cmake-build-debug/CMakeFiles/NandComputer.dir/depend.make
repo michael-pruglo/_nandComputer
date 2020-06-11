@@ -4,22 +4,36 @@
 CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj: ../hardware/Adders.cpp
 CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj: ../hardware/Adders.hpp
 CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj: ../hardware/BasicGates.hpp
+CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj: ../hardware/Hardware.hpp
 
 CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj: ../hardware/BasicGates.cpp
 CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj: ../hardware/BasicGates.hpp
+CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj: ../hardware/Hardware.hpp
 
 CMakeFiles/NandComputer.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/NandComputer.dir/main.cpp.obj: ../tests/TestAdders.hpp
 CMakeFiles/NandComputer.dir/main.cpp.obj: ../tests/TestBasicGates.hpp
-CMakeFiles/NandComputer.dir/main.cpp.obj: ../tests/Timer.hpp
 
 CMakeFiles/NandComputer.dir/tests/Random.cpp.obj: ../tests/Random.cpp
 CMakeFiles/NandComputer.dir/tests/Random.cpp.obj: ../tests/Random.hpp
 
+CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.obj: ../hardware/Adders.hpp
+CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.obj: ../hardware/BasicGates.hpp
+CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.obj: ../hardware/Hardware.hpp
+CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.obj: ../tests/Random.hpp
+CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.obj: ../tests/TestAdders.cpp
+CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.obj: ../tests/TestAdders.hpp
+CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.obj: ../tests/Timer.hpp
+
 CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: ../hardware/BasicGates.hpp
+CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: ../hardware/Hardware.hpp
 CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: ../tests/Random.hpp
 CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: ../tests/TestBasicGates.cpp
 CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: ../tests/TestBasicGates.hpp
 CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: ../tests/Timer.hpp
+
+CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.obj: ../tests/TestHardware.cpp
+CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.obj: ../tests/TestHardware.hpp
 
 CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj: ../tests/Timer.cpp
 CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj: ../tests/Timer.hpp

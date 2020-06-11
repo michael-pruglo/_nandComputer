@@ -4,11 +4,14 @@ All the computation is based on the chip Nand. <p>
 Based on [Nand2Tetris](https://www.nand2tetris.org/) <p>
 
 ## Hardware
-Currently the most basic chips are implemented: Nand, Not, And, Or, Xor, Mux, DMux as well as their multi-bit and multi-way versions.
-The implementation is in the namespace `BasicGates`. <p>
-Testing capacities are provided as well - in form of the class `TestBasicGates`.
+Currently implemented chips: <p>
+`BasicGates`: Nand, Not, And, Or, Xor, Mux, DMux as well as their multi-bit and multi-way versions.<p>
+`Adders`: Half adder, Full adder, Add32.
+
+Testing capacities are provided as well.
 There are 2 parameters: `RANDOM_AMOUNT_N`, which specifies how thoroughly the functions are tested (higher = more tests),
 and `EXHAUSTIVE_TIME_N`, which allows to measure time more precisely (higher = more precise).<p>
+
 Current results: <p>
 ```
 TestBasicGates::full scan:
@@ -31,4 +34,15 @@ TestBasicGates::full scan:
         testing _dmux8way: OK.  testing time:        251 ns
 ====TestBasicGates::full scan finished====
     # of tests passed: 17
+```
+```
+TestAdders::full scan:
+        testing _half_adder: OK.testing time:         90 ns
+        testing _full_adder:
+                v1:  OK.        testing time:        131 ns
+                v2:  OK.        testing time:        130 ns
+        testing _add32:
+                v1:  OK.        testing time:       2785 ns
+====TestAdders::full scan finished====
+    # of tests passed: 3
 ```

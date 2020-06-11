@@ -5,9 +5,6 @@
 #ifndef NANDCOMPUTER_TESTBASICGATES_HPP
 #define NANDCOMPUTER_TESTBASICGATES_HPP
 
-#include <chrono>
-#include "Timer.hpp"
-
 class TestBasicGates
 {
 public:
@@ -36,44 +33,6 @@ public:
 private:
     static const int RANDOM_AMOUNT_N = 100'000;
     static const int EXHAUSTIVE_TIME_N = 2'000'000;
-
-    template<typename F, typename ...Args>
-    static auto timens(F&& foo, Args&&... args)
-    {
-        return Timer<std::chrono::nanoseconds>::exhaustive(EXHAUSTIVE_TIME_N,
-                                                               foo, args...);
-    }
-    template<typename F>
-    static auto timens1arg(F&& foo)
-    {
-        long long res = 0;
-        for (auto arg1: {0, 1})
-            res += Timer<std::chrono::nanoseconds>::exhaustive(EXHAUSTIVE_TIME_N,
-                    foo, arg1);
-        return res/2;
-    }
-    template<typename F>
-    static auto timens2arg(F&& foo)
-    {
-        long long res = 0;
-        for (auto arg1: {0, 1})
-        for (auto arg2: {0, 1})
-            res += Timer<std::chrono::nanoseconds>::exhaustive(EXHAUSTIVE_TIME_N,
-                    foo, arg1, arg2);
-        return res/4;
-    }
-    template<typename F>
-    static auto timens3arg(F&& foo)
-    {
-        long long res = 0;
-        for (auto arg1: {0, 1})
-        for (auto arg2: {0, 1})
-        for (auto arg3: {0, 1})
-            res += Timer<std::chrono::nanoseconds>::exhaustive(EXHAUSTIVE_TIME_N,
-                    foo, arg1, arg2, arg3);
-        return res/8;
-    }
-
 };
 
 

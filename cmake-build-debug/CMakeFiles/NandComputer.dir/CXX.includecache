@@ -6,17 +6,29 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/mickl/ClionProjects/NandComputer/hardware/Adders.hpp
+array
+-
+BasicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/hardware/BasicGates.hpp
+
 C:/Users/mickl/ClionProjects/NandComputer/hardware/BasicGates.hpp
 array
+-
+Hardware.hpp
+C:/Users/mickl/ClionProjects/NandComputer/hardware/Hardware.hpp
+
+C:/Users/mickl/ClionProjects/NandComputer/hardware/Hardware.hpp
+cstdint
 -
 
 C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp
 random
 -
 
-C:/Users/mickl/ClionProjects/NandComputer/tests/TestBasicGates.cpp
-TestBasicGates.hpp
-C:/Users/mickl/ClionProjects/NandComputer/tests/TestBasicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/tests/TestAdders.cpp
+TestAdders.hpp
+C:/Users/mickl/ClionProjects/NandComputer/tests/TestAdders.hpp
 iostream
 -
 cassert
@@ -25,14 +37,12 @@ iomanip
 -
 Random.hpp
 C:/Users/mickl/ClionProjects/NandComputer/tests/Random.hpp
-../hardware/BasicGates.hpp
-C:/Users/mickl/ClionProjects/NandComputer/hardware/BasicGates.hpp
-
-C:/Users/mickl/ClionProjects/NandComputer/tests/TestBasicGates.hpp
-chrono
--
 Timer.hpp
 C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp
+../hardware/Adders.hpp
+C:/Users/mickl/ClionProjects/NandComputer/hardware/Adders.hpp
+
+C:/Users/mickl/ClionProjects/NandComputer/tests/TestAdders.hpp
 
 C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.hpp
 chrono
