@@ -10,6 +10,7 @@ CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj: ../hardware/BasicGates.
 CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj: ../hardware/BasicGates.hpp
 CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj: ../hardware/Hardware.hpp
 
+CMakeFiles/NandComputer.dir/main.cpp.obj: ../experimental/Testcases.hpp
 CMakeFiles/NandComputer.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/NandComputer.dir/main.cpp.obj: ../tests/TestAdders.hpp
 CMakeFiles/NandComputer.dir/main.cpp.obj: ../tests/TestBasicGates.hpp
@@ -34,7 +35,4 @@ CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj: ../tests/Timer.hpp
 
 CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.obj: ../tests/TestHardware.cpp
 CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.obj: ../tests/TestHardware.hpp
-
-CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj: ../tests/Timer.cpp
-CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj: ../tests/Timer.hpp
 

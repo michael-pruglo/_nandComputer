@@ -11,7 +11,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/mickl/ClionProjects/NandComputer/tests/TestAdders.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.obj"
   "C:/Users/mickl/ClionProjects/NandComputer/tests/TestBasicGates.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj"
   "C:/Users/mickl/ClionProjects/NandComputer/tests/TestHardware.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.obj"
-  "C:/Users/mickl/ClionProjects/NandComputer/tests/Timer.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

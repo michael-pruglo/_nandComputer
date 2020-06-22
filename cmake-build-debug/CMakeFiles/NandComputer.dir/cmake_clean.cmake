@@ -6,7 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.obj"
   "CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj"
   "CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.obj"
-  "CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj"
   "NandComputer.exe"
   "NandComputer.exe.manifest"
   "NandComputer.pdb"

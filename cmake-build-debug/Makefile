@@ -311,33 +311,6 @@ tests/TestHardware.cpp.s:
 	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.s
 .PHONY : tests/TestHardware.cpp.s
 
-tests/Timer.obj: tests/Timer.cpp.obj
-
-.PHONY : tests/Timer.obj
-
-# target to build an object file
-tests/Timer.cpp.obj:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/Timer.cpp.obj
-.PHONY : tests/Timer.cpp.obj
-
-tests/Timer.i: tests/Timer.cpp.i
-
-.PHONY : tests/Timer.i
-
-# target to preprocess a source file
-tests/Timer.cpp.i:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/Timer.cpp.i
-.PHONY : tests/Timer.cpp.i
-
-tests/Timer.s: tests/Timer.cpp.s
-
-.PHONY : tests/Timer.s
-
-# target to generate assembly for a file
-tests/Timer.cpp.s:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/Timer.cpp.s
-.PHONY : tests/Timer.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -368,9 +341,6 @@ help:
 	@echo ... tests/TestHardware.obj
 	@echo ... tests/TestHardware.i
 	@echo ... tests/TestHardware.s
-	@echo ... tests/Timer.obj
-	@echo ... tests/Timer.i
-	@echo ... tests/Timer.s
 .PHONY : help
 
 

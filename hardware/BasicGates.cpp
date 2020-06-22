@@ -3,6 +3,7 @@
 //
 
 #include "BasicGates.hpp"
+#include <string>
 
 namespace Hardware::BasicGates {
 
