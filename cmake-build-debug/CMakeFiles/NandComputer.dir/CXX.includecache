@@ -17,6 +17,8 @@ functional
 C:/Users/mickl/ClionProjects/NandComputer/main.cpp
 iostream
 -
+memory
+-
 tests/TestBasicGates.hpp
 C:/Users/mickl/ClionProjects/NandComputer/tests/TestBasicGates.hpp
 tests/TestAdders.hpp
