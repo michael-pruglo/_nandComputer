@@ -13,11 +13,18 @@ int main()
     //TestBasicGates::full(true);
     //TestAdders::full(true);
 
-    Testcase<int,int,int> tc1(&foo, std::make_unique<TruthTable<int, int, int>>(TruthTable<int,int,int>::table_t({
-        std::make_pair(Input<int,int>(1,2), 4),
-        std::make_pair(Input<int,int>(1,2), 4),
-    })).get());
-    Testcase<int,int,int> tc2(&foo, new Standard<int,int,int>(&bar, &gen, 2));
+    Testcase<int,int,int> tc1(
+            &foo,
+            new TruthTable({
+                std::make_pair(Input<int,int>(1,2), 4),
+                std::make_pair(Input<int,int>(1,2), 4),
+            })
+    );
+    Testcase<int,int,int> tc2(
+            &foo,
+            new Standard<int,int,int>(&bar, &gen, 2)
+    );
+    //TODO: memory leak patch
 
     std::cout<<"testcase 1: "<<tc1.run()<<"\n";
     std::cout<<"testcase 2: "<<tc2.run()<<"\n";
