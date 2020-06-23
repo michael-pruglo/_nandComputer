@@ -23,8 +23,8 @@ template <typename Output, typename... InputTypes>
 class Benchmark
 {
 public:
-    virtual bool test(std::function<Output(InputTypes...)> f) = 0;
-    inline bool assess(const Output& given, const Output& expected)
+    virtual bool test(std::function<Output(InputTypes...)> f) const = 0;
+    inline bool assess(const Output& given, const Output& expected) const
     {
         return given == expected;
     }
@@ -37,7 +37,7 @@ public:
     typedef std::vector<std::pair<Input<InputTypes...>, Output>> table_t;
 public:
     TruthTable(table_t table) : data(table) {}
-    bool test(std::function<Output(InputTypes...)> f) override;
+    bool test(std::function<Output(InputTypes...)> f) const override;
 private:
     table_t data;
 };
@@ -53,7 +53,7 @@ public:
         inputGenerator(inputGenerator),
         thoroughness(thoroughness)
     {}
-    bool test(std::function<Output(InputTypes...)> f) override;
+    bool test(std::function<Output(InputTypes...)> f) const override;
 
 private:
     std::function<Output(InputTypes...)> standardf;
@@ -65,18 +65,18 @@ template <typename Output, typename... InputTypes>
 class Testcase
 {
 public:
-                Testcase(std::function<Output(InputTypes...)> function, Benchmark<Output, InputTypes...>* benchmark);
+                Testcase(std::function<Output(InputTypes...)> function, const Benchmark<Output, InputTypes...>* benchmark);
                 Testcase(const std::vector<std::function<Output(InputTypes...)>>& functions, //variants of the same function
-                         Benchmark<Output, InputTypes...>* benchmark);
+                         const Benchmark<Output, InputTypes...>* benchmark);
     bool        run();
 private:
     std::vector<std::function<Output(InputTypes...)>> fvector;
-    Benchmark<Output, InputTypes...>* benchmark;
+    const Benchmark<Output, InputTypes...>* benchmark;
 };
 
 ///===================================================IMPLEMENTATION===================================================
 template<typename Output, typename... InputTypes>
-Testcase<Output, InputTypes...>::Testcase(std::function<Output(InputTypes...)> function, Benchmark<Output, InputTypes...>* benchmark) :
+Testcase<Output, InputTypes...>::Testcase(std::function<Output(InputTypes...)> function, const Benchmark<Output, InputTypes...>* benchmark) :
     fvector({function}),
     benchmark(benchmark)
 {
@@ -84,7 +84,7 @@ Testcase<Output, InputTypes...>::Testcase(std::function<Output(InputTypes...)> f
 
 template<typename Output, typename... InputTypes>
 Testcase<Output, InputTypes...>::Testcase(const std::vector<std::function<Output(InputTypes...)>>& functions,
-                                          Benchmark<Output, InputTypes...>* benchmark) :
+                                          const Benchmark<Output, InputTypes...>* benchmark) :
     fvector(functions),
     benchmark(benchmark)
 {
@@ -100,7 +100,7 @@ bool Testcase<Output, InputTypes...>::run()
 }
 
 template<typename Output, typename... InputTypes>
-bool TruthTable<Output, InputTypes...>::test(std::function<Output(InputTypes...)> f)
+bool TruthTable<Output, InputTypes...>::test(std::function<Output(InputTypes...)> f) const
 {
     bool success = true;
     for (auto [in, out]: data)
@@ -109,7 +109,7 @@ bool TruthTable<Output, InputTypes...>::test(std::function<Output(InputTypes...)
 }
 
 template<typename Output, typename... InputTypes>
-bool Standard<Output, InputTypes...>::test(std::function<Output(InputTypes...)> f)
+bool Standard<Output, InputTypes...>::test(std::function<Output(InputTypes...)> f) const
 {
     bool success = true;
     for (int i = 0; i < thoroughness; ++i)

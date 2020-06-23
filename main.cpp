@@ -1,6 +1,6 @@
 #include <iostream>
 #include <memory>
-#include "tests/TestBasicGates.hpp"
+#include "hardware/BasicGates.hpp"
 #include "tests/TestAdders.hpp"
 #include "experimental/Testcases.hpp"
 
@@ -13,21 +13,11 @@ int main()
     //TestBasicGates::full(true);
     //TestAdders::full(true);
 
-    Testcase<int,int,int> tc1(
-            &foo,
-            new TruthTable({
-                std::make_pair(Input<int,int>(1,2), 4),
-                std::make_pair(Input<int,int>(1,2), 4),
-            })
-    );
-    Testcase<int,int,int> tc2(
-            &foo,
-            new Standard<int,int,int>(&bar, &gen, 2)
-    );
-    //TODO: memory leak patch
+    Testcase<bool, bool,bool> tc1(&Hardware::BasicGates::_nand, &Hardware::BasicGates::_nand_tt);
+    //Testcase tc2(&Hardware::BasicGates::_nand, &Hardware::BasicGates::_nand_tt);
 
     std::cout<<"testcase 1: "<<tc1.run()<<"\n";
-    std::cout<<"testcase 2: "<<tc2.run()<<"\n";
+    //std::cout<<"testcase 2: "<<tc2.run()<<"\n";
 
 
     return 0;

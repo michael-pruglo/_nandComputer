@@ -1,7 +1,3 @@
-//
-// Created by Michael on 06/10/20.
-//
-
 #include "BasicGates.hpp"
 #include <string>
 
@@ -268,3 +264,4 @@ std::array<bool, 8> _dmux8way(bool in, bool sel0, bool sel1, bool sel2)
     };
 }
 }
+
