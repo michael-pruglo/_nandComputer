@@ -4,7 +4,7 @@
 #include "gtest/gtest.h"
 #include "src/hardware/Hardware.hpp"
 
-namespace Standards
+namespace Standards::HardwareStandards::BasicGatesStandards
 {
     typedef bool(*  UnaryBoolFunc)(bool);
     typedef bool(* BinaryBoolFunc)(bool, bool);
