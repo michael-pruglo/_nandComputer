@@ -170,32 +170,59 @@ google_Tests_run/fast:
 	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests\CMakeFiles\google_Tests_run.dir\build.make google_tests/CMakeFiles/google_Tests_run.dir/build
 .PHONY : google_Tests_run/fast
 
-hardware/BasicGatesTest.obj: hardware/BasicGatesTest.cpp.obj
+hardware_tests/AddersTest.obj: hardware_tests/AddersTest.cpp.obj
 
-.PHONY : hardware/BasicGatesTest.obj
+.PHONY : hardware_tests/AddersTest.obj
 
 # target to build an object file
-hardware/BasicGatesTest.cpp.obj:
-	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests\CMakeFiles\google_Tests_run.dir\build.make google_tests/CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.obj
-.PHONY : hardware/BasicGatesTest.cpp.obj
+hardware_tests/AddersTest.cpp.obj:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests\CMakeFiles\google_Tests_run.dir\build.make google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.obj
+.PHONY : hardware_tests/AddersTest.cpp.obj
 
-hardware/BasicGatesTest.i: hardware/BasicGatesTest.cpp.i
+hardware_tests/AddersTest.i: hardware_tests/AddersTest.cpp.i
 
-.PHONY : hardware/BasicGatesTest.i
+.PHONY : hardware_tests/AddersTest.i
 
 # target to preprocess a source file
-hardware/BasicGatesTest.cpp.i:
-	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests\CMakeFiles\google_Tests_run.dir\build.make google_tests/CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.i
-.PHONY : hardware/BasicGatesTest.cpp.i
+hardware_tests/AddersTest.cpp.i:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests\CMakeFiles\google_Tests_run.dir\build.make google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.i
+.PHONY : hardware_tests/AddersTest.cpp.i
 
-hardware/BasicGatesTest.s: hardware/BasicGatesTest.cpp.s
+hardware_tests/AddersTest.s: hardware_tests/AddersTest.cpp.s
 
-.PHONY : hardware/BasicGatesTest.s
+.PHONY : hardware_tests/AddersTest.s
 
 # target to generate assembly for a file
-hardware/BasicGatesTest.cpp.s:
-	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests\CMakeFiles\google_Tests_run.dir\build.make google_tests/CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.s
-.PHONY : hardware/BasicGatesTest.cpp.s
+hardware_tests/AddersTest.cpp.s:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests\CMakeFiles\google_Tests_run.dir\build.make google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.s
+.PHONY : hardware_tests/AddersTest.cpp.s
+
+hardware_tests/BasicGatesTest.obj: hardware_tests/BasicGatesTest.cpp.obj
+
+.PHONY : hardware_tests/BasicGatesTest.obj
+
+# target to build an object file
+hardware_tests/BasicGatesTest.cpp.obj:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests\CMakeFiles\google_Tests_run.dir\build.make google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.obj
+.PHONY : hardware_tests/BasicGatesTest.cpp.obj
+
+hardware_tests/BasicGatesTest.i: hardware_tests/BasicGatesTest.cpp.i
+
+.PHONY : hardware_tests/BasicGatesTest.i
+
+# target to preprocess a source file
+hardware_tests/BasicGatesTest.cpp.i:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests\CMakeFiles\google_Tests_run.dir\build.make google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.i
+.PHONY : hardware_tests/BasicGatesTest.cpp.i
+
+hardware_tests/BasicGatesTest.s: hardware_tests/BasicGatesTest.cpp.s
+
+.PHONY : hardware_tests/BasicGatesTest.s
+
+# target to generate assembly for a file
+hardware_tests/BasicGatesTest.cpp.s:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests\CMakeFiles\google_Tests_run.dir\build.make google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.s
+.PHONY : hardware_tests/BasicGatesTest.cpp.s
 
 # Help Target
 help:
@@ -210,9 +237,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... install/strip
-	@echo ... hardware/BasicGatesTest.obj
-	@echo ... hardware/BasicGatesTest.i
-	@echo ... hardware/BasicGatesTest.s
+	@echo ... hardware_tests/AddersTest.obj
+	@echo ... hardware_tests/AddersTest.i
+	@echo ... hardware_tests/AddersTest.s
+	@echo ... hardware_tests/BasicGatesTest.obj
+	@echo ... hardware_tests/BasicGatesTest.i
+	@echo ... hardware_tests/BasicGatesTest.s
 .PHONY : help
 
 

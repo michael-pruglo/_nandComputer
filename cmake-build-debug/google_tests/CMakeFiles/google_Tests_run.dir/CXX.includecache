@@ -326,11 +326,15 @@ cxxabi.h
 acxx_demangle.h
 -
 
-../src/hardware/BasicGates.cpp
+../src/hardware/Adders.cpp
+Adders.hpp
+../src/hardware/Adders.hpp
+
+../src/hardware/Adders.hpp
+array
+-
 BasicGates.hpp
 ../src/hardware/BasicGates.hpp
-string
--
 
 ../src/hardware/BasicGates.hpp
 array
@@ -342,19 +346,25 @@ Hardware.hpp
 cstdint
 -
 
-C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware/BasicGatesStandards.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/AddersStandards.hpp
 gtest/gtest.h
-C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware/gtest/gtest.h
+C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/gtest/gtest.h
 src/hardware/Hardware.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware/src/hardware/Hardware.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/src/hardware/Hardware.hpp
 
-C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware/BasicGatesTest.cpp
-BasicGatesStandards.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware/BasicGatesStandards.hpp
-src/hardware/BasicGates.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware/src/hardware/BasicGates.hpp
-src/hardware/BasicGates.cpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware/src/hardware/BasicGates.cpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/AddersTest.cpp
+AddersStandards.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/AddersStandards.hpp
+src/hardware/Adders.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/src/hardware/Adders.hpp
+src/hardware/Adders.cpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/src/hardware/Adders.cpp
+InputGenerator.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/InputGenerator.hpp
+
+C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/InputGenerator.hpp
 random
+-
+src/hardware/Hardware.hpp
 -
 

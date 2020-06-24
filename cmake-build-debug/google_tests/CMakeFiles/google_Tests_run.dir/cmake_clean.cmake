@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.obj"
+  "CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.obj"
+  "CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.obj"
   "google_Tests_run.exe"
   "google_Tests_run.exe.manifest"
   "google_Tests_run.pdb"

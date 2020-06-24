@@ -1,5 +1,4 @@
 "C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\mickl\ClionProjects\NandComputer
 -- Configuring done
-WARNING: Target "google_Tests_run" requests linking to directory "C:/Users/mickl/ClionProjects/NandComputer".  Targets may link only to libraries.  CMake is dropping the item.
 -- Generating done
 -- Build files have been written to: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug

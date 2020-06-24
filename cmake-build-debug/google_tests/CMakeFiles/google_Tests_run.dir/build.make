@@ -56,28 +56,44 @@ include google_tests/CMakeFiles/google_Tests_run.dir/progress.make
 # Include the compile flags for this target's objects.
 include google_tests/CMakeFiles/google_Tests_run.dir/flags.make
 
-google_tests/CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.obj: google_tests/CMakeFiles/google_Tests_run.dir/flags.make
-google_tests/CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.obj: google_tests/CMakeFiles/google_Tests_run.dir/includes_CXX.rsp
-google_tests/CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.obj: ../google_tests/hardware/BasicGatesTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object google_tests/CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.obj"
-	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests && C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\google_Tests_run.dir\hardware\BasicGatesTest.cpp.obj -c C:\Users\mickl\ClionProjects\NandComputer\google_tests\hardware\BasicGatesTest.cpp
+google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.obj: google_tests/CMakeFiles/google_Tests_run.dir/flags.make
+google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.obj: google_tests/CMakeFiles/google_Tests_run.dir/includes_CXX.rsp
+google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.obj: ../google_tests/hardware_tests/BasicGatesTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.obj"
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests && C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\google_Tests_run.dir\hardware_tests\BasicGatesTest.cpp.obj -c C:\Users\mickl\ClionProjects\NandComputer\google_tests\hardware_tests\BasicGatesTest.cpp
 
-google_tests/CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.i"
-	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mickl\ClionProjects\NandComputer\google_tests\hardware\BasicGatesTest.cpp > CMakeFiles\google_Tests_run.dir\hardware\BasicGatesTest.cpp.i
+google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.i"
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mickl\ClionProjects\NandComputer\google_tests\hardware_tests\BasicGatesTest.cpp > CMakeFiles\google_Tests_run.dir\hardware_tests\BasicGatesTest.cpp.i
 
-google_tests/CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.s"
-	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mickl\ClionProjects\NandComputer\google_tests\hardware\BasicGatesTest.cpp -o CMakeFiles\google_Tests_run.dir\hardware\BasicGatesTest.cpp.s
+google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.s"
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mickl\ClionProjects\NandComputer\google_tests\hardware_tests\BasicGatesTest.cpp -o CMakeFiles\google_Tests_run.dir\hardware_tests\BasicGatesTest.cpp.s
+
+google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.obj: google_tests/CMakeFiles/google_Tests_run.dir/flags.make
+google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.obj: google_tests/CMakeFiles/google_Tests_run.dir/includes_CXX.rsp
+google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.obj: ../google_tests/hardware_tests/AddersTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.obj"
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests && C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\google_Tests_run.dir\hardware_tests\AddersTest.cpp.obj -c C:\Users\mickl\ClionProjects\NandComputer\google_tests\hardware_tests\AddersTest.cpp
+
+google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.i"
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mickl\ClionProjects\NandComputer\google_tests\hardware_tests\AddersTest.cpp > CMakeFiles\google_Tests_run.dir\hardware_tests\AddersTest.cpp.i
+
+google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.s"
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mickl\ClionProjects\NandComputer\google_tests\hardware_tests\AddersTest.cpp -o CMakeFiles\google_Tests_run.dir\hardware_tests\AddersTest.cpp.s
 
 # Object files for target google_Tests_run
 google_Tests_run_OBJECTS = \
-"CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.obj"
+"CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.obj" \
+"CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.obj"
 
 # External object files for target google_Tests_run
 google_Tests_run_EXTERNAL_OBJECTS =
 
-google_tests/google_Tests_run.exe: google_tests/CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.obj
+google_tests/google_Tests_run.exe: google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.obj
+google_tests/google_Tests_run.exe: google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.obj
 google_tests/google_Tests_run.exe: google_tests/CMakeFiles/google_Tests_run.dir/build.make
 google_tests/google_Tests_run.exe: lib/libgtestd.a
 google_tests/google_Tests_run.exe: lib/libgtest_maind.a
@@ -85,7 +101,7 @@ google_tests/google_Tests_run.exe: lib/libgtestd.a
 google_tests/google_Tests_run.exe: google_tests/CMakeFiles/google_Tests_run.dir/linklibs.rsp
 google_tests/google_Tests_run.exe: google_tests/CMakeFiles/google_Tests_run.dir/objects1.rsp
 google_tests/google_Tests_run.exe: google_tests/CMakeFiles/google_Tests_run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable google_Tests_run.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable google_Tests_run.exe"
 	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\google_Tests_run.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

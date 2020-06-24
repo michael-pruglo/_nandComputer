@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware/BasicGatesTest.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/google_tests/CMakeFiles/google_Tests_run.dir/hardware/BasicGatesTest.cpp.obj"
+  "C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/AddersTest.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/AddersTest.cpp.obj"
+  "C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/BasicGatesTest.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/google_tests/CMakeFiles/google_Tests_run.dir/hardware_tests/BasicGatesTest.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

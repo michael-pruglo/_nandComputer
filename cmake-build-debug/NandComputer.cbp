@@ -384,10 +384,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware/BasicGatesStandards.hpp">
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/AddersStandards.hpp">
 			<Option target="google_Tests_run"/>
 		</Unit>
-		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware/BasicGatesTest.cpp">
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/AddersTest.cpp">
+			<Option target="google_Tests_run"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/BasicGatesStandards.hpp">
+			<Option target="google_Tests_run"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/BasicGatesTest.cpp">
+			<Option target="google_Tests_run"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests/hardware_tests/InputGenerator.hpp">
 			<Option target="google_Tests_run"/>
 		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests/lib/googlemock/src/gmock-all.cc">
