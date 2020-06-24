@@ -55,6 +55,30 @@ CMAKE_BINARY_DIR = C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -76,6 +100,28 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,194 +168,151 @@ NandComputer/fast:
 	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/build
 .PHONY : NandComputer/fast
 
-hardware/Adders.obj: hardware/Adders.cpp.obj
+#=============================================================================
+# Target rules for targets named google_Tests_run
 
-.PHONY : hardware/Adders.obj
+# Build rule for target.
+google_Tests_run: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 google_Tests_run
+.PHONY : google_Tests_run
 
-# target to build an object file
-hardware/Adders.cpp.obj:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj
-.PHONY : hardware/Adders.cpp.obj
+# fast build rule for target.
+google_Tests_run/fast:
+	$(MAKE) -f google_tests\CMakeFiles\google_Tests_run.dir\build.make google_tests/CMakeFiles/google_Tests_run.dir/build
+.PHONY : google_Tests_run/fast
 
-hardware/Adders.i: hardware/Adders.cpp.i
+#=============================================================================
+# Target rules for targets named gmock_main
 
-.PHONY : hardware/Adders.i
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 gmock_main
+.PHONY : gmock_main
 
-# target to preprocess a source file
-hardware/Adders.cpp.i:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/Adders.cpp.i
-.PHONY : hardware/Adders.cpp.i
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\build.make google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
 
-hardware/Adders.s: hardware/Adders.cpp.s
+#=============================================================================
+# Target rules for targets named gmock
 
-.PHONY : hardware/Adders.s
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 gmock
+.PHONY : gmock
 
-# target to generate assembly for a file
-hardware/Adders.cpp.s:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/Adders.cpp.s
-.PHONY : hardware/Adders.cpp.s
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f google_tests\lib\googlemock\CMakeFiles\gmock.dir\build.make google_tests/lib/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
 
-hardware/BasicGates.obj: hardware/BasicGates.cpp.obj
+#=============================================================================
+# Target rules for targets named gtest
 
-.PHONY : hardware/BasicGates.obj
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 gtest
+.PHONY : gtest
 
-# target to build an object file
-hardware/BasicGates.cpp.obj:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj
-.PHONY : hardware/BasicGates.cpp.obj
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f google_tests\lib\googletest\CMakeFiles\gtest.dir\build.make google_tests/lib/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
 
-hardware/BasicGates.i: hardware/BasicGates.cpp.i
+#=============================================================================
+# Target rules for targets named gtest_main
 
-.PHONY : hardware/BasicGates.i
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 gtest_main
+.PHONY : gtest_main
 
-# target to preprocess a source file
-hardware/BasicGates.cpp.i:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.i
-.PHONY : hardware/BasicGates.cpp.i
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make google_tests/lib/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
 
-hardware/BasicGates.s: hardware/BasicGates.cpp.s
+src/hardware/Adders.obj: src/hardware/Adders.cpp.obj
 
-.PHONY : hardware/BasicGates.s
-
-# target to generate assembly for a file
-hardware/BasicGates.cpp.s:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.s
-.PHONY : hardware/BasicGates.cpp.s
-
-main.obj: main.cpp.obj
-
-.PHONY : main.obj
-
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-tests/Random.obj: tests/Random.cpp.obj
-
-.PHONY : tests/Random.obj
+.PHONY : src/hardware/Adders.obj
 
 # target to build an object file
-tests/Random.cpp.obj:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/Random.cpp.obj
-.PHONY : tests/Random.cpp.obj
+src/hardware/Adders.cpp.obj:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/hardware/Adders.cpp.obj
+.PHONY : src/hardware/Adders.cpp.obj
 
-tests/Random.i: tests/Random.cpp.i
+src/hardware/Adders.i: src/hardware/Adders.cpp.i
 
-.PHONY : tests/Random.i
+.PHONY : src/hardware/Adders.i
 
 # target to preprocess a source file
-tests/Random.cpp.i:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/Random.cpp.i
-.PHONY : tests/Random.cpp.i
+src/hardware/Adders.cpp.i:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/hardware/Adders.cpp.i
+.PHONY : src/hardware/Adders.cpp.i
 
-tests/Random.s: tests/Random.cpp.s
+src/hardware/Adders.s: src/hardware/Adders.cpp.s
 
-.PHONY : tests/Random.s
+.PHONY : src/hardware/Adders.s
 
 # target to generate assembly for a file
-tests/Random.cpp.s:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/Random.cpp.s
-.PHONY : tests/Random.cpp.s
+src/hardware/Adders.cpp.s:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/hardware/Adders.cpp.s
+.PHONY : src/hardware/Adders.cpp.s
 
-tests/TestAdders.obj: tests/TestAdders.cpp.obj
+src/hardware/BasicGates.obj: src/hardware/BasicGates.cpp.obj
 
-.PHONY : tests/TestAdders.obj
+.PHONY : src/hardware/BasicGates.obj
 
 # target to build an object file
-tests/TestAdders.cpp.obj:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.obj
-.PHONY : tests/TestAdders.cpp.obj
+src/hardware/BasicGates.cpp.obj:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/hardware/BasicGates.cpp.obj
+.PHONY : src/hardware/BasicGates.cpp.obj
 
-tests/TestAdders.i: tests/TestAdders.cpp.i
+src/hardware/BasicGates.i: src/hardware/BasicGates.cpp.i
 
-.PHONY : tests/TestAdders.i
+.PHONY : src/hardware/BasicGates.i
 
 # target to preprocess a source file
-tests/TestAdders.cpp.i:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.i
-.PHONY : tests/TestAdders.cpp.i
+src/hardware/BasicGates.cpp.i:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/hardware/BasicGates.cpp.i
+.PHONY : src/hardware/BasicGates.cpp.i
 
-tests/TestAdders.s: tests/TestAdders.cpp.s
+src/hardware/BasicGates.s: src/hardware/BasicGates.cpp.s
 
-.PHONY : tests/TestAdders.s
+.PHONY : src/hardware/BasicGates.s
 
 # target to generate assembly for a file
-tests/TestAdders.cpp.s:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.s
-.PHONY : tests/TestAdders.cpp.s
+src/hardware/BasicGates.cpp.s:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/hardware/BasicGates.cpp.s
+.PHONY : src/hardware/BasicGates.cpp.s
 
-tests/TestBasicGates.obj: tests/TestBasicGates.cpp.obj
+src/main.obj: src/main.cpp.obj
 
-.PHONY : tests/TestBasicGates.obj
+.PHONY : src/main.obj
 
 # target to build an object file
-tests/TestBasicGates.cpp.obj:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj
-.PHONY : tests/TestBasicGates.cpp.obj
+src/main.cpp.obj:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
 
-tests/TestBasicGates.i: tests/TestBasicGates.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : tests/TestBasicGates.i
-
-# target to preprocess a source file
-tests/TestBasicGates.cpp.i:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.i
-.PHONY : tests/TestBasicGates.cpp.i
-
-tests/TestBasicGates.s: tests/TestBasicGates.cpp.s
-
-.PHONY : tests/TestBasicGates.s
-
-# target to generate assembly for a file
-tests/TestBasicGates.cpp.s:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.s
-.PHONY : tests/TestBasicGates.cpp.s
-
-tests/TestHardware.obj: tests/TestHardware.cpp.obj
-
-.PHONY : tests/TestHardware.obj
-
-# target to build an object file
-tests/TestHardware.cpp.obj:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.obj
-.PHONY : tests/TestHardware.cpp.obj
-
-tests/TestHardware.i: tests/TestHardware.cpp.i
-
-.PHONY : tests/TestHardware.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-tests/TestHardware.cpp.i:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.i
-.PHONY : tests/TestHardware.cpp.i
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-tests/TestHardware.s: tests/TestHardware.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : tests/TestHardware.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-tests/TestHardware.cpp.s:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.s
-.PHONY : tests/TestHardware.cpp.s
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -318,29 +321,26 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... NandComputer
+	@echo ... install/local
+	@echo ... install
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... hardware/Adders.obj
-	@echo ... hardware/Adders.i
-	@echo ... hardware/Adders.s
-	@echo ... hardware/BasicGates.obj
-	@echo ... hardware/BasicGates.i
-	@echo ... hardware/BasicGates.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
-	@echo ... tests/Random.obj
-	@echo ... tests/Random.i
-	@echo ... tests/Random.s
-	@echo ... tests/TestAdders.obj
-	@echo ... tests/TestAdders.i
-	@echo ... tests/TestAdders.s
-	@echo ... tests/TestBasicGates.obj
-	@echo ... tests/TestBasicGates.i
-	@echo ... tests/TestBasicGates.s
-	@echo ... tests/TestHardware.obj
-	@echo ... tests/TestHardware.i
-	@echo ... tests/TestHardware.s
+	@echo ... list_install_components
+	@echo ... install/strip
+	@echo ... google_Tests_run
+	@echo ... gmock_main
+	@echo ... gmock
+	@echo ... gtest
+	@echo ... gtest_main
+	@echo ... src/hardware/Adders.obj
+	@echo ... src/hardware/Adders.i
+	@echo ... src/hardware/Adders.s
+	@echo ... src/hardware/BasicGates.obj
+	@echo ... src/hardware/BasicGates.i
+	@echo ... src/hardware/BasicGates.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
 .PHONY : help
 
 

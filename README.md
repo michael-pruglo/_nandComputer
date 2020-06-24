@@ -8,11 +8,11 @@ Currently implemented chips: <p>
 `BasicGates`: Nand, Not, And, Or, Xor, Mux, DMux as well as their multi-bit and multi-way versions.<p>
 `Adders`: Half adder, Full adder, Add32.
 
-Testing capacities are provided as well.
-There are 2 parameters: `RANDOM_AMOUNT_N`, which specifies how thoroughly the functions are tested (higher = more tests),
-and `EXHAUSTIVE_TIME_N`, which allows to measure time more precisely (higher = more precise).<p>
-
-Current results: <p>
+## Testing
+Correctness is tested using Google Tests. <p>
+![current results](docs/assets/gtests_screenshot.JPG) <p>
+Performance is [planned to be] tested using Google Benchmark. <p>
+Old results: <p>
 ```
 TestBasicGates::full scan:
         testing _nand: OK.      testing time:         52 ns

@@ -1,1 +1,1 @@
-CMakeFiles/NandComputer.dir/main.cpp.obj CMakeFiles/NandComputer.dir/tests/Random.cpp.obj CMakeFiles/NandComputer.dir/hardware/Adders.cpp.obj CMakeFiles/NandComputer.dir/hardware/BasicGates.cpp.obj CMakeFiles/NandComputer.dir/tests/TestBasicGates.cpp.obj CMakeFiles/NandComputer.dir/tests/TestAdders.cpp.obj CMakeFiles/NandComputer.dir/tests/TestHardware.cpp.obj
+CMakeFiles/NandComputer.dir/src/main.cpp.obj CMakeFiles/NandComputer.dir/src/hardware/Adders.cpp.obj CMakeFiles/NandComputer.dir/src/hardware/BasicGates.cpp.obj
