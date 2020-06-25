@@ -1,4 +1,10 @@
 "C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\mickl\ClionProjects\NandComputer
+-- git Version: v1.5.0-39b6e703
+-- Version: 1.5.0
+-- Performing Test HAVE_STD_REGEX -- success
+-- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_STEADY_CLOCK -- success
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug

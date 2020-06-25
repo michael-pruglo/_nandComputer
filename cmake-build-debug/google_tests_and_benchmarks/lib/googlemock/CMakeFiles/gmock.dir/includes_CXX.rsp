@@ -1,0 +1,1 @@
+-IC:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/lib/googlemock/include -IC:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/lib/googlemock -isystem C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/lib/googletest/include -isystem C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/lib/googletest 

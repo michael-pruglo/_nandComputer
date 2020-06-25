@@ -11,38 +11,5 @@ Currently implemented chips: <p>
 ## Testing
 Correctness is tested using Google Tests. <p>
 ![current results](docs/assets/gtests_screenshot.JPG) <p>
-Performance is [planned to be] tested using Google Benchmark. <p>
-Old results: <p>
-```
-TestBasicGates::full scan:
-        testing _nand: OK.      testing time:         52 ns
-        testing _not: OK.       testing time:         54 ns
-        testing _and: OK.       testing time:         56 ns
-        testing _or: OK.        testing time:         61 ns
-        testing _xor: OK.       testing time:         71 ns
-        testing _mux: OK.       testing time:         64 ns
-        testing _dmux: OK.      testing time:         68 ns
-        testing _not32: OK.     testing time:        166 ns
-        testing _and32: OK.     testing time:        293 ns
-        testing _or32: OK.      testing time:        397 ns
-        testing _mux32: OK.     testing time:        423 ns
-        testing _and8way: OK.   testing time:        112 ns
-        testing _or8way: OK.    testing time:        120 ns
-        testing _mux4way32: OK. testing time:       1174 ns
-        testing _mux8way32: OK. testing time:       2670 ns
-        testing _dmux4way: OK.  testing time:        128 ns
-        testing _dmux8way: OK.  testing time:        251 ns
-====TestBasicGates::full scan finished====
-    # of tests passed: 17
-```
-```
-TestAdders::full scan:
-        testing _half_adder: OK.testing time:         90 ns
-        testing _full_adder:
-                v1:  OK.        testing time:        131 ns
-                v2:  OK.        testing time:        130 ns
-        testing _add32:
-                v1:  OK.        testing time:       2785 ns
-====TestAdders::full scan finished====
-    # of tests passed: 3
-```
+Performance is tested using Google Benchmark. <p>
+![current results](docs/assets/gbenchmark_screenshot.JPG) <p>

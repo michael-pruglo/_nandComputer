@@ -556,3 +556,275 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_STD_CXX11 succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_8b044/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_8b044.dir\build.make CMakeFiles/cmTC_8b044.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8b044.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -DHAVE_CXX_FLAG_STD_CXX11  -std=c++11   -std=c++11 -o CMakeFiles\cmTC_8b044.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_8b044.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_8b044.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_8b044.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_8b044.dir/objects.a @CMakeFiles\cmTC_8b044.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe  -DHAVE_CXX_FLAG_STD_CXX11  -std=c++11    -Wl,--whole-archive CMakeFiles\cmTC_8b044.dir/objects.a -Wl,--no-whole-archive  -o cmTC_8b044.exe -Wl,--out-implib,libcmTC_8b044.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_8b044.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WALL succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_e8e03/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_e8e03.dir\build.make CMakeFiles/cmTC_e8e03.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e8e03.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11 -DHAVE_CXX_FLAG_WALL  -Wall   -Wall -o CMakeFiles\cmTC_e8e03.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_e8e03.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_e8e03.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_e8e03.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_e8e03.dir/objects.a @CMakeFiles\cmTC_e8e03.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe   -std=c++11 -DHAVE_CXX_FLAG_WALL  -Wall    -Wl,--whole-archive CMakeFiles\cmTC_e8e03.dir/objects.a -Wl,--no-whole-archive  -o cmTC_e8e03.exe -Wl,--out-implib,libcmTC_e8e03.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_e8e03.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WEXTRA succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_171db/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_171db.dir\build.make CMakeFiles/cmTC_171db.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_171db.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall -DHAVE_CXX_FLAG_WEXTRA  -Wextra   -Wextra -o CMakeFiles\cmTC_171db.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_171db.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_171db.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_171db.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_171db.dir/objects.a @CMakeFiles\cmTC_171db.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe   -std=c++11  -Wall -DHAVE_CXX_FLAG_WEXTRA  -Wextra    -Wl,--whole-archive CMakeFiles\cmTC_171db.dir/objects.a -Wl,--no-whole-archive  -o cmTC_171db.exe -Wl,--out-implib,libcmTC_171db.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_171db.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHADOW succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_53c76/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_53c76.dir\build.make CMakeFiles/cmTC_53c76.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_53c76.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra -DHAVE_CXX_FLAG_WSHADOW  -Wshadow   -Wshadow -o CMakeFiles\cmTC_53c76.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_53c76.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_53c76.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_53c76.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_53c76.dir/objects.a @CMakeFiles\cmTC_53c76.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe   -std=c++11  -Wall  -Wextra -DHAVE_CXX_FLAG_WSHADOW  -Wshadow    -Wl,--whole-archive CMakeFiles\cmTC_53c76.dir/objects.a -Wl,--no-whole-archive  -o cmTC_53c76.exe -Wl,--out-implib,libcmTC_53c76.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_53c76.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WERROR succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_f0f44/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_f0f44.dir\build.make CMakeFiles/cmTC_f0f44.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f0f44.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow -DHAVE_CXX_FLAG_WERROR  -Werror   -Werror -o CMakeFiles\cmTC_f0f44.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_f0f44.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_f0f44.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_f0f44.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_f0f44.dir/objects.a @CMakeFiles\cmTC_f0f44.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe   -std=c++11  -Wall  -Wextra  -Wshadow -DHAVE_CXX_FLAG_WERROR  -Werror    -Wl,--whole-archive CMakeFiles\cmTC_f0f44.dir/objects.a -Wl,--no-whole-archive  -o cmTC_f0f44.exe -Wl,--out-implib,libcmTC_f0f44.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_f0f44.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_FSTRICT_ALIASING succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_c8673/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_c8673.dir\build.make CMakeFiles/cmTC_c8673.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c8673.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow -DHAVE_CXX_FLAG_FSTRICT_ALIASING  -fstrict-aliasing   -fstrict-aliasing -o CMakeFiles\cmTC_c8673.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_c8673.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_c8673.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_c8673.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_c8673.dir/objects.a @CMakeFiles\cmTC_c8673.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe   -std=c++11  -Wall  -Wextra  -Wshadow -DHAVE_CXX_FLAG_FSTRICT_ALIASING  -fstrict-aliasing    -Wl,--whole-archive CMakeFiles\cmTC_c8673.dir/objects.a -Wl,--no-whole-archive  -o cmTC_c8673.exe -Wl,--out-implib,libcmTC_c8673.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_c8673.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_47ecb/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_47ecb.dir\build.make CMakeFiles/cmTC_47ecb.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_47ecb.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing -DHAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS  -Wno-deprecated-declarations   -Wno-deprecated-declarations -o CMakeFiles\cmTC_47ecb.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_47ecb.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_47ecb.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_47ecb.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_47ecb.dir/objects.a @CMakeFiles\cmTC_47ecb.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe   -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing -DHAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS  -Wno-deprecated-declarations    -Wl,--whole-archive CMakeFiles\cmTC_47ecb.dir/objects.a -Wl,--no-whole-archive  -o cmTC_47ecb.exe -Wl,--out-implib,libcmTC_47ecb.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_47ecb.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WNO_DEPRECATED succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_b1a80/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_b1a80.dir\build.make CMakeFiles/cmTC_b1a80.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b1a80.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations -DHAVE_CXX_FLAG_WNO_DEPRECATED  -Wno-deprecated   -Wno-deprecated -o CMakeFiles\cmTC_b1a80.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_b1a80.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_b1a80.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_b1a80.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_b1a80.dir/objects.a @CMakeFiles\cmTC_b1a80.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe   -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations -DHAVE_CXX_FLAG_WNO_DEPRECATED  -Wno-deprecated    -Wl,--whole-archive CMakeFiles\cmTC_b1a80.dir/objects.a -Wl,--no-whole-archive  -o cmTC_b1a80.exe -Wl,--out-implib,libcmTC_b1a80.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_b1a80.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSTRICT_ALIASING succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_1edf0/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_1edf0.dir\build.make CMakeFiles/cmTC_1edf0.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1edf0.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations -DHAVE_CXX_FLAG_WSTRICT_ALIASING  -Wstrict-aliasing   -Wstrict-aliasing -o CMakeFiles\cmTC_1edf0.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_1edf0.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_1edf0.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_1edf0.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_1edf0.dir/objects.a @CMakeFiles\cmTC_1edf0.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe   -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations -DHAVE_CXX_FLAG_WSTRICT_ALIASING  -Wstrict-aliasing    -Wl,--whole-archive CMakeFiles\cmTC_1edf0.dir/objects.a -Wl,--no-whole-archive  -o cmTC_1edf0.exe -Wl,--out-implib,libcmTC_1edf0.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_1edf0.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_COVERAGE succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_1b112/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_1b112.dir\build.make CMakeFiles/cmTC_1b112.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1b112.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_COVERAGE  --coverage   --coverage -o CMakeFiles\cmTC_1b112.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_1b112.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_1b112.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_1b112.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_1b112.dir/objects.a @CMakeFiles\cmTC_1b112.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe   -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_COVERAGE  --coverage    -Wl,--whole-archive CMakeFiles\cmTC_1b112.dir/objects.a -Wl,--no-whole-archive  -o cmTC_1b112.exe -Wl,--out-implib,libcmTC_1b112.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_1b112.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_5b1e4/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_5b1e4.dir\build.make CMakeFiles/cmTC_5b1e4.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5b1e4.dir/CheckIncludeFile.c.obj
+C:\msys64\mingw64\bin\gcc.exe    -o CMakeFiles\cmTC_5b1e4.dir\CheckIncludeFile.c.obj   -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_5b1e4.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_5b1e4.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_5b1e4.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_5b1e4.dir/objects.a @CMakeFiles\cmTC_5b1e4.dir\objects1.rsp
+C:\msys64\mingw64\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_5b1e4.dir/objects.a -Wl,--no-whole-archive  -o cmTC_5b1e4.exe -Wl,--out-implib,libcmTC_5b1e4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_5b1e4.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_80296/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_80296.dir\build.make CMakeFiles/cmTC_80296.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_80296.dir/src.c.obj
+C:\msys64\mingw64\bin\gcc.exe   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\cmTC_80296.dir\src.c.obj   -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_80296.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_80296.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_80296.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_80296.dir/objects.a @CMakeFiles\cmTC_80296.dir\objects1.rsp
+C:\msys64\mingw64\bin\gcc.exe  -DCMAKE_HAVE_LIBC_PTHREAD    -Wl,--whole-archive CMakeFiles\cmTC_80296.dir/objects.a -Wl,--no-whole-archive  -o cmTC_80296.exe -Wl,--out-implib,libcmTC_80296.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_80296.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test BENCHMARK_HAS_O3_FLAG succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_5c4da/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_5c4da.dir\build.make CMakeFiles/cmTC_5c4da.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5c4da.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DBENCHMARK_HAS_O3_FLAG   -O3 -o CMakeFiles\cmTC_5c4da.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_5c4da.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_5c4da.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_5c4da.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_5c4da.dir/objects.a @CMakeFiles\cmTC_5c4da.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe   -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DBENCHMARK_HAS_O3_FLAG    -Wl,--whole-archive CMakeFiles\cmTC_5c4da.dir/objects.a -Wl,--no-whole-archive  -o cmTC_5c4da.exe -Wl,--out-implib,libcmTC_5c4da.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_5c4da.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test BENCHMARK_HAS_CXX03_FLAG succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_d919b/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_d919b.dir\build.make CMakeFiles/cmTC_d919b.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d919b.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DBENCHMARK_HAS_CXX03_FLAG   -std=c++03 -o CMakeFiles\cmTC_d919b.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_d919b.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_d919b.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_d919b.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_d919b.dir/objects.a @CMakeFiles\cmTC_d919b.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe   -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DBENCHMARK_HAS_CXX03_FLAG    -Wl,--whole-archive CMakeFiles\cmTC_d919b.dir/objects.a -Wl,--no-whole-archive  -o cmTC_d919b.exe -Wl,--out-implib,libcmTC_d919b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_d919b.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test BENCHMARK_HAS_WNO_ODR succeeded with the following output:
+Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_5cf74/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_5cf74.dir\build.make CMakeFiles/cmTC_5cf74.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5cf74.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DBENCHMARK_HAS_WNO_ODR   -Wno-odr -o CMakeFiles\cmTC_5cf74.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_5cf74.exe
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_5cf74.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_5cf74.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_5cf74.dir/objects.a @CMakeFiles\cmTC_5cf74.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe   -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DBENCHMARK_HAS_WNO_ODR    -Wl,--whole-archive CMakeFiles\cmTC_5cf74.dir/objects.a -Wl,--no-whole-archive  -o cmTC_5cf74.exe -Wl,--out-implib,libcmTC_5cf74.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_5cf74.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }

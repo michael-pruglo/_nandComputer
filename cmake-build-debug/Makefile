@@ -169,17 +169,30 @@ NandComputer/fast:
 .PHONY : NandComputer/fast
 
 #=============================================================================
-# Target rules for targets named google_Tests_run
+# Target rules for targets named google_benchmark_run
 
 # Build rule for target.
-google_Tests_run: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 google_Tests_run
-.PHONY : google_Tests_run
+google_benchmark_run: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 google_benchmark_run
+.PHONY : google_benchmark_run
 
 # fast build rule for target.
-google_Tests_run/fast:
-	$(MAKE) -f google_tests\CMakeFiles\google_Tests_run.dir\build.make google_tests/CMakeFiles/google_Tests_run.dir/build
-.PHONY : google_Tests_run/fast
+google_benchmark_run/fast:
+	$(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/build
+.PHONY : google_benchmark_run/fast
+
+#=============================================================================
+# Target rules for targets named google_test
+
+# Build rule for target.
+google_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 google_test
+.PHONY : google_test
+
+# fast build rule for target.
+google_test/fast:
+	$(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_test.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_test.dir/build
+.PHONY : google_test/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -191,7 +204,7 @@ gmock_main: cmake_check_build_system
 
 # fast build rule for target.
 gmock_main/fast:
-	$(MAKE) -f google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\build.make google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build
+	$(MAKE) -f google_tests_and_benchmarks\lib\googlemock\CMakeFiles\gmock_main.dir\build.make google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/build
 .PHONY : gmock_main/fast
 
 #=============================================================================
@@ -204,7 +217,7 @@ gmock: cmake_check_build_system
 
 # fast build rule for target.
 gmock/fast:
-	$(MAKE) -f google_tests\lib\googlemock\CMakeFiles\gmock.dir\build.make google_tests/lib/googlemock/CMakeFiles/gmock.dir/build
+	$(MAKE) -f google_tests_and_benchmarks\lib\googlemock\CMakeFiles\gmock.dir\build.make google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/build
 .PHONY : gmock/fast
 
 #=============================================================================
@@ -217,7 +230,7 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) -f google_tests\lib\googletest\CMakeFiles\gtest.dir\build.make google_tests/lib/googletest/CMakeFiles/gtest.dir/build
+	$(MAKE) -f google_tests_and_benchmarks\lib\googletest\CMakeFiles\gtest.dir\build.make google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
 #=============================================================================
@@ -230,8 +243,411 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) -f google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make google_tests/lib/googletest/CMakeFiles/gtest_main.dir/build
+	$(MAKE) -f google_tests_and_benchmarks\lib\googletest\CMakeFiles\gtest_main.dir\build.make google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named benchmark_main
+
+# Build rule for target.
+benchmark_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 benchmark_main
+.PHONY : benchmark_main
+
+# fast build rule for target.
+benchmark_main/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\src\CMakeFiles\benchmark_main.dir\build.make _deps/googlebenchmark-build/src/CMakeFiles/benchmark_main.dir/build
+.PHONY : benchmark_main/fast
+
+#=============================================================================
+# Target rules for targets named benchmark
+
+# Build rule for target.
+benchmark: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 benchmark
+.PHONY : benchmark
+
+# fast build rule for target.
+benchmark/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\src\CMakeFiles\benchmark.dir\build.make _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/build
+.PHONY : benchmark/fast
+
+#=============================================================================
+# Target rules for targets named basic_test
+
+# Build rule for target.
+basic_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 basic_test
+.PHONY : basic_test
+
+# fast build rule for target.
+basic_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\basic_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/basic_test.dir/build
+.PHONY : basic_test/fast
+
+#=============================================================================
+# Target rules for targets named options_test
+
+# Build rule for target.
+options_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 options_test
+.PHONY : options_test
+
+# fast build rule for target.
+options_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\options_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/options_test.dir/build
+.PHONY : options_test/fast
+
+#=============================================================================
+# Target rules for targets named output_test_helper
+
+# Build rule for target.
+output_test_helper: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 output_test_helper
+.PHONY : output_test_helper
+
+# fast build rule for target.
+output_test_helper/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\output_test_helper.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/build
+.PHONY : output_test_helper/fast
+
+#=============================================================================
+# Target rules for targets named user_counters_tabular_test
+
+# Build rule for target.
+user_counters_tabular_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 user_counters_tabular_test
+.PHONY : user_counters_tabular_test
+
+# fast build rule for target.
+user_counters_tabular_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\user_counters_tabular_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/user_counters_tabular_test.dir/build
+.PHONY : user_counters_tabular_test/fast
+
+#=============================================================================
+# Target rules for targets named benchmark_test
+
+# Build rule for target.
+benchmark_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 benchmark_test
+.PHONY : benchmark_test
+
+# fast build rule for target.
+benchmark_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\benchmark_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/benchmark_test.dir/build
+.PHONY : benchmark_test/fast
+
+#=============================================================================
+# Target rules for targets named filter_test
+
+# Build rule for target.
+filter_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 filter_test
+.PHONY : filter_test
+
+# fast build rule for target.
+filter_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\filter_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/filter_test.dir/build
+.PHONY : filter_test/fast
+
+#=============================================================================
+# Target rules for targets named diagnostics_test
+
+# Build rule for target.
+diagnostics_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 diagnostics_test
+.PHONY : diagnostics_test
+
+# fast build rule for target.
+diagnostics_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\diagnostics_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/diagnostics_test.dir/build
+.PHONY : diagnostics_test/fast
+
+#=============================================================================
+# Target rules for targets named donotoptimize_test
+
+# Build rule for target.
+donotoptimize_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 donotoptimize_test
+.PHONY : donotoptimize_test
+
+# fast build rule for target.
+donotoptimize_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\donotoptimize_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/donotoptimize_test.dir/build
+.PHONY : donotoptimize_test/fast
+
+#=============================================================================
+# Target rules for targets named skip_with_error_test
+
+# Build rule for target.
+skip_with_error_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 skip_with_error_test
+.PHONY : skip_with_error_test
+
+# fast build rule for target.
+skip_with_error_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\skip_with_error_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/skip_with_error_test.dir/build
+.PHONY : skip_with_error_test/fast
+
+#=============================================================================
+# Target rules for targets named memory_manager_test
+
+# Build rule for target.
+memory_manager_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 memory_manager_test
+.PHONY : memory_manager_test
+
+# fast build rule for target.
+memory_manager_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\memory_manager_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/memory_manager_test.dir/build
+.PHONY : memory_manager_test/fast
+
+#=============================================================================
+# Target rules for targets named fixture_test
+
+# Build rule for target.
+fixture_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 fixture_test
+.PHONY : fixture_test
+
+# fast build rule for target.
+fixture_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\fixture_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/fixture_test.dir/build
+.PHONY : fixture_test/fast
+
+#=============================================================================
+# Target rules for targets named register_benchmark_test
+
+# Build rule for target.
+register_benchmark_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 register_benchmark_test
+.PHONY : register_benchmark_test
+
+# fast build rule for target.
+register_benchmark_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\register_benchmark_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/register_benchmark_test.dir/build
+.PHONY : register_benchmark_test/fast
+
+#=============================================================================
+# Target rules for targets named benchmark_gtest
+
+# Build rule for target.
+benchmark_gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 benchmark_gtest
+.PHONY : benchmark_gtest
+
+# fast build rule for target.
+benchmark_gtest/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\benchmark_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/build
+.PHONY : benchmark_gtest/fast
+
+#=============================================================================
+# Target rules for targets named map_test
+
+# Build rule for target.
+map_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 map_test
+.PHONY : map_test
+
+# fast build rule for target.
+map_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\map_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/map_test.dir/build
+.PHONY : map_test/fast
+
+#=============================================================================
+# Target rules for targets named multiple_ranges_test
+
+# Build rule for target.
+multiple_ranges_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 multiple_ranges_test
+.PHONY : multiple_ranges_test
+
+# fast build rule for target.
+multiple_ranges_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\multiple_ranges_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/multiple_ranges_test.dir/build
+.PHONY : multiple_ranges_test/fast
+
+#=============================================================================
+# Target rules for targets named templated_fixture_test
+
+# Build rule for target.
+templated_fixture_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 templated_fixture_test
+.PHONY : templated_fixture_test
+
+# fast build rule for target.
+templated_fixture_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\templated_fixture_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/templated_fixture_test.dir/build
+.PHONY : templated_fixture_test/fast
+
+#=============================================================================
+# Target rules for targets named link_main_test
+
+# Build rule for target.
+link_main_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 link_main_test
+.PHONY : link_main_test
+
+# fast build rule for target.
+link_main_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\link_main_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/link_main_test.dir/build
+.PHONY : link_main_test/fast
+
+#=============================================================================
+# Target rules for targets named reporter_output_test
+
+# Build rule for target.
+reporter_output_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 reporter_output_test
+.PHONY : reporter_output_test
+
+# fast build rule for target.
+reporter_output_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\reporter_output_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/reporter_output_test.dir/build
+.PHONY : reporter_output_test/fast
+
+#=============================================================================
+# Target rules for targets named user_counters_test
+
+# Build rule for target.
+user_counters_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 user_counters_test
+.PHONY : user_counters_test
+
+# fast build rule for target.
+user_counters_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\user_counters_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/user_counters_test.dir/build
+.PHONY : user_counters_test/fast
+
+#=============================================================================
+# Target rules for targets named statistics_gtest
+
+# Build rule for target.
+statistics_gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 statistics_gtest
+.PHONY : statistics_gtest
+
+# fast build rule for target.
+statistics_gtest/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\statistics_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/build
+.PHONY : statistics_gtest/fast
+
+#=============================================================================
+# Target rules for targets named internal_threading_test
+
+# Build rule for target.
+internal_threading_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 internal_threading_test
+.PHONY : internal_threading_test
+
+# fast build rule for target.
+internal_threading_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\internal_threading_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/internal_threading_test.dir/build
+.PHONY : internal_threading_test/fast
+
+#=============================================================================
+# Target rules for targets named report_aggregates_only_test
+
+# Build rule for target.
+report_aggregates_only_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 report_aggregates_only_test
+.PHONY : report_aggregates_only_test
+
+# fast build rule for target.
+report_aggregates_only_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\report_aggregates_only_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/report_aggregates_only_test.dir/build
+.PHONY : report_aggregates_only_test/fast
+
+#=============================================================================
+# Target rules for targets named complexity_test
+
+# Build rule for target.
+complexity_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 complexity_test
+.PHONY : complexity_test
+
+# fast build rule for target.
+complexity_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\complexity_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/complexity_test.dir/build
+.PHONY : complexity_test/fast
+
+#=============================================================================
+# Target rules for targets named display_aggregates_only_test
+
+# Build rule for target.
+display_aggregates_only_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 display_aggregates_only_test
+.PHONY : display_aggregates_only_test
+
+# fast build rule for target.
+display_aggregates_only_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\display_aggregates_only_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/display_aggregates_only_test.dir/build
+.PHONY : display_aggregates_only_test/fast
+
+#=============================================================================
+# Target rules for targets named user_counters_thousands_test
+
+# Build rule for target.
+user_counters_thousands_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 user_counters_thousands_test
+.PHONY : user_counters_thousands_test
+
+# fast build rule for target.
+user_counters_thousands_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\user_counters_thousands_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/user_counters_thousands_test.dir/build
+.PHONY : user_counters_thousands_test/fast
+
+#=============================================================================
+# Target rules for targets named cxx03_test
+
+# Build rule for target.
+cxx03_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 cxx03_test
+.PHONY : cxx03_test
+
+# fast build rule for target.
+cxx03_test/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\cxx03_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/cxx03_test.dir/build
+.PHONY : cxx03_test/fast
+
+#=============================================================================
+# Target rules for targets named benchmark_name_gtest
+
+# Build rule for target.
+benchmark_name_gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 benchmark_name_gtest
+.PHONY : benchmark_name_gtest
+
+# fast build rule for target.
+benchmark_name_gtest/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\benchmark_name_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/build
+.PHONY : benchmark_name_gtest/fast
+
+#=============================================================================
+# Target rules for targets named commandlineflags_gtest
+
+# Build rule for target.
+commandlineflags_gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 commandlineflags_gtest
+.PHONY : commandlineflags_gtest
+
+# fast build rule for target.
+commandlineflags_gtest/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\commandlineflags_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/build
+.PHONY : commandlineflags_gtest/fast
+
+#=============================================================================
+# Target rules for targets named string_util_gtest
+
+# Build rule for target.
+string_util_gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 string_util_gtest
+.PHONY : string_util_gtest
+
+# fast build rule for target.
+string_util_gtest/fast:
+	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\string_util_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/build
+.PHONY : string_util_gtest/fast
 
 src/hardware/Adders.obj: src/hardware/Adders.cpp.obj
 
@@ -327,11 +743,43 @@ help:
 	@echo ... rebuild_cache
 	@echo ... list_install_components
 	@echo ... install/strip
-	@echo ... google_Tests_run
+	@echo ... google_benchmark_run
+	@echo ... google_test
 	@echo ... gmock_main
 	@echo ... gmock
 	@echo ... gtest
 	@echo ... gtest_main
+	@echo ... benchmark_main
+	@echo ... benchmark
+	@echo ... basic_test
+	@echo ... options_test
+	@echo ... output_test_helper
+	@echo ... user_counters_tabular_test
+	@echo ... benchmark_test
+	@echo ... filter_test
+	@echo ... diagnostics_test
+	@echo ... donotoptimize_test
+	@echo ... skip_with_error_test
+	@echo ... memory_manager_test
+	@echo ... fixture_test
+	@echo ... register_benchmark_test
+	@echo ... benchmark_gtest
+	@echo ... map_test
+	@echo ... multiple_ranges_test
+	@echo ... templated_fixture_test
+	@echo ... link_main_test
+	@echo ... reporter_output_test
+	@echo ... user_counters_test
+	@echo ... statistics_gtest
+	@echo ... internal_threading_test
+	@echo ... report_aggregates_only_test
+	@echo ... complexity_test
+	@echo ... display_aggregates_only_test
+	@echo ... user_counters_thousands_test
+	@echo ... cxx03_test
+	@echo ... benchmark_name_gtest
+	@echo ... commandlineflags_gtest
+	@echo ... string_util_gtest
 	@echo ... src/hardware/Adders.obj
 	@echo ... src/hardware/Adders.i
 	@echo ... src/hardware/Adders.s
