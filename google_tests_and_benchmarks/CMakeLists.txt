@@ -4,7 +4,7 @@ add_subdirectory(lib)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 include_directories(${NandComputer_SOURCE_DIR})
 
-add_executable(google_benchmark_run hardware_benchmarks/BasicGatesBenchmark.cpp hardware_benchmarks/AddersBenchmark.cpp hardware_benchmarks/HardwareBenchmark.cpp)
+add_executable(google_benchmark_run hardware_benchmarks/BasicGatesBenchmark.cpp hardware_benchmarks/AddersBenchmark.cpp hardware_benchmarks/HardwareBenchmarkManager.hpp BenchmarkMain.cpp)
 target_link_libraries(google_benchmark_run gtest gtest_main)
 
 include(FetchContent)

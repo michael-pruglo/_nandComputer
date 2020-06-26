@@ -185,6 +185,33 @@ google_test/fast:
 	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_test.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_test.dir/build
 .PHONY : google_test/fast
 
+BenchmarkMain.obj: BenchmarkMain.cpp.obj
+
+.PHONY : BenchmarkMain.obj
+
+# target to build an object file
+BenchmarkMain.cpp.obj:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/BenchmarkMain.cpp.obj
+.PHONY : BenchmarkMain.cpp.obj
+
+BenchmarkMain.i: BenchmarkMain.cpp.i
+
+.PHONY : BenchmarkMain.i
+
+# target to preprocess a source file
+BenchmarkMain.cpp.i:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/BenchmarkMain.cpp.i
+.PHONY : BenchmarkMain.cpp.i
+
+BenchmarkMain.s: BenchmarkMain.cpp.s
+
+.PHONY : BenchmarkMain.s
+
+# target to generate assembly for a file
+BenchmarkMain.cpp.s:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/BenchmarkMain.cpp.s
+.PHONY : BenchmarkMain.cpp.s
+
 hardware_benchmarks/AddersBenchmark.obj: hardware_benchmarks/AddersBenchmark.cpp.obj
 
 .PHONY : hardware_benchmarks/AddersBenchmark.obj
@@ -334,6 +361,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... list_install_components
 	@echo ... install/strip
+	@echo ... BenchmarkMain.obj
+	@echo ... BenchmarkMain.i
+	@echo ... BenchmarkMain.s
 	@echo ... hardware_benchmarks/AddersBenchmark.obj
 	@echo ... hardware_benchmarks/AddersBenchmark.i
 	@echo ... hardware_benchmarks/AddersBenchmark.s

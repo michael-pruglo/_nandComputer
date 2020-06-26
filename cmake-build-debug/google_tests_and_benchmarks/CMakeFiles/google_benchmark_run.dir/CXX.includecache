@@ -23,22 +23,20 @@ cstdint
 -
 
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/AddersBenchmark.cpp
-benchmark/benchmark.h
--
+HardwareBenchmarkManager.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
 src/hardware/Adders.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/src/hardware/Adders.hpp
 
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/BasicGatesBenchmark.cpp
-benchmark/benchmark.h
--
+HardwareBenchmarkManager.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
 src/hardware/BasicGates.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/src/hardware/BasicGates.hpp
 
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmark.cpp
-AddersBenchmark.cpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/AddersBenchmark.cpp
-BasicGatesBenchmark.cpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/BasicGatesBenchmark.cpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
+benchmark/benchmark.h
+-
 
 _deps/googlebenchmark-src/include/benchmark/benchmark.h
 stdint.h

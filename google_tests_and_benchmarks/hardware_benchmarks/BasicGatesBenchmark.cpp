@@ -1,4 +1,4 @@
-#include <benchmark/benchmark.h>
+#include "HardwareBenchmarkManager.hpp"
 #include "src/hardware/BasicGates.hpp"
 
 static void BM_BasicGates_nand      (benchmark::State& state) { for (auto _ : state) { Hardware::BasicGates::_nand(0, 0); } }
@@ -18,3 +18,24 @@ static void BM_BasicGates_mux4way32 (benchmark::State& state) { for (auto _ : st
 static void BM_BasicGates_mux8way32 (benchmark::State& state) { for (auto _ : state) { Hardware::BasicGates::_mux8way32(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0); } }
 static void BM_BasicGates_dmux4way  (benchmark::State& state) { for (auto _ : state) { Hardware::BasicGates::_dmux4way(0, 0, 0); } }
 static void BM_BasicGates_dmux8way  (benchmark::State& state) { for (auto _ : state) { Hardware::BasicGates::_dmux8way(0, 0, 0, 0); } }
+
+
+#ifdef REGISTER_BM_BASICGATES
+    BENCHMARK(BM_BasicGates_nand);
+    BENCHMARK(BM_BasicGates_not);
+    BENCHMARK(BM_BasicGates_and);
+    BENCHMARK(BM_BasicGates_or);
+    BENCHMARK(BM_BasicGates_xor);
+    BENCHMARK(BM_BasicGates_mux);
+    BENCHMARK(BM_BasicGates_dmux);
+    BENCHMARK(BM_BasicGates_not32);
+    BENCHMARK(BM_BasicGates_and32);
+    BENCHMARK(BM_BasicGates_or32);
+    BENCHMARK(BM_BasicGates_mux32);
+    BENCHMARK(BM_BasicGates_and8way);
+    BENCHMARK(BM_BasicGates_or8way);
+    BENCHMARK(BM_BasicGates_mux4way32);
+    BENCHMARK(BM_BasicGates_mux8way32);
+    BENCHMARK(BM_BasicGates_dmux4way);
+    BENCHMARK(BM_BasicGates_dmux8way);
+#endif
