@@ -26,6 +26,7 @@ google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/AddersTest
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/AddersTest.cpp.obj: ../src/hardware/Hardware.hpp
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/AddersTest.cpp.obj: ../google_tests_and_benchmarks/hardware_tests/AddersStandards.hpp
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/AddersTest.cpp.obj: ../google_tests_and_benchmarks/hardware_tests/AddersTest.cpp
+google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/AddersTest.cpp.obj: ../google_tests_and_benchmarks/hardware_tests/HardwareTestManager.hpp
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/AddersTest.cpp.obj: ../google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp
 
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/BasicGatesTest.cpp.obj: ../google_tests_and_benchmarks/lib/googletest/include/gtest/gtest-death-test.h
@@ -52,5 +53,6 @@ google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/BasicGates
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/BasicGatesTest.cpp.obj: ../src/hardware/Hardware.hpp
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/BasicGatesTest.cpp.obj: ../google_tests_and_benchmarks/hardware_tests/BasicGatesStandards.hpp
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/BasicGatesTest.cpp.obj: ../google_tests_and_benchmarks/hardware_tests/BasicGatesTest.cpp
+google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/BasicGatesTest.cpp.obj: ../google_tests_and_benchmarks/hardware_tests/HardwareTestManager.hpp
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/BasicGatesTest.cpp.obj: ../google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp
 

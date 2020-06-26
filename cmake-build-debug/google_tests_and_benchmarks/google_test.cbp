@@ -2443,9 +2443,6 @@
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/BasicGatesBenchmark.cpp">
 			<Option target="google_benchmark_run"/>
 		</Unit>
-		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmark.cpp">
-			<Option target="google_benchmark_run"/>
-		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp">
 			<Option target="google_benchmark_run"/>
 		</Unit>
@@ -2459,6 +2456,9 @@
 			<Option target="google_test"/>
 		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/BasicGatesTest.cpp">
+			<Option target="google_test"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/HardwareTestManager.hpp">
 			<Option target="google_test"/>
 		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp">

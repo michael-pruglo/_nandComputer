@@ -266,33 +266,6 @@ hardware_benchmarks/BasicGatesBenchmark.cpp.s:
 	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/BasicGatesBenchmark.cpp.s
 .PHONY : hardware_benchmarks/BasicGatesBenchmark.cpp.s
 
-hardware_benchmarks/HardwareBenchmark.obj: hardware_benchmarks/HardwareBenchmark.cpp.obj
-
-.PHONY : hardware_benchmarks/HardwareBenchmark.obj
-
-# target to build an object file
-hardware_benchmarks/HardwareBenchmark.cpp.obj:
-	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/HardwareBenchmark.cpp.obj
-.PHONY : hardware_benchmarks/HardwareBenchmark.cpp.obj
-
-hardware_benchmarks/HardwareBenchmark.i: hardware_benchmarks/HardwareBenchmark.cpp.i
-
-.PHONY : hardware_benchmarks/HardwareBenchmark.i
-
-# target to preprocess a source file
-hardware_benchmarks/HardwareBenchmark.cpp.i:
-	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/HardwareBenchmark.cpp.i
-.PHONY : hardware_benchmarks/HardwareBenchmark.cpp.i
-
-hardware_benchmarks/HardwareBenchmark.s: hardware_benchmarks/HardwareBenchmark.cpp.s
-
-.PHONY : hardware_benchmarks/HardwareBenchmark.s
-
-# target to generate assembly for a file
-hardware_benchmarks/HardwareBenchmark.cpp.s:
-	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/HardwareBenchmark.cpp.s
-.PHONY : hardware_benchmarks/HardwareBenchmark.cpp.s
-
 hardware_tests/AddersTest.obj: hardware_tests/AddersTest.cpp.obj
 
 .PHONY : hardware_tests/AddersTest.obj
@@ -370,9 +343,6 @@ help:
 	@echo ... hardware_benchmarks/BasicGatesBenchmark.obj
 	@echo ... hardware_benchmarks/BasicGatesBenchmark.i
 	@echo ... hardware_benchmarks/BasicGatesBenchmark.s
-	@echo ... hardware_benchmarks/HardwareBenchmark.obj
-	@echo ... hardware_benchmarks/HardwareBenchmark.i
-	@echo ... hardware_benchmarks/HardwareBenchmark.s
 	@echo ... hardware_tests/AddersTest.obj
 	@echo ... hardware_tests/AddersTest.i
 	@echo ... hardware_tests/AddersTest.s

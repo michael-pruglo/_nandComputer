@@ -13,5 +13,5 @@ FetchContent_MakeAvailable(googlebenchmark)
 target_link_libraries(google_benchmark_run benchmark::benchmark)
 
 project(google_test)
-add_executable(google_test hardware_tests/AddersStandards.hpp hardware_tests/AddersTest.cpp hardware_tests/BasicGatesStandards.hpp hardware_tests/BasicGatesTest.cpp hardware_tests/InputGenerator.hpp)
+add_executable(google_test hardware_tests/AddersStandards.hpp hardware_tests/AddersTest.cpp hardware_tests/BasicGatesStandards.hpp hardware_tests/BasicGatesTest.cpp hardware_tests/InputGenerator.hpp hardware_tests/HardwareTestManager.hpp)
 target_link_libraries(google_test gtest gtest_main)

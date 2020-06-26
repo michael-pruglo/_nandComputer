@@ -27,6 +27,7 @@ google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/AddersTest
  ../src/hardware/Hardware.hpp
  C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/AddersStandards.hpp
  C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/AddersTest.cpp
+ C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/HardwareTestManager.hpp
  C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/BasicGatesTest.cpp.obj
  ../google_tests_and_benchmarks/lib/googletest/include/gtest/gtest-death-test.h
@@ -53,4 +54,5 @@ google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/BasicGates
  ../src/hardware/Hardware.hpp
  C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/BasicGatesStandards.hpp
  C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/BasicGatesTest.cpp
+ C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/HardwareTestManager.hpp
  C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp

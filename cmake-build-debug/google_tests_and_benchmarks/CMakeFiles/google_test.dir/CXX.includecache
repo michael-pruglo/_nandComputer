@@ -349,12 +349,16 @@ src/hardware/Hardware.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/Hardware.hpp
 
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/AddersTest.cpp
+HardwareTestManager.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/HardwareTestManager.hpp
 AddersStandards.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/AddersStandards.hpp
 src/hardware/Adders.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/Adders.hpp
 InputGenerator.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp
+
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/HardwareTestManager.hpp
 
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp
 random

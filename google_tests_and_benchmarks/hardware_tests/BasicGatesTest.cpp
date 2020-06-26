@@ -1,26 +1,29 @@
+#include "HardwareTestManager.hpp"
 #include "BasicGatesStandards.hpp"
 #include "src/hardware/BasicGates.hpp"
 
-TEST(BasicGatesTestSuite, Nand)      { Standards::HardwareStandards::BasicGatesStandards::_nand      (Hardware::BasicGates::_nand); }
-TEST(BasicGatesTestSuite, Not)       { Standards::HardwareStandards::BasicGatesStandards::_not       (Hardware::BasicGates::_not); }
-TEST(BasicGatesTestSuite, And)       { Standards::HardwareStandards::BasicGatesStandards::_and       (Hardware::BasicGates::_and); }
-TEST(BasicGatesTestSuite, Or)        { Standards::HardwareStandards::BasicGatesStandards::_or        (Hardware::BasicGates::_or); }
-TEST(BasicGatesTestSuite, Xor)       { Standards::HardwareStandards::BasicGatesStandards::_xor       (Hardware::BasicGates::_xor); }
-TEST(BasicGatesTestSuite, Mux)       { Standards::HardwareStandards::BasicGatesStandards::_mux       (Hardware::BasicGates::_mux); }
-TEST(BasicGatesTestSuite, Dmux)      { Standards::HardwareStandards::BasicGatesStandards::_dmux      (Hardware::BasicGates::_dmux); }
-TEST(BasicGatesTestSuite, Dmux4way)  { Standards::HardwareStandards::BasicGatesStandards::_dmux4way  (Hardware::BasicGates::_dmux4way); }
-TEST(BasicGatesTestSuite, Dmux8way)  { Standards::HardwareStandards::BasicGatesStandards::_dmux8way  (Hardware::BasicGates::_dmux8way); }
-
+BASICGATE_TRUTHTABLE_TEST(Nand, _nand)
+BASICGATE_TRUTHTABLE_TEST(Not, _not)
+BASICGATE_TRUTHTABLE_TEST(And, _and)
+BASICGATE_TRUTHTABLE_TEST(Or, _or)
+BASICGATE_TRUTHTABLE_TEST(Xor, _xor)
+BASICGATE_TRUTHTABLE_TEST(Mux, _mux)
+BASICGATE_TRUTHTABLE_TEST(Dmux, _dmux)
+BASICGATE_TRUTHTABLE_TEST(Dmux4way, _dmux4way)
+BASICGATE_TRUTHTABLE_TEST(Dmux8way, _dmux8way)
+#undef BASICGATE_TRUTHTABLE_TEST
+#undef BASICGATE_TRUTHTABLE_TEST_V
 
 
 #include "InputGenerator.hpp"
-const int THOROUGHNESS = 100'000;
 
-TEST(BasicGatesTestSuite, Not32)     { for ( int i = THOROUGHNESS; i--; Standards::HardwareStandards::BasicGatesStandards::_not32        (Hardware::BasicGates::_not32,     generateBus32()) ); }
-TEST(BasicGatesTestSuite, And32)     { for ( int i = THOROUGHNESS; i--; Standards::HardwareStandards::BasicGatesStandards::_and32        (Hardware::BasicGates::_and32,     generateBus32(), generateBus32()) ); }
-TEST(BasicGatesTestSuite, Or32)      { for ( int i = THOROUGHNESS; i--; Standards::HardwareStandards::BasicGatesStandards::_or32         (Hardware::BasicGates::_or32,      generateBus32(), generateBus32()) ); }
-TEST(BasicGatesTestSuite, Mux32)     { for ( int i = THOROUGHNESS; i--; Standards::HardwareStandards::BasicGatesStandards::_mux32        (Hardware::BasicGates::_mux32,     generateBus32(), generateBus32()) ); }
-TEST(BasicGatesTestSuite, And8way)   { for ( int i = THOROUGHNESS; i--; Standards::HardwareStandards::BasicGatesStandards::_and8way      (Hardware::BasicGates::_and8way,   generateBus8()) ); }
-TEST(BasicGatesTestSuite, Or8way)    { for ( int i = THOROUGHNESS; i--; Standards::HardwareStandards::BasicGatesStandards::_or8way       (Hardware::BasicGates::_or8way,    generateBus8()) ); }
-TEST(BasicGatesTestSuite, Mux4way32) { for ( int i = THOROUGHNESS; i--; Standards::HardwareStandards::BasicGatesStandards::_mux4way32    (Hardware::BasicGates::_mux4way32, generateBus32(), generateBus32(), generateBus32(), generateBus32()) ); }
-TEST(BasicGatesTestSuite, Mux8way32) { for ( int i = THOROUGHNESS; i--; Standards::HardwareStandards::BasicGatesStandards::_mux8way32    (Hardware::BasicGates::_mux8way32, generateBus32(), generateBus32(), generateBus32(), generateBus32(), generateBus32(), generateBus32(), generateBus32(), generateBus32()) ); }
+BASICGATE_PARTIAL_TEST(Not32,     _not32,     5'000'000, generateBus32() )
+BASICGATE_PARTIAL_TEST(And32,     _and32,     3'000'000, generateBus32(), generateBus32() )
+BASICGATE_PARTIAL_TEST(Or32,      _or32,      2'000'000, generateBus32(), generateBus32() )
+BASICGATE_PARTIAL_TEST(Mux32,     _mux32,     1'000'000, generateBus32(), generateBus32() )
+BASICGATE_PARTIAL_TEST(And8way,   _and8way,   6'000'000, generateBus8() )
+BASICGATE_PARTIAL_TEST(Or8way,    _or8way,    6'000'000, generateBus8() )
+BASICGATE_PARTIAL_TEST(Mux4way32, _mux4way32,   200'000, generateBus32(), generateBus32(), generateBus32(), generateBus32() )
+BASICGATE_PARTIAL_TEST(Mux8way32, _mux8way32,    40'000, generateBus32(), generateBus32(), generateBus32(), generateBus32(), generateBus32(), generateBus32(), generateBus32(), generateBus32() )
+#undef BASICGATE_PARTIAL_TEST
+#undef BASICGATE_PARTIAL_TEST_V

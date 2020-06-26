@@ -28,12 +28,6 @@ C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_b
 src/hardware/Adders.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/src/hardware/Adders.hpp
 
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/BasicGatesBenchmark.cpp
-HardwareBenchmarkManager.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
-src/hardware/BasicGates.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/src/hardware/BasicGates.hpp
-
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
 benchmark/benchmark.h
 -
