@@ -4,8 +4,8 @@
 #include <benchmark/benchmark.h>
 
 ///Main benchmark session
-#define REGISTER_BM_ADDERS
 #define REGISTER_BM_BASICGATES
+#define REGISTER_BM_ADDERS
 
 
 

@@ -31,6 +31,7 @@ namespace Standards::HardwareStandards::AddersStandards
                 Hardware::Bus32 b)
     {
         EXPECT_EQ((gate(a,b)), (a+b));
+        EXPECT_EQ((gate(b,a)), (b+a));
     }
 
     void _inc32(Hardware::Bus32(*gate)(Hardware::Bus32),

@@ -6,3 +6,27 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/mickl/ClionProjects/NandComputer/src/hardware/Adders.hpp
+array
+-
+BasicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/src/hardware/BasicGates.hpp
+
+C:/Users/mickl/ClionProjects/NandComputer/src/hardware/BasicGates.hpp
+array
+-
+Hardware.hpp
+C:/Users/mickl/ClionProjects/NandComputer/src/hardware/Hardware.hpp
+
+C:/Users/mickl/ClionProjects/NandComputer/src/hardware/Hardware.hpp
+cstdint
+-
+
+C:/Users/mickl/ClionProjects/NandComputer/src/main.cpp
+iostream
+-
+hardware/BasicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/src/hardware/BasicGates.hpp
+hardware/Adders.hpp
+C:/Users/mickl/ClionProjects/NandComputer/src/hardware/Adders.hpp
+

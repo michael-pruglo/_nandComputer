@@ -1,7 +1,3 @@
-//
-// Created by Michael on 06/11/20.
-//
-
 #ifndef NANDCOMPUTER_HARDWARE_HPP
 #define NANDCOMPUTER_HARDWARE_HPP
 
