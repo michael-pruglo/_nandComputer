@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/google_test.dir/hardware_tests/ALUTest.cpp.obj"
   "CMakeFiles/google_test.dir/hardware_tests/AddersTest.cpp.obj"
   "CMakeFiles/google_test.dir/hardware_tests/BasicGatesTest.cpp.obj"
   "google_test.exe"

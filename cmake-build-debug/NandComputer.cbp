@@ -2543,6 +2543,9 @@
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/BenchmarkMain.cpp">
 			<Option target="google_benchmark_run"/>
 		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/ALUBenchmark.cpp">
+			<Option target="google_benchmark_run"/>
+		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/AddersBenchmark.cpp">
 			<Option target="google_benchmark_run"/>
 		</Unit>
@@ -2551,6 +2554,12 @@
 		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp">
 			<Option target="google_benchmark_run"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/ALUStandards.hpp">
+			<Option target="google_test"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/ALUTest.cpp">
+			<Option target="google_test"/>
 		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/AddersStandards.hpp">
 			<Option target="google_test"/>
@@ -2581,6 +2590,9 @@
 		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/lib/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/src/hardware/ALU.hpp">
+			<Option target="NandComputer"/>
 		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/src/hardware/Adders.hpp">
 			<Option target="NandComputer"/>

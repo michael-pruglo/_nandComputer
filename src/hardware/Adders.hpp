@@ -15,6 +15,9 @@ namespace Hardware::Adders
     inline               Bus32 _inc32(Bus32 in);
 };
 
+
+
+
 ///Implementation
 namespace Hardware::Adders {
 

@@ -4,6 +4,14 @@
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/BenchmarkMain.cpp.obj
  C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/BenchmarkMain.cpp
  _deps/googlebenchmark-src/include/benchmark/benchmark.h
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj
+ ../src/hardware/ALU.hpp
+ ../src/hardware/Adders.hpp
+ ../src/hardware/BasicGates.hpp
+ ../src/hardware/Hardware.hpp
+ C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/ALUBenchmark.cpp
+ C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
+ _deps/googlebenchmark-src/include/benchmark/benchmark.h
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/AddersBenchmark.cpp.obj
  ../src/hardware/Adders.hpp
  ../src/hardware/BasicGates.hpp

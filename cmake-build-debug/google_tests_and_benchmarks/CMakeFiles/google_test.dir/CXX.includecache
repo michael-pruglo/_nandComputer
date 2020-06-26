@@ -326,6 +326,16 @@ cxxabi.h
 acxx_demangle.h
 -
 
+../src/hardware/ALU.hpp
+tuple
+-
+Hardware.hpp
+../src/hardware/Hardware.hpp
+BasicGates.hpp
+../src/hardware/BasicGates.hpp
+Adders.hpp
+../src/hardware/Adders.hpp
+
 ../src/hardware/Adders.hpp
 array
 -
@@ -342,19 +352,23 @@ Hardware.hpp
 cstdint
 -
 
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/AddersStandards.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/ALUStandards.hpp
 gtest/gtest.h
 -
 src/hardware/Hardware.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/Hardware.hpp
+bitset
+-
+src/hardware/ALU.hpp
+-
 
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/AddersTest.cpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/ALUTest.cpp
 HardwareTestManager.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/HardwareTestManager.hpp
-AddersStandards.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/AddersStandards.hpp
-src/hardware/Adders.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/Adders.hpp
+ALUStandards.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/ALUStandards.hpp
+src/hardware/ALU.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/ALU.hpp
 InputGenerator.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp
 

@@ -1,7 +1,7 @@
 #ifndef NANDCOMPUTER_HARDWARETESTMANAGER_HPP
 #define NANDCOMPUTER_HARDWARETESTMANAGER_HPP
 
-const double COEF = 30; //roughly equals the number of seconds per test
+const double COEF = 0.5; //roughly equals the number of seconds per test
 
 
 ///Macro definitions for easy registration

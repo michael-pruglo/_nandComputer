@@ -98,11 +98,26 @@ google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/BenchmarkMain.cp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/google_benchmark_run.dir/BenchmarkMain.cpp.s"
 	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests_and_benchmarks && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mickl\ClionProjects\NandComputer\google_tests_and_benchmarks\BenchmarkMain.cpp -o CMakeFiles\google_benchmark_run.dir\BenchmarkMain.cpp.s
 
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj: google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/flags.make
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj: google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/includes_CXX.rsp
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj: ../google_tests_and_benchmarks/hardware_benchmarks/ALUBenchmark.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj"
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests_and_benchmarks && C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\google_benchmark_run.dir\hardware_benchmarks\ALUBenchmark.cpp.obj -c C:\Users\mickl\ClionProjects\NandComputer\google_tests_and_benchmarks\hardware_benchmarks\ALUBenchmark.cpp
+
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.i"
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests_and_benchmarks && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mickl\ClionProjects\NandComputer\google_tests_and_benchmarks\hardware_benchmarks\ALUBenchmark.cpp > CMakeFiles\google_benchmark_run.dir\hardware_benchmarks\ALUBenchmark.cpp.i
+
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.s"
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests_and_benchmarks && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mickl\ClionProjects\NandComputer\google_tests_and_benchmarks\hardware_benchmarks\ALUBenchmark.cpp -o CMakeFiles\google_benchmark_run.dir\hardware_benchmarks\ALUBenchmark.cpp.s
+
 # Object files for target google_benchmark_run
 google_benchmark_run_OBJECTS = \
 "CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/BasicGatesBenchmark.cpp.obj" \
 "CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/AddersBenchmark.cpp.obj" \
-"CMakeFiles/google_benchmark_run.dir/BenchmarkMain.cpp.obj"
+"CMakeFiles/google_benchmark_run.dir/BenchmarkMain.cpp.obj" \
+"CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj"
 
 # External object files for target google_benchmark_run
 google_benchmark_run_EXTERNAL_OBJECTS =
@@ -110,6 +125,7 @@ google_benchmark_run_EXTERNAL_OBJECTS =
 google_tests_and_benchmarks/google_benchmark_run.exe: google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/BasicGatesBenchmark.cpp.obj
 google_tests_and_benchmarks/google_benchmark_run.exe: google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/AddersBenchmark.cpp.obj
 google_tests_and_benchmarks/google_benchmark_run.exe: google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/BenchmarkMain.cpp.obj
+google_tests_and_benchmarks/google_benchmark_run.exe: google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj
 google_tests_and_benchmarks/google_benchmark_run.exe: google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/build.make
 google_tests_and_benchmarks/google_benchmark_run.exe: lib/libgtestd.a
 google_tests_and_benchmarks/google_benchmark_run.exe: lib/libgtest_maind.a
@@ -118,7 +134,7 @@ google_tests_and_benchmarks/google_benchmark_run.exe: lib/libgtestd.a
 google_tests_and_benchmarks/google_benchmark_run.exe: google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/linklibs.rsp
 google_tests_and_benchmarks/google_benchmark_run.exe: google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/objects1.rsp
 google_tests_and_benchmarks/google_benchmark_run.exe: google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable google_benchmark_run.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable google_benchmark_run.exe"
 	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\google_tests_and_benchmarks && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\google_benchmark_run.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

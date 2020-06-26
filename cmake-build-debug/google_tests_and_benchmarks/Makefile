@@ -212,6 +212,33 @@ BenchmarkMain.cpp.s:
 	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/BenchmarkMain.cpp.s
 .PHONY : BenchmarkMain.cpp.s
 
+hardware_benchmarks/ALUBenchmark.obj: hardware_benchmarks/ALUBenchmark.cpp.obj
+
+.PHONY : hardware_benchmarks/ALUBenchmark.obj
+
+# target to build an object file
+hardware_benchmarks/ALUBenchmark.cpp.obj:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj
+.PHONY : hardware_benchmarks/ALUBenchmark.cpp.obj
+
+hardware_benchmarks/ALUBenchmark.i: hardware_benchmarks/ALUBenchmark.cpp.i
+
+.PHONY : hardware_benchmarks/ALUBenchmark.i
+
+# target to preprocess a source file
+hardware_benchmarks/ALUBenchmark.cpp.i:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.i
+.PHONY : hardware_benchmarks/ALUBenchmark.cpp.i
+
+hardware_benchmarks/ALUBenchmark.s: hardware_benchmarks/ALUBenchmark.cpp.s
+
+.PHONY : hardware_benchmarks/ALUBenchmark.s
+
+# target to generate assembly for a file
+hardware_benchmarks/ALUBenchmark.cpp.s:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.s
+.PHONY : hardware_benchmarks/ALUBenchmark.cpp.s
+
 hardware_benchmarks/AddersBenchmark.obj: hardware_benchmarks/AddersBenchmark.cpp.obj
 
 .PHONY : hardware_benchmarks/AddersBenchmark.obj
@@ -265,6 +292,33 @@ hardware_benchmarks/BasicGatesBenchmark.s: hardware_benchmarks/BasicGatesBenchma
 hardware_benchmarks/BasicGatesBenchmark.cpp.s:
 	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/BasicGatesBenchmark.cpp.s
 .PHONY : hardware_benchmarks/BasicGatesBenchmark.cpp.s
+
+hardware_tests/ALUTest.obj: hardware_tests/ALUTest.cpp.obj
+
+.PHONY : hardware_tests/ALUTest.obj
+
+# target to build an object file
+hardware_tests/ALUTest.cpp.obj:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_test.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/ALUTest.cpp.obj
+.PHONY : hardware_tests/ALUTest.cpp.obj
+
+hardware_tests/ALUTest.i: hardware_tests/ALUTest.cpp.i
+
+.PHONY : hardware_tests/ALUTest.i
+
+# target to preprocess a source file
+hardware_tests/ALUTest.cpp.i:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_test.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/ALUTest.cpp.i
+.PHONY : hardware_tests/ALUTest.cpp.i
+
+hardware_tests/ALUTest.s: hardware_tests/ALUTest.cpp.s
+
+.PHONY : hardware_tests/ALUTest.s
+
+# target to generate assembly for a file
+hardware_tests/ALUTest.cpp.s:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_test.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/ALUTest.cpp.s
+.PHONY : hardware_tests/ALUTest.cpp.s
 
 hardware_tests/AddersTest.obj: hardware_tests/AddersTest.cpp.obj
 
@@ -337,12 +391,18 @@ help:
 	@echo ... BenchmarkMain.obj
 	@echo ... BenchmarkMain.i
 	@echo ... BenchmarkMain.s
+	@echo ... hardware_benchmarks/ALUBenchmark.obj
+	@echo ... hardware_benchmarks/ALUBenchmark.i
+	@echo ... hardware_benchmarks/ALUBenchmark.s
 	@echo ... hardware_benchmarks/AddersBenchmark.obj
 	@echo ... hardware_benchmarks/AddersBenchmark.i
 	@echo ... hardware_benchmarks/AddersBenchmark.s
 	@echo ... hardware_benchmarks/BasicGatesBenchmark.obj
 	@echo ... hardware_benchmarks/BasicGatesBenchmark.i
 	@echo ... hardware_benchmarks/BasicGatesBenchmark.s
+	@echo ... hardware_tests/ALUTest.obj
+	@echo ... hardware_tests/ALUTest.i
+	@echo ... hardware_tests/ALUTest.s
 	@echo ... hardware_tests/AddersTest.obj
 	@echo ... hardware_tests/AddersTest.i
 	@echo ... hardware_tests/AddersTest.s

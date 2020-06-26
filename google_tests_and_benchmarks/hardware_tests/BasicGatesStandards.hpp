@@ -95,6 +95,16 @@ namespace Standards::HardwareStandards::BasicGatesStandards
         EXPECT_EQ(gate(a, b, 1),   b);
     }
 
+    void _is_zero32(bool(*gate)(Hardware::Bus32), Hardware::Bus32 in)
+    {
+        EXPECT_EQ(gate(in), (in==0));
+    }
+
+    void _is_nzero32(bool(*gate)(Hardware::Bus32), Hardware::Bus32 in)
+    {
+        EXPECT_EQ(gate(in), (in!=0));
+    }
+
     void _and8way(bool(*gate)(Hardware::Bus8), Hardware::Bus8 in)
     {
         EXPECT_EQ(gate(in), (__builtin_popcount(in)==8));

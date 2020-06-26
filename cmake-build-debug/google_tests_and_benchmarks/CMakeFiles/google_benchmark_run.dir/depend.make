@@ -4,6 +4,14 @@
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/BenchmarkMain.cpp.obj: ../google_tests_and_benchmarks/BenchmarkMain.cpp
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/BenchmarkMain.cpp.obj: _deps/googlebenchmark-src/include/benchmark/benchmark.h
 
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj: ../src/hardware/ALU.hpp
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj: ../src/hardware/Adders.hpp
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj: ../src/hardware/BasicGates.hpp
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj: ../src/hardware/Hardware.hpp
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj: ../google_tests_and_benchmarks/hardware_benchmarks/ALUBenchmark.cpp
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj: ../google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj: _deps/googlebenchmark-src/include/benchmark/benchmark.h
+
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/AddersBenchmark.cpp.obj: ../src/hardware/Adders.hpp
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/AddersBenchmark.cpp.obj: ../src/hardware/BasicGates.hpp
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/AddersBenchmark.cpp.obj: ../src/hardware/Hardware.hpp

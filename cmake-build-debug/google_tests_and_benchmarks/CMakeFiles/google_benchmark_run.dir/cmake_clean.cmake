@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/google_benchmark_run.dir/BenchmarkMain.cpp.obj"
+  "CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj"
   "CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/AddersBenchmark.cpp.obj"
   "CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/BasicGatesBenchmark.cpp.obj"
   "google_benchmark_run.exe"

@@ -5,8 +5,9 @@ Based on [Nand2Tetris](https://www.nand2tetris.org/) <p>
 
 ## Hardware
 Currently implemented chips: <p>
-`BasicGates`: Nand, Not, And, Or, Xor, Mux, DMux as well as their multi-bit and multi-way versions.<p>
-`Adders`: Half adder, Full adder, Add32.
+`BasicGates`: Nand, Not, And, Or, Xor, Mux, DMux, IsZero, IsNZero as well as their multi-bit and multi-way versions.<p>
+`Adders`: Half adder, Full adder, Add32, Inc32.
+`ALU`: Arithmetical Logical Unit
 
 ## Testing
 Correctness is tested using Google Tests. <p>
