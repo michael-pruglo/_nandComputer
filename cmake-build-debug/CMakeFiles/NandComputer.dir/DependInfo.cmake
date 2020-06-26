@@ -4,8 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/mickl/ClionProjects/NandComputer/src/hardware/Adders.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/NandComputer.dir/src/hardware/Adders.cpp.obj"
-  "C:/Users/mickl/ClionProjects/NandComputer/src/hardware/BasicGates.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/NandComputer.dir/src/hardware/BasicGates.cpp.obj"
   "C:/Users/mickl/ClionProjects/NandComputer/src/main.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/NandComputer.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

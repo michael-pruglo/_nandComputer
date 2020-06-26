@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/NandComputer.dir/src/hardware/Adders.cpp.obj"
-  "CMakeFiles/NandComputer.dir/src/hardware/BasicGates.cpp.obj"
   "CMakeFiles/NandComputer.dir/src/main.cpp.obj"
   "NandComputer.exe"
   "NandComputer.exe.manifest"

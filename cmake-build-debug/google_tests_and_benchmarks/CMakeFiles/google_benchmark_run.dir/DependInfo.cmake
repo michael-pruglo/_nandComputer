@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/AddersBenchmark.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/AddersBenchmark.cpp.obj"
   "C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/BasicGatesBenchmark.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/BasicGatesBenchmark.cpp.obj"
+  "C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmark.cpp" "C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/HardwareBenchmark.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

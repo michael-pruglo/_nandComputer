@@ -326,21 +326,11 @@ cxxabi.h
 acxx_demangle.h
 -
 
-../src/hardware/Adders.cpp
-Adders.hpp
-../src/hardware/Adders.hpp
-
 ../src/hardware/Adders.hpp
 array
 -
 BasicGates.hpp
 ../src/hardware/BasicGates.hpp
-
-../src/hardware/BasicGates.cpp
-BasicGates.hpp
-../src/hardware/BasicGates.hpp
-string
--
 
 ../src/hardware/BasicGates.hpp
 array
@@ -354,7 +344,7 @@ cstdint
 
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/AddersStandards.hpp
 gtest/gtest.h
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/gtest/gtest.h
+-
 src/hardware/Hardware.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/Hardware.hpp
 
@@ -363,24 +353,6 @@ AddersStandards.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/AddersStandards.hpp
 src/hardware/Adders.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/Adders.hpp
-src/hardware/Adders.cpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/Adders.cpp
-InputGenerator.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp
-
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/BasicGatesStandards.hpp
-gtest/gtest.h
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/gtest/gtest.h
-src/hardware/Hardware.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/Hardware.hpp
-
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/BasicGatesTest.cpp
-BasicGatesStandards.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/BasicGatesStandards.hpp
-src/hardware/BasicGates.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/BasicGates.hpp
-src/hardware/BasicGates.cpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/BasicGates.cpp
 InputGenerator.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp
 

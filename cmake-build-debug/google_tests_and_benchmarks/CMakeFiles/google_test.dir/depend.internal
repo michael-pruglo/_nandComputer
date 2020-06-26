@@ -22,7 +22,6 @@ google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/AddersTest
  ../google_tests_and_benchmarks/lib/googletest/include/gtest/internal/gtest-port.h
  ../google_tests_and_benchmarks/lib/googletest/include/gtest/internal/gtest-string.h
  ../google_tests_and_benchmarks/lib/googletest/include/gtest/internal/gtest-type-util.h
- ../src/hardware/Adders.cpp
  ../src/hardware/Adders.hpp
  ../src/hardware/BasicGates.hpp
  ../src/hardware/Hardware.hpp
@@ -50,7 +49,6 @@ google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/BasicGates
  ../google_tests_and_benchmarks/lib/googletest/include/gtest/internal/gtest-port.h
  ../google_tests_and_benchmarks/lib/googletest/include/gtest/internal/gtest-string.h
  ../google_tests_and_benchmarks/lib/googletest/include/gtest/internal/gtest-type-util.h
- ../src/hardware/BasicGates.cpp
  ../src/hardware/BasicGates.hpp
  ../src/hardware/Hardware.hpp
  C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/BasicGatesStandards.hpp

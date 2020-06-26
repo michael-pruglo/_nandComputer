@@ -649,60 +649,6 @@ string_util_gtest/fast:
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\string_util_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/build
 .PHONY : string_util_gtest/fast
 
-src/hardware/Adders.obj: src/hardware/Adders.cpp.obj
-
-.PHONY : src/hardware/Adders.obj
-
-# target to build an object file
-src/hardware/Adders.cpp.obj:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/hardware/Adders.cpp.obj
-.PHONY : src/hardware/Adders.cpp.obj
-
-src/hardware/Adders.i: src/hardware/Adders.cpp.i
-
-.PHONY : src/hardware/Adders.i
-
-# target to preprocess a source file
-src/hardware/Adders.cpp.i:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/hardware/Adders.cpp.i
-.PHONY : src/hardware/Adders.cpp.i
-
-src/hardware/Adders.s: src/hardware/Adders.cpp.s
-
-.PHONY : src/hardware/Adders.s
-
-# target to generate assembly for a file
-src/hardware/Adders.cpp.s:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/hardware/Adders.cpp.s
-.PHONY : src/hardware/Adders.cpp.s
-
-src/hardware/BasicGates.obj: src/hardware/BasicGates.cpp.obj
-
-.PHONY : src/hardware/BasicGates.obj
-
-# target to build an object file
-src/hardware/BasicGates.cpp.obj:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/hardware/BasicGates.cpp.obj
-.PHONY : src/hardware/BasicGates.cpp.obj
-
-src/hardware/BasicGates.i: src/hardware/BasicGates.cpp.i
-
-.PHONY : src/hardware/BasicGates.i
-
-# target to preprocess a source file
-src/hardware/BasicGates.cpp.i:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/hardware/BasicGates.cpp.i
-.PHONY : src/hardware/BasicGates.cpp.i
-
-src/hardware/BasicGates.s: src/hardware/BasicGates.cpp.s
-
-.PHONY : src/hardware/BasicGates.s
-
-# target to generate assembly for a file
-src/hardware/BasicGates.cpp.s:
-	$(MAKE) -f CMakeFiles\NandComputer.dir\build.make CMakeFiles/NandComputer.dir/src/hardware/BasicGates.cpp.s
-.PHONY : src/hardware/BasicGates.cpp.s
-
 src/main.obj: src/main.cpp.obj
 
 .PHONY : src/main.obj
@@ -780,12 +726,6 @@ help:
 	@echo ... benchmark_name_gtest
 	@echo ... commandlineflags_gtest
 	@echo ... string_util_gtest
-	@echo ... src/hardware/Adders.obj
-	@echo ... src/hardware/Adders.i
-	@echo ... src/hardware/Adders.s
-	@echo ... src/hardware/BasicGates.obj
-	@echo ... src/hardware/BasicGates.i
-	@echo ... src/hardware/BasicGates.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

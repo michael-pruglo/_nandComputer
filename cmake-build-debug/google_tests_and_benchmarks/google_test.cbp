@@ -2434,7 +2434,13 @@
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/_deps/googlebenchmark-src/test/user_counters_thousands_test.cc">
 			<Option target="user_counters_thousands_test"/>
 		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/AddersBenchmark.cpp">
+			<Option target="google_benchmark_run"/>
+		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/BasicGatesBenchmark.cpp">
+			<Option target="google_benchmark_run"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmark.cpp">
 			<Option target="google_benchmark_run"/>
 		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/AddersStandards.hpp">
