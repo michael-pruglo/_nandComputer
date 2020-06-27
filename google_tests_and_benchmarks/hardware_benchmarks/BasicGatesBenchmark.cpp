@@ -1,12 +1,14 @@
 #include "HardwareBenchmarkManager.hpp"
 #include "src/hardware/BasicGates.hpp"
 
-const int REPS = 100;
+const int REPS = 15;
 const int REPS32 = 5;
+
 
 #ifdef REGISTER_BM_BASICGATES
     BASICGATE_BENCHMARK(_nand,      (0, 0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_nand_v2,   (0, 0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
+    BASICGATE_BENCHMARK(_nand_v3,   (0, 0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_not,       (0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_and,       (0, 0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_or,        (0, 0))->Repetitions(REPS)->DisplayAggregatesOnly(true);

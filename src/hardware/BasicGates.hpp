@@ -58,6 +58,10 @@ namespace Hardware::BasicGates
     {
         return a ? !b : true;
     }
+    inline bool _nand_v3(bool a, bool b)
+    {
+        if (a) return !b; else return true;
+    }
 
     inline bool _not(bool in)
     {

@@ -8,6 +8,7 @@ namespace Hardware::Adders
 {
     ///return {sum, carry}
     inline std::array<bool, 2> _half_adder(bool a, bool b);
+    inline std::array<bool, 2> _half_adder_v2(bool a, bool b);
     inline std::array<bool, 2> _full_adder(bool a, bool b, bool c);
     inline std::array<bool, 2> _full_adder_v2(bool a, bool b, bool c);
 
@@ -26,6 +27,14 @@ namespace Hardware::Adders {
     ///return {sum, carry}
     inline std::array<bool, 2> _half_adder(bool a, bool b)
     {
+        bool tmp = _nand(a, b);
+        return {
+                _nand(_nand(a, tmp), _nand(tmp, b)),
+                _nand(tmp, tmp)
+        };
+    }
+    inline std::array<bool, 2> _half_adder_v2(bool a, bool b)
+    {
         return {
                 _xor(a, b),
                 _and(a, b)
@@ -34,16 +43,19 @@ namespace Hardware::Adders {
 
     inline std::array<bool, 2> _full_adder(bool a, bool b, bool c)
     {
+        bool nandab = _nand(a, b);
+        bool xorab = _nand(_nand(a, nandab), _nand(nandab, b));
+        bool tmp = _nand(xorab, c);
         return {
-                _xor(_xor(a, b), c),
-                _mux(_and(b, c), _or(b, c), a)
+                _nand(_nand(xorab, tmp), _nand(tmp, c)),
+                _nand(tmp, nandab)
         };
     }
     inline std::array<bool, 2> _full_adder_v2(bool a, bool b, bool c)
     {
         return {
                 _xor(_xor(a, b), c),
-                _nand(_nand(_xor(a, b), c), _nand(a, b))
+                _mux(_and(b, c), _or(b, c), a)
         };
     }
 

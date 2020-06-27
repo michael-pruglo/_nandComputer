@@ -3,6 +3,7 @@
 #include "src/hardware/Adders.hpp"
 
 ADDER_TRUTHTABLE_TEST  (HalfAdder,   _half_adder)
+ADDER_TRUTHTABLE_TEST_V(HalfAdderv2, _half_adder, _half_adder_v2)
 ADDER_TRUTHTABLE_TEST  (FullAdder,   _full_adder)
 ADDER_TRUTHTABLE_TEST_V(FullAdderv2, _full_adder, _full_adder_v2)
 #undef ADDER_TRUTHTABLE_TEST

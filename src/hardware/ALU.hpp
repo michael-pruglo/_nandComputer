@@ -11,24 +11,7 @@ namespace Hardware::ALU
     using namespace Hardware::BasicGates;
     using namespace Hardware::Adders;
 
-    inline Bus32 _zero_if32(Bus32 in, bool z) { return _mux32(in, 0, z); }
-    inline Bus32 _neg_if32(Bus32 in, bool n) { return _mux32(in, _not32(in), n); }
-    inline Bus32 _prepare32(Bus32 in, bool z, bool n) { return _neg_if32(_zero_if32(in, z), n); }
-
-    std::tuple<Bus32,bool,bool> _alu(Bus32 x, Bus32 y,
-                                     bool zx, bool nx, bool zy, bool ny, bool f, bool no)
-    {
-        x = _prepare32(x, zx, nx);
-        y = _prepare32(y, zy, ny);
-        Bus32 out = _mux32(_and32(x, y), _add32(x, y), f);
-        out = _neg_if32(out, no);
-
-        bool zr = _is_zero32(out);
-        bool ng = out&0x80'00'00'00;
-        return std::tuple<Bus32,bool,bool>{out, zr, ng};
-    }
-
-    inline Bus32 _prepare32_v2(Bus32 in, bool z, bool n) {
+    inline Bus32 _prepare32(Bus32 in, bool z, bool n) {
         z = _not(z);
         return    _xor(  _and(in &0x80000000u, z),  n  ) <<31u
                 | _xor(  _and(in &0x40000000u, z),  n  ) <<30u
@@ -64,7 +47,7 @@ namespace Hardware::ALU
                 | _xor(  _and(in &       0x1u, z),  n  ) << 0u
                 ;
     }
-    inline Bus32 _neg_if32_v2(Bus32 in, bool n) {
+    inline Bus32 _neg_if32(Bus32 in, bool n) {
         return    _xor( in &0x80000000u, n ) <<31u
                 | _xor( in &0x40000000u, n ) <<30u
                 | _xor( in &0x20000000u, n ) <<29u
@@ -99,8 +82,26 @@ namespace Hardware::ALU
                 | _xor( in &       0x1u, n ) << 0u
                 ;
     }
-    std::tuple<Bus32,bool,bool> _alu_v2(Bus32 x, Bus32 y,
+    std::tuple<Bus32,bool,bool> _alu(Bus32 x, Bus32 y,
                                      bool zx, bool nx, bool zy, bool ny, bool f, bool no)
+    {
+        x = _prepare32(x, zx, nx);
+        y = _prepare32(y, zy, ny);
+        Bus32 out = _mux32(_and32(x, y), _add32(x, y), f);
+        out = _neg_if32(out, no);
+
+        bool zr = _is_zero32(out);
+        bool ng = out&0x80'00'00'00;
+        return std::tuple<Bus32,bool,bool>{out, zr, ng};
+    }
+
+
+    inline Bus32 _zero_if32_v2(Bus32 in, bool z) { return _mux32(in, 0, z); }
+    inline Bus32 _neg_if32_v2(Bus32 in, bool n) { return _mux32(in, _not32(in), n); }
+    inline Bus32 _prepare32_v2(Bus32 in, bool z, bool n) { return _neg_if32_v2(_zero_if32_v2(in, z), n); }
+
+    std::tuple<Bus32,bool,bool> _alu_v2(Bus32 x, Bus32 y,
+                                        bool zx, bool nx, bool zy, bool ny, bool f, bool no)
     {
         x = _prepare32_v2(x, zx, nx);
         y = _prepare32_v2(y, zy, ny);

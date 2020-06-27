@@ -326,16 +326,6 @@ cxxabi.h
 acxx_demangle.h
 -
 
-../src/hardware/ALU.hpp
-tuple
--
-Hardware.hpp
-../src/hardware/Hardware.hpp
-BasicGates.hpp
-../src/hardware/BasicGates.hpp
-Adders.hpp
-../src/hardware/Adders.hpp
-
 ../src/hardware/Adders.hpp
 array
 -
@@ -352,26 +342,6 @@ Hardware.hpp
 cstdint
 -
 
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/ALUStandards.hpp
-gtest/gtest.h
--
-src/hardware/Hardware.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/Hardware.hpp
-bitset
--
-src/hardware/ALU.hpp
--
-
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/ALUTest.cpp
-HardwareTestManager.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/HardwareTestManager.hpp
-ALUStandards.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/ALUStandards.hpp
-src/hardware/ALU.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/ALU.hpp
-InputGenerator.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp
-
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/AddersStandards.hpp
 gtest/gtest.h
 -
@@ -385,22 +355,6 @@ AddersStandards.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/AddersStandards.hpp
 src/hardware/Adders.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/Adders.hpp
-InputGenerator.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp
-
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/BasicGatesStandards.hpp
-gtest/gtest.h
--
-src/hardware/Hardware.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/Hardware.hpp
-
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/BasicGatesTest.cpp
-HardwareTestManager.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/HardwareTestManager.hpp
-BasicGatesStandards.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/BasicGatesStandards.hpp
-src/hardware/BasicGates.hpp
-C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/src/hardware/BasicGates.hpp
 InputGenerator.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp
 
