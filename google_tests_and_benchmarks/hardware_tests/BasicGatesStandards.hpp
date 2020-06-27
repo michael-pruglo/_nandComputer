@@ -52,6 +52,14 @@ namespace Standards::HardwareStandards::BasicGatesStandards
         EXPECT_EQ(gate(1, 1), 0);
     }
 
+    void _xnor(BinaryBoolFunc gate)
+    {
+        EXPECT_EQ(gate(0, 0), 1);
+        EXPECT_EQ(gate(0, 1), 0);
+        EXPECT_EQ(gate(1, 0), 0);
+        EXPECT_EQ(gate(1, 1), 1);
+    }
+
     void _mux(TernaryBoolFunc gate)
     {
         EXPECT_EQ(gate(0, 0, 0), 0);

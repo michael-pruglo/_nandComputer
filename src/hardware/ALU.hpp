@@ -13,7 +13,7 @@ namespace Hardware::ALU
 
     inline Bus32 _prepare32(Bus32 in, bool z, bool n) {
         z = _not(z);
-        return    _xor(  _and(in &0x80000000u, z),  n  ) <<31u
+        return    _xor(  _and(in &0x80000000u, z),  n  ) <<31u //TODO: xnor
                 | _xor(  _and(in &0x40000000u, z),  n  ) <<30u
                 | _xor(  _and(in &0x20000000u, z),  n  ) <<29u
                 | _xor(  _and(in &0x10000000u, z),  n  ) <<28u

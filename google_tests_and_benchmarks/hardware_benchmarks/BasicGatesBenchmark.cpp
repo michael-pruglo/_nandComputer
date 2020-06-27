@@ -13,6 +13,7 @@ const int REPS32 = 5;
     BASICGATE_BENCHMARK(_and,       (0, 0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_or,        (0, 0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_xor,       (0, 0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
+    BASICGATE_BENCHMARK(_xnor,      (0, 0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_mux,       (0,0,0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_dmux,      (0, 0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_not32,     (0))->Repetitions(REPS32)->DisplayAggregatesOnly(true);

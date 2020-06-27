@@ -14,6 +14,7 @@ namespace Hardware::BasicGates
     inline                bool _or  (bool a,  bool b);
 
     inline                bool _xor (bool a,  bool b);
+    inline                bool _xnor (bool a,  bool b);
 
     inline                bool _mux (bool a,  bool b,   bool sel);
     inline std::array<bool, 2> _dmux(bool in, bool sel);
@@ -56,11 +57,11 @@ namespace Hardware::BasicGates
     }
     inline bool _nand_v2(bool a, bool b)
     {
-        return a ? !b : true;
+        if (a) return !b; else return true;
     }
     inline bool _nand_v3(bool a, bool b)
     {
-        if (a) return !b; else return true;
+        return a ? !b : true;
     }
 
     inline bool _not(bool in)
@@ -95,6 +96,19 @@ namespace Hardware::BasicGates
     inline bool _xor_v2(bool a, bool b)
     {
         return _and(_or(a, b), _nand(a, b));
+    }
+
+    inline bool _xnor(bool a, bool b)
+    {
+        bool nandab = _nand(a, b);
+        bool tmpa = _nand(a, nandab);
+        bool tmpb = _nand(b, nandab);
+        bool t = _nand(tmpa, tmpb);
+        return _nand(t, t);
+    }
+    inline bool _xnor_v2(bool a, bool b)
+    {
+        return _not(_xor(a, b));
     }
 
     inline bool _mux(bool a, bool b, bool sel)
