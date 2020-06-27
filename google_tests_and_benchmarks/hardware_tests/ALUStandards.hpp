@@ -14,6 +14,19 @@ namespace Standards::HardwareStandards::ALUStandards
 
     inline bool __ng(Hardware::Bus32 in) { return in&0x80'00'00'00; }
 
+    void _prepare32(Hardware::Bus32(*gate)(Hardware::Bus32, bool, bool),
+                    Hardware::Bus32 in, bool z, bool n)
+    {
+        Hardware::Bus32 out = z ? 0 : in;
+        out = n ? ~out : out;
+        EXPECT_EQ( (gate(in, z, n)), out );
+    }
+    void _neg_if32(Hardware::Bus32(*gate)(Hardware::Bus32, bool),
+                    Hardware::Bus32 in, bool n)
+    {
+        EXPECT_EQ( (gate(in, n)), (n?~in:in) );
+    }
+
     void _alu(ALUFunc gate, Hardware::Bus32 x, Hardware::Bus32 y)
     {
         EXPECT_EQ(   (gate(x,y,  1, 0,    1, 0,    1, 0)),    (ReturnType{     0,   bool(       1),  bool(    0) })   );
