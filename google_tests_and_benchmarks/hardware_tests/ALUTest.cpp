@@ -6,3 +6,6 @@
 HARDWARE_PARTIAL_TEST_V(ALU, ALU1, _alu, _alu, 18'000*COEF, generateBus32(), generateBus32())
 HARDWARE_PARTIAL_TEST_V(ALU, ALU2, _alu, _alu, 10'000*COEF, generateBus32(), generateBus32(), generateBool(), generateBool(), generateBool(), generateBool(), generateBool(), generateBool())
 
+HARDWARE_PARTIAL_TEST_V(ALU, ALUv21, _alu, _alu_v2, 18'000*COEF, generateBus32(), generateBus32())
+HARDWARE_PARTIAL_TEST_V(ALU, ALUv22, _alu, _alu_v2, 10'000*COEF, generateBus32(), generateBus32(), generateBool(), generateBool(), generateBool(), generateBool(), generateBool(), generateBool())
+

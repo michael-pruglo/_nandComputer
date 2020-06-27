@@ -54,6 +54,10 @@ namespace Hardware::BasicGates
     {
         return !(a&b);
     }
+    inline bool _nand_v2(bool a, bool b)
+    {
+        return a ? !b : true;
+    }
 
     inline bool _not(bool in)
     {
@@ -62,25 +66,50 @@ namespace Hardware::BasicGates
 
     inline bool _and(bool a, bool b)
     {
+        bool tmp = _nand(a, b);
+        return _nand(tmp, tmp);
+    }
+    inline bool _and_v2(bool a, bool b)
+    {
         return _not(_nand(a, b));
     }
 
     inline bool _or(bool a, bool b)
+    {
+        return _nand(_nand(a,a), _nand(b,b));
+    }
+    inline bool _or_v2(bool a, bool b)
     {
         return _nand(_not(a), _not(b));
     }
 
     inline bool _xor(bool a, bool b)
     {
+        bool tmp = _nand(a, b);
+        return _nand(_nand(a, tmp), _nand(tmp, b));
+    }
+    inline bool _xor_v2(bool a, bool b)
+    {
         return _and(_or(a, b), _nand(a, b));
     }
 
     inline bool _mux(bool a, bool b, bool sel)
     {
+        return _nand(_nand(sel, b), _nand(_nand(sel, sel), a));
+    }
+    inline bool _mux_v2(bool a, bool b, bool sel)
+    {
         return _nand(_nand(sel, b), _nand(_not(sel), a));
     }
 
     inline std::array<bool, 2> _dmux(bool in, bool sel)
+    {
+        return {
+                _and(_nand(sel,sel), in),
+                _and(          sel , in)
+        };
+    }
+    inline std::array<bool, 2> _dmux_v2(bool in, bool sel)
     {
         return {
                 _and(_not(sel), in),
