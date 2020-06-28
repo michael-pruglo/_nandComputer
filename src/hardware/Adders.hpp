@@ -8,9 +8,7 @@ namespace Hardware::Adders
 {
     ///return {sum, carry}
     inline std::array<bool, 2> _half_adder(bool a, bool b);
-    inline std::array<bool, 2> _half_adder_v2(bool a, bool b);
     inline std::array<bool, 2> _full_adder(bool a, bool b, bool c);
-    inline std::array<bool, 2> _full_adder_v2(bool a, bool b, bool c);
 
     inline               Bus32 _add32(Bus32 a, Bus32 b);
     inline               Bus32 _inc32(Bus32 in);

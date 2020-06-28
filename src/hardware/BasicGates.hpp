@@ -290,39 +290,38 @@ namespace Hardware::BasicGates
 
     inline bool _is_nzero32(Bus32 in)
     {
-        return    (in &0x80000000u)
-                | (in &0x40000000u)
-                | (in &0x20000000u)
-                | (in &0x10000000u)
-                | (in & 0x8000000u)
-                | (in & 0x4000000u)
-                | (in & 0x2000000u)
-                | (in & 0x1000000u)
-                | (in &  0x800000u)
-                | (in &  0x400000u)
-                | (in &  0x200000u)
-                | (in &  0x100000u)
-                | (in &   0x80000u)
-                | (in &   0x40000u)
-                | (in &   0x20000u)
-                | (in &   0x10000u)
-                | (in &    0x8000u)
-                | (in &    0x4000u)
-                | (in &    0x2000u)
-                | (in &    0x1000u)
-                | (in &     0x800u)
-                | (in &     0x400u)
-                | (in &     0x200u)
-                | (in &     0x100u)
-                | (in &      0x80u)
-                | (in &      0x40u)
-                | (in &      0x20u)
-                | (in &      0x10u)
-                | (in &       0x8u)
-                | (in &       0x4u)
-                | (in &       0x2u)
-                | (in &       0x1u)
-                ;
+        return  _or( (in &0x80000000u),
+                _or( (in &0x40000000u),
+                _or( (in &0x20000000u),
+                _or( (in &0x10000000u),
+                _or( (in & 0x8000000u),
+                _or( (in & 0x4000000u),
+                _or( (in & 0x2000000u),
+                _or( (in & 0x1000000u),
+                _or( (in &  0x800000u),
+                _or( (in &  0x400000u),
+                _or( (in &  0x200000u),
+                _or( (in &  0x100000u),
+                _or( (in &   0x80000u),
+                _or( (in &   0x40000u),
+                _or( (in &   0x20000u),
+                _or( (in &   0x10000u),
+                _or( (in &    0x8000u),
+                _or( (in &    0x4000u),
+                _or( (in &    0x2000u),
+                _or( (in &    0x1000u),
+                _or( (in &     0x800u),
+                _or( (in &     0x400u),
+                _or( (in &     0x200u),
+                _or( (in &     0x100u),
+                _or( (in &      0x80u),
+                _or( (in &      0x40u),
+                _or( (in &      0x20u),
+                _or( (in &      0x10u),
+                _or( (in &       0x8u),
+                _or( (in &       0x4u),
+                _or( (in &       0x2u),
+                     (in &       0x1u))))))))))))))))))))))))))))))));
     }
 
     inline bool _and8way(Bus8 in)

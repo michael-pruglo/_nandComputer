@@ -8,7 +8,9 @@
 #define REGISTER_BM_ADDERS
 #define REGISTER_BM_ALU
 
-
+const int REPS_UNIMPORTANT = 10;
+const int REPS = 500; //10=3.5min for basicGates+adders+alu
+const int REPS_PRIORITY = 1000;
 
 
 
