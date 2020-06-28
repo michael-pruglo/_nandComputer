@@ -4,7 +4,12 @@ All the computation is based on the chip Nand. <p>
 Based on [Nand2Tetris](https://www.nand2tetris.org/) <p>
 
 ## Hardware
-Currently implemented `Hardware::BasicGates`, `Hardware::Adders`, `Hardware::ALU` <p>
+Currently implemented 
+- `Hardware::BasicGates`
+- `Hardware::Adders`
+- `Hardware::ALU`
+- `Hardware::SequentialChips`
+<p>
 The list of the implemented chips and their performance can be found below.
 
 ## Testing
@@ -49,8 +54,12 @@ ALU_neg_if32                   332    ns
 ALU_prepare32                  332    ns 
 ALU_alu                      2'740    ns  
 
-SequentialChips_dff             28.6  ns 
-SequentialChips_bit             38.3  ns 
-SequentialChips_register32   1'289    ns 
+SequentialChips_bit_r            3.65 ns 
+SequentialChips_dff             20.6  ns 
+SequentialChips_bit             58    ns 
+SequentialChips_bit_w           60    ns 
+SequentialChips_register32_r   185    ns 
+SequentialChips_register32   1'950    ns 
+SequentialChips_register32_w 1'970    ns 
 
 ```

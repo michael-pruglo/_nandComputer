@@ -35,14 +35,19 @@ namespace Standards::HardwareStandards::SequentialChipsStandards
         for (bool load: {false, true})
             for (int t = 0; t < T; ++t)
             {
-                bool isTick = true;
-                tickOut[t+1] = gate(in[t], load, isTick);
-                EXPECT_EQ(tickOut[t+1], (load?in[t]:tickOut[t]));
-
-                isTick = false;
-                bool tockOut = gate(in[t], load, isTick);
-                EXPECT_EQ(tockOut, tickOut[t+1]);
+                tickOut[t+1] = gate(in[t], load);
+                if (load)
+                    EXPECT_EQ(tickOut[t+1], in[t])<<"t="<<t;
+                else if (t)
+                    EXPECT_EQ(tickOut[t+1], tickOut[t])<<"t="<<t;
             }
+        EXPECT_EQ(gate.read(), tickOut[T]);
+        for (auto item: EVERY_TRANSITION)
+        {
+            gate.write(item);
+            auto stored = gate.read();
+            EXPECT_EQ(stored, item);
+        }
     }
 
     void _register32(Hardware::SequentialChips::_register32 gate,
@@ -53,14 +58,19 @@ namespace Standards::HardwareStandards::SequentialChipsStandards
         for (bool load: {false, true})
             for (int t = 0; t < T; ++t)
             {
-                bool isTick = true;
-                tickOut[t+1] = gate(in[t], load, isTick);
-                EXPECT_EQ(tickOut[t+1], (load?in[t]:tickOut[t]));
-
-                isTick = false;
-                Hardware::Bus32 tockOut = gate(in[t], load, isTick);
-                EXPECT_EQ(tockOut, tickOut[t+1]);
+                tickOut[t+1] = gate(in[t], load);
+                if (load)
+                    EXPECT_EQ(tickOut[t+1], in[t])<<"t="<<t;
+                else if (t)
+                    EXPECT_EQ(tickOut[t+1], tickOut[t])<<"t="<<t;
             }
+
+        EXPECT_EQ(gate.read(), tickOut[T]);
+        for (auto item: in)
+        {
+            gate.write(item);
+            EXPECT_EQ(gate.read(), item);
+        }
     }
 }
 

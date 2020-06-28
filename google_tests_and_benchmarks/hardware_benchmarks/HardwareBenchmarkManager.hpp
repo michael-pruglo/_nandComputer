@@ -22,9 +22,9 @@ const int REPS_PRIORITY = 100;
 
 #define     ADDER_BENCHMARK(NAME, PARAMS) HARDWARE_BENCHMARK(Adders,     NAME, PARAMS)
 #define BASICGATE_BENCHMARK(NAME, PARAMS) HARDWARE_BENCHMARK(BasicGates, NAME, PARAMS)
-#define SEQUENTIALCHIP_BENCHMARK(CLASSNAME, PARAMS)  \
-    static void BM_SequentialChips##CLASSNAME(benchmark::State& state) { auto gate=Hardware::SequentialChips::CLASSNAME(); for (auto _ : state) { gate PARAMS; } } \
-    BENCHMARK(BM_SequentialChips##CLASSNAME)
+#define SEQUENTIALCHIP_BENCHMARK(CLASSNAME, TESTNAME, PARAMS)  \
+    static void BM_SequentialChips##CLASSNAME##TESTNAME(benchmark::State& state) { auto gate=Hardware::SequentialChips::CLASSNAME(); for (auto _ : state) { gate PARAMS; } } \
+    BENCHMARK(BM_SequentialChips##CLASSNAME##TESTNAME)
 
 
 
