@@ -124,6 +124,49 @@ namespace Hardware::SequentialChips
     private:
         std::array<_bit, 32> bits;
     };
+
+    template<int N>
+    class _RAM
+    {
+    public:
+        _RAM() { std::cout<<"instantiate RAM<"<<N<<">\n"; }
+        inline Bus32 operator()(Bus32 in, Bus32 address, bool load)
+        {
+            auto loads = _dmux8way(load, address&N>>3u, address&N>>2u, address&N>>1u);
+            Bus32 m0 = memoryRegions[0](in, address&((N>>3u)-1u), loads[0]);
+            Bus32 m1 = memoryRegions[1](in, address&((N>>3u)-1u), loads[1]);
+            Bus32 m2 = memoryRegions[2](in, address&((N>>3u)-1u), loads[2]);
+            Bus32 m3 = memoryRegions[3](in, address&((N>>3u)-1u), loads[3]);
+            Bus32 m4 = memoryRegions[4](in, address&((N>>3u)-1u), loads[4]);
+            Bus32 m5 = memoryRegions[5](in, address&((N>>3u)-1u), loads[5]);
+            Bus32 m6 = memoryRegions[6](in, address&((N>>3u)-1u), loads[6]);
+            Bus32 m7 = memoryRegions[7](in, address&((N>>3u)-1u), loads[7]);
+            return _mux8way32(m0,m1,m2,m3,m4,m5,m6,m7,address&N>>3u, address&N>>2u, address&N>>1u);
+        }
+    private:
+        std::array<_RAM<N/8>, 8> memoryRegions;
+    };
+
+    template <>
+    class _RAM<8>
+    {
+    public:
+        inline Bus32 operator()(Bus32 in, Bus8 address, bool load)
+        {
+            auto loads = _dmux8way(load, address&0x1u, address&0x2u, address&0x4u);
+            Bus32 m0 = memory[0](in, loads[0]);
+            Bus32 m1 = memory[1](in, loads[1]);
+            Bus32 m2 = memory[2](in, loads[2]);
+            Bus32 m3 = memory[3](in, loads[3]);
+            Bus32 m4 = memory[4](in, loads[4]);
+            Bus32 m5 = memory[5](in, loads[5]);
+            Bus32 m6 = memory[6](in, loads[6]);
+            Bus32 m7 = memory[7](in, loads[7]);
+            return _mux8way32(m0,m1,m2,m3,m4,m5,m6,m7,address&0x1u, address&0x2u, address&0x4u);
+        }
+    private:
+        std::array<_register32, 8> memory;
+    };
 }
 
 #endif //NANDCOMPUTER_SEQUENTIALCHIPS_HPP

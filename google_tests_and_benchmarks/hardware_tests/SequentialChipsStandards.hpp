@@ -72,6 +72,20 @@ namespace Standards::HardwareStandards::SequentialChipsStandards
             EXPECT_EQ(gate.read(), item);
         }
     }
+
+    template <int N>
+    void _RAM(Hardware::SequentialChips::_RAM<N> gate)
+    {
+        std::vector<int> candidateAddresses = {0, 1, N-2, N-1};
+        int step = std::max(1, N/100);
+        for (int i = 0; i < N; i+=step)
+            candidateAddresses.push_back(i);
+        for (auto i:candidateAddresses)
+        {
+            gate(777, i, 1);
+            EXPECT_EQ(gate(888, i, 0), 777);
+        }
+    }
 }
 
 #endif //NANDCOMPUTER_SEQUENTIALCHIPSSTANDARDS_HPP

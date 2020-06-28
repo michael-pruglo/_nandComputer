@@ -5,4 +5,5 @@ CMakeFiles/NandComputer.dir/src/main.cpp.obj
  C:/Users/mickl/ClionProjects/NandComputer/src/hardware/Adders.hpp
  C:/Users/mickl/ClionProjects/NandComputer/src/hardware/BasicGates.hpp
  C:/Users/mickl/ClionProjects/NandComputer/src/hardware/Hardware.hpp
+ C:/Users/mickl/ClionProjects/NandComputer/src/hardware/SequentialChips.hpp
  C:/Users/mickl/ClionProjects/NandComputer/src/main.cpp

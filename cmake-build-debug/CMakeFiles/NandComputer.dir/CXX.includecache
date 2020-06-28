@@ -22,6 +22,12 @@ C:/Users/mickl/ClionProjects/NandComputer/src/hardware/Hardware.hpp
 cstdint
 -
 
+C:/Users/mickl/ClionProjects/NandComputer/src/hardware/SequentialChips.hpp
+Hardware.hpp
+C:/Users/mickl/ClionProjects/NandComputer/src/hardware/Hardware.hpp
+BasicGates.hpp
+C:/Users/mickl/ClionProjects/NandComputer/src/hardware/BasicGates.hpp
+
 C:/Users/mickl/ClionProjects/NandComputer/src/main.cpp
 iostream
 -
@@ -29,4 +35,6 @@ hardware/BasicGates.hpp
 C:/Users/mickl/ClionProjects/NandComputer/src/hardware/BasicGates.hpp
 hardware/Adders.hpp
 C:/Users/mickl/ClionProjects/NandComputer/src/hardware/Adders.hpp
+hardware/SequentialChips.hpp
+C:/Users/mickl/ClionProjects/NandComputer/src/hardware/SequentialChips.hpp
 
