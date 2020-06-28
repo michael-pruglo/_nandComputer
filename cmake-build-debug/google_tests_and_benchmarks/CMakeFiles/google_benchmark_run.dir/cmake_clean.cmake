@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/ALUBenchmark.cpp.obj"
   "CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/AddersBenchmark.cpp.obj"
   "CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/BasicGatesBenchmark.cpp.obj"
+  "CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/SequentialChipsBenchmark.cpp.obj"
   "google_benchmark_run.exe"
   "google_benchmark_run.exe.manifest"
   "google_benchmark_run.pdb"

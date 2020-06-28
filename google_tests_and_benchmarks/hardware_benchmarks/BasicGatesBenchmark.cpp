@@ -1,11 +1,11 @@
 #include "HardwareBenchmarkManager.hpp"
 #include "src/hardware/BasicGates.hpp"
 
-
 #ifdef REGISTER_BM_BASICGATES
     BASICGATE_BENCHMARK(_nand,      (0, 0))->Repetitions(REPS_PRIORITY)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_nand_v2,   (0, 0))->Repetitions(REPS_PRIORITY)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_nand_v3,   (0, 0))->Repetitions(REPS_PRIORITY)->DisplayAggregatesOnly(true);
+    BASICGATE_BENCHMARK(_nand3way,  (0,0,0))->Repetitions(REPS_PRIORITY)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_not,       (0))->Repetitions(REPS_PRIORITY)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_and,       (0, 0))->Repetitions(REPS_PRIORITY)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_or,        (0, 0))->Repetitions(REPS_PRIORITY)->DisplayAggregatesOnly(true);

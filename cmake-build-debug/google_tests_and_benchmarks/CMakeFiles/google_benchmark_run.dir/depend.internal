@@ -25,3 +25,10 @@ google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchma
  C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/BasicGatesBenchmark.cpp
  C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
  _deps/googlebenchmark-src/include/benchmark/benchmark.h
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/SequentialChipsBenchmark.cpp.obj
+ ../src/hardware/BasicGates.hpp
+ ../src/hardware/Hardware.hpp
+ ../src/hardware/SequentialChips.hpp
+ C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
+ C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/SequentialChipsBenchmark.cpp
+ _deps/googlebenchmark-src/include/benchmark/benchmark.h

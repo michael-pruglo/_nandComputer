@@ -21,6 +21,17 @@ namespace Standards::HardwareStandards::BasicGatesStandards
         EXPECT_EQ(gate(1, 0), 1);
         EXPECT_EQ(gate(1, 1), 0);
     }
+    void _nand3way(TernaryBoolFunc gate)
+    {
+        EXPECT_EQ(gate(0, 0, 0), 1);
+        EXPECT_EQ(gate(0, 1, 0), 1);
+        EXPECT_EQ(gate(1, 0, 0), 1);
+        EXPECT_EQ(gate(1, 1, 0), 1);
+        EXPECT_EQ(gate(0, 0, 1), 1);
+        EXPECT_EQ(gate(0, 1, 1), 1);
+        EXPECT_EQ(gate(1, 0, 1), 1);
+        EXPECT_EQ(gate(1, 1, 1), 0);
+    }
 
     void _not(UnaryBoolFunc gate)
     {

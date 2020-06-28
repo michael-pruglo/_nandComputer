@@ -299,17 +299,17 @@ CMakeFiles/NandComputer.dir/clean:
 # Target rules for target google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir
 
 # All Build rule for target.
-google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest_main.dir/all
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest_main.dir/all
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/depend
 	$(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=52,53,54,55,56 "Built target google_benchmark_run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=52,53,54,55,56,57 "Built target google_benchmark_run"
 .PHONY : google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/all
 
 # Build rule for subdir invocation for target.
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles 29
 	$(MAKE) -f CMakeFiles\Makefile2 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles 0
 .PHONY : google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/rule
@@ -328,16 +328,16 @@ google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/clean:
 # Target rules for target google_tests_and_benchmarks/CMakeFiles/google_test.dir
 
 # All Build rule for target.
-google_tests_and_benchmarks/CMakeFiles/google_test.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest_main.dir/all
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
+google_tests_and_benchmarks/CMakeFiles/google_test.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_test.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_test.dir/depend
 	$(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_test.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=57,58,59,60 "Built target google_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=58,59,60,61,62 "Built target google_test"
 .PHONY : google_tests_and_benchmarks/CMakeFiles/google_test.dir/all
 
 # Build rule for subdir invocation for target.
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles 9
 	$(MAKE) -f CMakeFiles\Makefile2 google_tests_and_benchmarks/CMakeFiles/google_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles 0
 .PHONY : google_tests_and_benchmarks/CMakeFiles/google_test.dir/rule
@@ -356,8 +356,8 @@ google_tests_and_benchmarks/CMakeFiles/google_test.dir/clean:
 # Target rules for target google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
+google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 	$(MAKE) -f google_tests_and_benchmarks\lib\googlemock\CMakeFiles\gmock_main.dir\build.make google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f google_tests_and_benchmarks\lib\googlemock\CMakeFiles\gmock_main.dir\build.make google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=50,51 "Built target gmock_main"
@@ -414,7 +414,7 @@ google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/clean:
 google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f google_tests_and_benchmarks\lib\googletest\CMakeFiles\gtest.dir\build.make google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f google_tests_and_benchmarks\lib\googletest\CMakeFiles\gtest.dir\build.make google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=61,62 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=63,64 "Built target gtest"
 .PHONY : google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -441,7 +441,7 @@ google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/clean:
 google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest_main.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f google_tests_and_benchmarks\lib\googletest\CMakeFiles\gtest_main.dir\build.make google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f google_tests_and_benchmarks\lib\googletest\CMakeFiles\gtest_main.dir\build.make google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=63,64 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=65,66 "Built target gtest_main"
 .PHONY : google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -549,7 +549,7 @@ _deps/googlebenchmark-build/test/CMakeFiles/basic_test.dir/clean:
 _deps/googlebenchmark-build/test/CMakeFiles/options_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\options_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/options_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\options_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/options_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=75,76 "Built target options_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=77,78 "Built target options_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/options_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -576,7 +576,7 @@ _deps/googlebenchmark-build/test/CMakeFiles/options_test.dir/clean:
 _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all:
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\output_test_helper.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\output_test_helper.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=77,78 "Built target output_test_helper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=79,80 "Built target output_test_helper"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 
 # Build rule for subdir invocation for target.
@@ -600,11 +600,11 @@ _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/user_counters_tabular_test.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/user_counters_tabular_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/user_counters_tabular_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/user_counters_tabular_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\user_counters_tabular_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/user_counters_tabular_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\user_counters_tabular_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/user_counters_tabular_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=93,94 "Built target user_counters_tabular_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=95,96 "Built target user_counters_tabular_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/user_counters_tabular_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -739,7 +739,7 @@ _deps/googlebenchmark-build/test/CMakeFiles/donotoptimize_test.dir/clean:
 _deps/googlebenchmark-build/test/CMakeFiles/skip_with_error_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\skip_with_error_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/skip_with_error_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\skip_with_error_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/skip_with_error_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=85,86 "Built target skip_with_error_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=87,88 "Built target skip_with_error_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/skip_with_error_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -763,11 +763,11 @@ _deps/googlebenchmark-build/test/CMakeFiles/skip_with_error_test.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/memory_manager_test.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/memory_manager_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/memory_manager_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/memory_manager_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\memory_manager_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/memory_manager_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\memory_manager_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/memory_manager_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=71,72 "Built target memory_manager_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=73,74 "Built target memory_manager_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/memory_manager_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -821,7 +821,7 @@ _deps/googlebenchmark-build/test/CMakeFiles/fixture_test.dir/clean:
 _deps/googlebenchmark-build/test/CMakeFiles/register_benchmark_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\register_benchmark_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/register_benchmark_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\register_benchmark_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/register_benchmark_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=79,80 "Built target register_benchmark_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=81,82 "Built target register_benchmark_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/register_benchmark_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -845,8 +845,8 @@ _deps/googlebenchmark-build/test/CMakeFiles/register_benchmark_test.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\benchmark_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/depend
@@ -878,7 +878,7 @@ _deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/clean:
 _deps/googlebenchmark-build/test/CMakeFiles/map_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\map_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/map_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\map_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/map_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=69,70 "Built target map_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=71,72 "Built target map_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/map_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -905,7 +905,7 @@ _deps/googlebenchmark-build/test/CMakeFiles/map_test.dir/clean:
 _deps/googlebenchmark-build/test/CMakeFiles/multiple_ranges_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\multiple_ranges_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/multiple_ranges_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\multiple_ranges_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/multiple_ranges_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=73,74 "Built target multiple_ranges_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=75,76 "Built target multiple_ranges_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/multiple_ranges_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -929,11 +929,11 @@ _deps/googlebenchmark-build/test/CMakeFiles/multiple_ranges_test.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/templated_fixture_test.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/templated_fixture_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/templated_fixture_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/templated_fixture_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\templated_fixture_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/templated_fixture_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\templated_fixture_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/templated_fixture_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=91,92 "Built target templated_fixture_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=93,94 "Built target templated_fixture_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/templated_fixture_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -961,7 +961,7 @@ _deps/googlebenchmark-build/test/CMakeFiles/link_main_test.dir/all: _deps/google
 _deps/googlebenchmark-build/test/CMakeFiles/link_main_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\link_main_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/link_main_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\link_main_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/link_main_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=67,68 "Built target link_main_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=69,70 "Built target link_main_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/link_main_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -985,11 +985,11 @@ _deps/googlebenchmark-build/test/CMakeFiles/link_main_test.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/reporter_output_test.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/reporter_output_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/reporter_output_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/reporter_output_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\reporter_output_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/reporter_output_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\reporter_output_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/reporter_output_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=83,84 "Built target reporter_output_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=85,86 "Built target reporter_output_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/reporter_output_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1013,11 +1013,11 @@ _deps/googlebenchmark-build/test/CMakeFiles/reporter_output_test.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/user_counters_test.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/user_counters_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/user_counters_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/user_counters_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\user_counters_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/user_counters_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\user_counters_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/user_counters_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=95,96 "Built target user_counters_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=97,98 "Built target user_counters_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/user_counters_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1041,13 +1041,13 @@ _deps/googlebenchmark-build/test/CMakeFiles/user_counters_test.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\statistics_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\statistics_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=87,88 "Built target statistics_gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=89,90 "Built target statistics_gtest"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1071,11 +1071,11 @@ _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/internal_threading_test.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/internal_threading_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/internal_threading_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/internal_threading_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\internal_threading_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/internal_threading_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\internal_threading_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/internal_threading_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=65,66 "Built target internal_threading_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=67,68 "Built target internal_threading_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/internal_threading_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1099,11 +1099,11 @@ _deps/googlebenchmark-build/test/CMakeFiles/internal_threading_test.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/report_aggregates_only_test.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/report_aggregates_only_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/report_aggregates_only_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/report_aggregates_only_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\report_aggregates_only_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/report_aggregates_only_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\report_aggregates_only_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/report_aggregates_only_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=81,82 "Built target report_aggregates_only_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=83,84 "Built target report_aggregates_only_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/report_aggregates_only_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1127,8 +1127,8 @@ _deps/googlebenchmark-build/test/CMakeFiles/report_aggregates_only_test.dir/clea
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/complexity_test.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/complexity_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/complexity_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/complexity_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\complexity_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/complexity_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\complexity_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/complexity_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=34,35 "Built target complexity_test"
@@ -1155,8 +1155,8 @@ _deps/googlebenchmark-build/test/CMakeFiles/complexity_test.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/display_aggregates_only_test.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/display_aggregates_only_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/display_aggregates_only_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/display_aggregates_only_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\display_aggregates_only_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/display_aggregates_only_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\display_aggregates_only_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/display_aggregates_only_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=40,41 "Built target display_aggregates_only_test"
@@ -1183,11 +1183,11 @@ _deps/googlebenchmark-build/test/CMakeFiles/display_aggregates_only_test.dir/cle
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/user_counters_thousands_test.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/user_counters_thousands_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/user_counters_thousands_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/user_counters_thousands_test.dir/all: _deps/googlebenchmark-build/test/CMakeFiles/output_test_helper.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\user_counters_thousands_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/user_counters_thousands_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\user_counters_thousands_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/user_counters_thousands_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=97,98 "Built target user_counters_thousands_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=99,100 "Built target user_counters_thousands_test"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/user_counters_thousands_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1238,8 +1238,8 @@ _deps/googlebenchmark-build/test/CMakeFiles/cxx03_test.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\benchmark_name_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/depend
@@ -1268,8 +1268,8 @@ _deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\commandlineflags_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/depend
@@ -1298,13 +1298,13 @@ _deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\string_util_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\string_util_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=89,90 "Built target string_util_gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=91,92 "Built target string_util_gtest"
 .PHONY : _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/all
 
 # Build rule for subdir invocation for target.

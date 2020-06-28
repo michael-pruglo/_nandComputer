@@ -293,6 +293,33 @@ hardware_benchmarks/BasicGatesBenchmark.cpp.s:
 	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/BasicGatesBenchmark.cpp.s
 .PHONY : hardware_benchmarks/BasicGatesBenchmark.cpp.s
 
+hardware_benchmarks/SequentialChipsBenchmark.obj: hardware_benchmarks/SequentialChipsBenchmark.cpp.obj
+
+.PHONY : hardware_benchmarks/SequentialChipsBenchmark.obj
+
+# target to build an object file
+hardware_benchmarks/SequentialChipsBenchmark.cpp.obj:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/SequentialChipsBenchmark.cpp.obj
+.PHONY : hardware_benchmarks/SequentialChipsBenchmark.cpp.obj
+
+hardware_benchmarks/SequentialChipsBenchmark.i: hardware_benchmarks/SequentialChipsBenchmark.cpp.i
+
+.PHONY : hardware_benchmarks/SequentialChipsBenchmark.i
+
+# target to preprocess a source file
+hardware_benchmarks/SequentialChipsBenchmark.cpp.i:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/SequentialChipsBenchmark.cpp.i
+.PHONY : hardware_benchmarks/SequentialChipsBenchmark.cpp.i
+
+hardware_benchmarks/SequentialChipsBenchmark.s: hardware_benchmarks/SequentialChipsBenchmark.cpp.s
+
+.PHONY : hardware_benchmarks/SequentialChipsBenchmark.s
+
+# target to generate assembly for a file
+hardware_benchmarks/SequentialChipsBenchmark.cpp.s:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_benchmark_run.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/SequentialChipsBenchmark.cpp.s
+.PHONY : hardware_benchmarks/SequentialChipsBenchmark.cpp.s
+
 hardware_tests/ALUTest.obj: hardware_tests/ALUTest.cpp.obj
 
 .PHONY : hardware_tests/ALUTest.obj
@@ -374,6 +401,33 @@ hardware_tests/BasicGatesTest.cpp.s:
 	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_test.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/BasicGatesTest.cpp.s
 .PHONY : hardware_tests/BasicGatesTest.cpp.s
 
+hardware_tests/SequentialChipsTest.obj: hardware_tests/SequentialChipsTest.cpp.obj
+
+.PHONY : hardware_tests/SequentialChipsTest.obj
+
+# target to build an object file
+hardware_tests/SequentialChipsTest.cpp.obj:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_test.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/SequentialChipsTest.cpp.obj
+.PHONY : hardware_tests/SequentialChipsTest.cpp.obj
+
+hardware_tests/SequentialChipsTest.i: hardware_tests/SequentialChipsTest.cpp.i
+
+.PHONY : hardware_tests/SequentialChipsTest.i
+
+# target to preprocess a source file
+hardware_tests/SequentialChipsTest.cpp.i:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_test.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/SequentialChipsTest.cpp.i
+.PHONY : hardware_tests/SequentialChipsTest.cpp.i
+
+hardware_tests/SequentialChipsTest.s: hardware_tests/SequentialChipsTest.cpp.s
+
+.PHONY : hardware_tests/SequentialChipsTest.s
+
+# target to generate assembly for a file
+hardware_tests/SequentialChipsTest.cpp.s:
+	cd /d C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug && $(MAKE) -f google_tests_and_benchmarks\CMakeFiles\google_test.dir\build.make google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/SequentialChipsTest.cpp.s
+.PHONY : hardware_tests/SequentialChipsTest.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -400,6 +454,9 @@ help:
 	@echo ... hardware_benchmarks/BasicGatesBenchmark.obj
 	@echo ... hardware_benchmarks/BasicGatesBenchmark.i
 	@echo ... hardware_benchmarks/BasicGatesBenchmark.s
+	@echo ... hardware_benchmarks/SequentialChipsBenchmark.obj
+	@echo ... hardware_benchmarks/SequentialChipsBenchmark.i
+	@echo ... hardware_benchmarks/SequentialChipsBenchmark.s
 	@echo ... hardware_tests/ALUTest.obj
 	@echo ... hardware_tests/ALUTest.i
 	@echo ... hardware_tests/ALUTest.s
@@ -409,6 +466,9 @@ help:
 	@echo ... hardware_tests/BasicGatesTest.obj
 	@echo ... hardware_tests/BasicGatesTest.i
 	@echo ... hardware_tests/BasicGatesTest.s
+	@echo ... hardware_tests/SequentialChipsTest.obj
+	@echo ... hardware_tests/SequentialChipsTest.i
+	@echo ... hardware_tests/SequentialChipsTest.s
 .PHONY : help
 
 

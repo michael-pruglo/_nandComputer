@@ -2449,6 +2449,9 @@
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp">
 			<Option target="google_benchmark_run"/>
 		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/SequentialChipsBenchmark.cpp">
+			<Option target="google_benchmark_run"/>
+		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/ALUStandards.hpp">
 			<Option target="google_test"/>
 		</Unit>
@@ -2471,6 +2474,12 @@
 			<Option target="google_test"/>
 		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/InputGenerator.hpp">
+			<Option target="google_test"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/SequentialChipsStandards.hpp">
+			<Option target="google_test"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_tests/SequentialChipsTest.cpp">
 			<Option target="google_test"/>
 		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/lib/googlemock/src/gmock-all.cc">

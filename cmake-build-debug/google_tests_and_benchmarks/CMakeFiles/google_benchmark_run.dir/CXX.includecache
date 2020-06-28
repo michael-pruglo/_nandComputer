@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+../src/hardware/ALU.hpp
+tuple
+-
+Hardware.hpp
+../src/hardware/Hardware.hpp
+BasicGates.hpp
+../src/hardware/BasicGates.hpp
+Adders.hpp
+../src/hardware/Adders.hpp
+
+../src/hardware/Adders.hpp
+array
+-
+BasicGates.hpp
+../src/hardware/BasicGates.hpp
+
 ../src/hardware/BasicGates.hpp
 array
 -
@@ -16,6 +32,24 @@ Hardware.hpp
 cstdint
 -
 
+../src/hardware/SequentialChips.hpp
+Hardware.hpp
+../src/hardware/Hardware.hpp
+BasicGates.hpp
+../src/hardware/BasicGates.hpp
+
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/ALUBenchmark.cpp
+HardwareBenchmarkManager.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
+src/hardware/ALU.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/src/hardware/ALU.hpp
+
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/AddersBenchmark.cpp
+HardwareBenchmarkManager.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
+src/hardware/Adders.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/src/hardware/Adders.hpp
+
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/BasicGatesBenchmark.cpp
 HardwareBenchmarkManager.hpp
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
@@ -25,6 +59,12 @@ C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_b
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
 benchmark/benchmark.h
 -
+
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/SequentialChipsBenchmark.cpp
+HardwareBenchmarkManager.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
+src/hardware/SequentialChips.hpp
+C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/src/hardware/SequentialChips.hpp
 
 _deps/googlebenchmark-src/include/benchmark/benchmark.h
 stdint.h

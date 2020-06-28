@@ -18,6 +18,7 @@ Benchmark                         Time
 -----------------------------------------
 BasicGates_nand                  2.80 ns 
 BasicGates_nand_v2               3.07 ns 
+BasicGates_nand3way              3.35 ns 
 BasicGates_nand_v3               3.46 ns 
 BasicGates_not                   4    ns 
 BasicGates_and                   6.6  ns 
@@ -47,4 +48,9 @@ Adders_add32                 1'140    ns
 ALU_neg_if32                   332    ns 
 ALU_prepare32                  332    ns 
 ALU_alu                      2'740    ns  
+
+SequentialChips_dff             28.6  ns 
+SequentialChips_bit             38.3  ns 
+SequentialChips_register32   1'289    ns 
+
 ```

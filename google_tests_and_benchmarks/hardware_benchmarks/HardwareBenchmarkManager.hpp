@@ -4,13 +4,14 @@
 #include <benchmark/benchmark.h>
 
 ///Main benchmark session
-#define REGISTER_BM_BASICGATES
-#define REGISTER_BM_ADDERS
-#define REGISTER_BM_ALU
+//#define REGISTER_BM_BASICGATES
+//#define REGISTER_BM_ADDERS
+//#define REGISTER_BM_ALU
+#define REGISTER_BM_SEQUENTIALCHIPS
 
-const int REPS_UNIMPORTANT = 10;
-const int REPS = 500; //10=3.5min for basicGates+adders+alu
-const int REPS_PRIORITY = 1000;
+const int REPS_UNIMPORTANT = 1;
+const int REPS = 5; //10=3.5min for basicGates+adders+alu
+const int REPS_PRIORITY = 100;
 
 
 
@@ -21,6 +22,9 @@ const int REPS_PRIORITY = 1000;
 
 #define     ADDER_BENCHMARK(NAME, PARAMS) HARDWARE_BENCHMARK(Adders,     NAME, PARAMS)
 #define BASICGATE_BENCHMARK(NAME, PARAMS) HARDWARE_BENCHMARK(BasicGates, NAME, PARAMS)
+#define SEQUENTIALCHIP_BENCHMARK(CLASSNAME, PARAMS)  \
+    static void BM_SequentialChips##CLASSNAME(benchmark::State& state) { auto gate=Hardware::SequentialChips::CLASSNAME(); for (auto _ : state) { gate PARAMS; } } \
+    BENCHMARK(BM_SequentialChips##CLASSNAME)
 
 
 
