@@ -80,11 +80,17 @@ namespace Standards::HardwareStandards::SequentialChipsStandards
         int step = std::max(1, N/100);
         for (int i = 0; i < N; i+=step)
             candidateAddresses.push_back(i);
-        for (auto i:candidateAddresses)
+        
+        const int VAL = 777;
+        for (auto address:candidateAddresses)
         {
-            gate(777, i, 1);
-            EXPECT_EQ(gate(888, i, 0), 777);
+            gate(VAL, address, 1);
+            EXPECT_EQ(gate(888, address, 0), VAL)<<"@ "<<address<<"\n";
         }
+
+        for (auto address:candidateAddresses) EXPECT_EQ(gate.read(address), VAL)<<"@ "<<address<<"\n";
+        for (auto address:candidateAddresses) gate.write(address, address);
+        for (auto address:candidateAddresses) EXPECT_EQ(gate.read(address), address)<<"@ "<<address<<"\n";
     }
 }
 

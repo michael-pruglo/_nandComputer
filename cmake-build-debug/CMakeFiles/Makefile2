@@ -846,8 +846,8 @@ _deps/googlebenchmark-build/test/CMakeFiles/register_benchmark_test.dir/clean:
 
 # All Build rule for target.
 _deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
-_deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\benchmark_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\benchmark_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/benchmark_gtest.dir/build
@@ -957,8 +957,8 @@ _deps/googlebenchmark-build/test/CMakeFiles/templated_fixture_test.dir/clean:
 # Target rules for target _deps/googlebenchmark-build/test/CMakeFiles/link_main_test.dir
 
 # All Build rule for target.
-_deps/googlebenchmark-build/test/CMakeFiles/link_main_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark_main.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/link_main_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/link_main_test.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark_main.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\link_main_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/link_main_test.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\link_main_test.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/link_main_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles --progress-num=69,70 "Built target link_main_test"
@@ -1042,8 +1042,8 @@ _deps/googlebenchmark-build/test/CMakeFiles/user_counters_test.dir/clean:
 
 # All Build rule for target.
 _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
-_deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\statistics_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\statistics_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/statistics_gtest.dir/build
@@ -1239,8 +1239,8 @@ _deps/googlebenchmark-build/test/CMakeFiles/cxx03_test.dir/clean:
 
 # All Build rule for target.
 _deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
-_deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\benchmark_name_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\benchmark_name_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/build
@@ -1269,8 +1269,8 @@ _deps/googlebenchmark-build/test/CMakeFiles/benchmark_name_gtest.dir/clean:
 
 # All Build rule for target.
 _deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
-_deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\commandlineflags_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\commandlineflags_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/build
@@ -1299,8 +1299,8 @@ _deps/googlebenchmark-build/test/CMakeFiles/commandlineflags_gtest.dir/clean:
 
 # All Build rule for target.
 _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/all: google_tests_and_benchmarks/lib/googletest/CMakeFiles/gtest.dir/all
-_deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock_main.dir/all
+_deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/all: google_tests_and_benchmarks/lib/googlemock/CMakeFiles/gmock.dir/all
 _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/all: _deps/googlebenchmark-build/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\string_util_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/depend
 	$(MAKE) -f _deps\googlebenchmark-build\test\CMakeFiles\string_util_gtest.dir\build.make _deps/googlebenchmark-build/test/CMakeFiles/string_util_gtest.dir/build

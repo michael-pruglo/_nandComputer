@@ -3,6 +3,7 @@
 #include "hardware/Adders.hpp"
 #include "hardware/SequentialChips.hpp"
 
+
 int main()
 {
     std::cout<<"main():     _nand(0,0) = "<<Hardware::BasicGates::_nand(0,0)<<"\n";
