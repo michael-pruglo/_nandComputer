@@ -3,10 +3,10 @@
 
 #include "Hardware.hpp"
 #include "BasicGates.hpp"
+#include "Adders.hpp"
 
 namespace Hardware::SequentialChips
 {
-    using namespace Hardware::BasicGates;
 
     class _dff
     {
@@ -61,6 +61,19 @@ namespace Hardware::SequentialChips
     private:
         std::array<_register32, 8> memory;
     };
+
+
+    class _counter32
+    {
+    public:
+               Bus32 operator()(Bus32 in, bool inc, bool load, bool reset);
+        inline Bus32 read() const { return register32.read(); }
+        inline void  set(Bus32 val) { operator()(val, 0, 1, 0); }
+        inline void  reset() { operator()(0, 0, 0, 1); }
+        inline void  inc() { operator()(0, 1, 0, 0); }
+    private:
+        _register32 register32;
+    };
 }
 
 
@@ -68,6 +81,9 @@ namespace Hardware::SequentialChips
 ///Implementation
 namespace Hardware::SequentialChips
 {
+    using namespace Hardware::BasicGates;
+    using namespace Hardware::Adders;
+
     _dff::_dff() : q(!nq), bout(1), cout(1) {}
     bool _dff::activate(bool data)
     {
@@ -169,7 +185,6 @@ namespace Hardware::SequentialChips
 
 
 
-
     template<int N>
     Bus32 _RAM<N>::operator()(Bus32 in, Bus32 address, bool load)
     {
@@ -225,6 +240,14 @@ namespace Hardware::SequentialChips
         Bus32 m6 = memory[6].read();
         Bus32 m7 = memory[7].read();
         return _mux8way32(m0,m1,m2,m3,m4,m5,m6,m7,address&0x1u, address&0x2u, address&0x4u);
+    }
+
+
+
+    Bus32 _counter32::operator()(Bus32 in, bool inc, bool load, bool reset)
+    {
+        Bus32 val = _mux4way32(_inc32(register32.read()), in, 0, 0, load, reset);
+        return register32(val, _or(_or(inc, reset), load));
     }
 }
 

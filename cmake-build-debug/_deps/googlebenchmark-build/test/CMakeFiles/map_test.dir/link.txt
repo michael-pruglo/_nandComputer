@@ -1,3 +1,3 @@
-"C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\map_test.dir/objects.a
+"C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\map_test.dir/objects.a
 C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\map_test.dir/objects.a @CMakeFiles\map_test.dir\objects1.rsp
 C:\msys64\mingw64\bin\g++.exe   -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -g   -Wl,--whole-archive CMakeFiles\map_test.dir/objects.a -Wl,--no-whole-archive  -o map_test.exe -Wl,--out-implib,libmap_test.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\map_test.dir\linklibs.rsp

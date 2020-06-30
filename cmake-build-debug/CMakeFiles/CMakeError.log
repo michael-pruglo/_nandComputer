@@ -1,15 +1,15 @@
 Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 failed with the following output:
 Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_8c5c5/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_8c5c5.dir\build.make CMakeFiles/cmTC_8c5c5.dir/build
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_4f951/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_4f951.dir\build.make CMakeFiles/cmTC_4f951.dir/build
 mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8c5c5.dir/src.cxx.obj
-C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -Wshorten-64-to-32   -Wshorten-64-to-32 -o CMakeFiles\cmTC_8c5c5.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Building CXX object CMakeFiles/cmTC_4f951.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -Wshorten-64-to-32   -Wshorten-64-to-32 -o CMakeFiles\cmTC_4f951.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
 g++.exe: error: unrecognized command-line option '-Wshorten-64-to-32'
 g++.exe: error: unrecognized command-line option '-Wshorten-64-to-32'
-mingw32-make[1]: *** [CMakeFiles\cmTC_8c5c5.dir\build.make:65: CMakeFiles/cmTC_8c5c5.dir/src.cxx.obj] Error 1
+mingw32-make[1]: *** [CMakeFiles\cmTC_4f951.dir\build.make:65: CMakeFiles/cmTC_4f951.dir/src.cxx.obj] Error 1
 mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
-mingw32-make: *** [Makefile:120: cmTC_8c5c5/fast] Error 2
+mingw32-make: *** [Makefile:120: cmTC_4f951/fast] Error 2
 
 
 Source file was:
@@ -17,15 +17,15 @@ int main() { return 0; }
 Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WD654 failed with the following output:
 Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_c204e/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_c204e.dir\build.make CMakeFiles/cmTC_c204e.dir/build
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_2db81/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_2db81.dir\build.make CMakeFiles/cmTC_2db81.dir/build
 mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c204e.dir/src.cxx.obj
-C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_WD654  -wd654   -wd654 -o CMakeFiles\cmTC_c204e.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Building CXX object CMakeFiles/cmTC_2db81.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_WD654  -wd654   -wd654 -o CMakeFiles\cmTC_2db81.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
 g++.exe: error: unrecognized command-line option '-wd654'
 g++.exe: error: unrecognized command-line option '-wd654'
-mingw32-make[1]: *** [CMakeFiles\cmTC_c204e.dir\build.make:65: CMakeFiles/cmTC_c204e.dir/src.cxx.obj] Error 1
+mingw32-make[1]: *** [CMakeFiles\cmTC_2db81.dir\build.make:65: CMakeFiles/cmTC_2db81.dir/src.cxx.obj] Error 1
 mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
-mingw32-make: *** [Makefile:120: cmTC_c204e/fast] Error 2
+mingw32-make: *** [Makefile:120: cmTC_2db81/fast] Error 2
 
 
 Source file was:
@@ -33,15 +33,15 @@ int main() { return 0; }
 Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WTHREAD_SAFETY failed with the following output:
 Change Dir: C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_0fb3b/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_0fb3b.dir\build.make CMakeFiles/cmTC_0fb3b.dir/build
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe cmTC_18c25/fast && C:/msys64/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_18c25.dir\build.make CMakeFiles/cmTC_18c25.dir/build
 mingw32-make[1]: Entering directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_0fb3b.dir/src.cxx.obj
-C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -Wthread-safety   -Wthread-safety -o CMakeFiles\cmTC_0fb3b.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+Building CXX object CMakeFiles/cmTC_18c25.dir/src.cxx.obj
+C:\msys64\mingw64\bin\g++.exe    -std=c++11  -Wall  -Wextra  -Wshadow  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -Wthread-safety   -Wthread-safety -o CMakeFiles\cmTC_18c25.dir\src.cxx.obj -c C:\Users\mickl\ClionProjects\NandComputer\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
 g++.exe: error: unrecognized command-line option '-Wthread-safety'
 g++.exe: error: unrecognized command-line option '-Wthread-safety'
-mingw32-make[1]: *** [CMakeFiles\cmTC_0fb3b.dir\build.make:65: CMakeFiles/cmTC_0fb3b.dir/src.cxx.obj] Error 1
+mingw32-make[1]: *** [CMakeFiles\cmTC_18c25.dir\build.make:65: CMakeFiles/cmTC_18c25.dir/src.cxx.obj] Error 1
 mingw32-make[1]: Leaving directory 'C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/CMakeFiles/CMakeTmp'
-mingw32-make: *** [Makefile:120: cmTC_0fb3b/fast] Error 2
+mingw32-make: *** [Makefile:120: cmTC_18c25/fast] Error 2
 
 
 Source file was:

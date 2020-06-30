@@ -37,6 +37,8 @@ Hardware.hpp
 ../src/hardware/Hardware.hpp
 BasicGates.hpp
 ../src/hardware/BasicGates.hpp
+Adders.hpp
+../src/hardware/Adders.hpp
 
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/ALUBenchmark.cpp
 HardwareBenchmarkManager.hpp

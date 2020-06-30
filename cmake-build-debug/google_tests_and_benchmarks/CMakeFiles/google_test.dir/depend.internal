@@ -106,6 +106,7 @@ google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/Sequential
  ../google_tests_and_benchmarks/lib/googletest/include/gtest/internal/gtest-port.h
  ../google_tests_and_benchmarks/lib/googletest/include/gtest/internal/gtest-string.h
  ../google_tests_and_benchmarks/lib/googletest/include/gtest/internal/gtest-type-util.h
+ ../src/hardware/Adders.hpp
  ../src/hardware/BasicGates.hpp
  ../src/hardware/Hardware.hpp
  ../src/hardware/SequentialChips.hpp

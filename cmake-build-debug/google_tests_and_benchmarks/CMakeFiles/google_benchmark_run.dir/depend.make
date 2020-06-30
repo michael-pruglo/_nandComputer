@@ -25,6 +25,7 @@ google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchma
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/BasicGatesBenchmark.cpp.obj: ../google_tests_and_benchmarks/hardware_benchmarks/HardwareBenchmarkManager.hpp
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/BasicGatesBenchmark.cpp.obj: _deps/googlebenchmark-src/include/benchmark/benchmark.h
 
+google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/SequentialChipsBenchmark.cpp.obj: ../src/hardware/Adders.hpp
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/SequentialChipsBenchmark.cpp.obj: ../src/hardware/BasicGates.hpp
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/SequentialChipsBenchmark.cpp.obj: ../src/hardware/Hardware.hpp
 google_tests_and_benchmarks/CMakeFiles/google_benchmark_run.dir/hardware_benchmarks/SequentialChipsBenchmark.cpp.obj: ../src/hardware/SequentialChips.hpp

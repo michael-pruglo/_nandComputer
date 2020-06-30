@@ -105,6 +105,7 @@ google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/Sequential
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/SequentialChipsTest.cpp.obj: ../google_tests_and_benchmarks/lib/googletest/include/gtest/internal/gtest-port.h
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/SequentialChipsTest.cpp.obj: ../google_tests_and_benchmarks/lib/googletest/include/gtest/internal/gtest-string.h
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/SequentialChipsTest.cpp.obj: ../google_tests_and_benchmarks/lib/googletest/include/gtest/internal/gtest-type-util.h
+google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/SequentialChipsTest.cpp.obj: ../src/hardware/Adders.hpp
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/SequentialChipsTest.cpp.obj: ../src/hardware/BasicGates.hpp
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/SequentialChipsTest.cpp.obj: ../src/hardware/Hardware.hpp
 google_tests_and_benchmarks/CMakeFiles/google_test.dir/hardware_tests/SequentialChipsTest.cpp.obj: ../src/hardware/SequentialChips.hpp

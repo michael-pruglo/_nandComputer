@@ -77,8 +77,8 @@ namespace Standards::HardwareStandards::SequentialChipsStandards
     void _RAM(Hardware::SequentialChips::_RAM<N> gate)
     {
         std::vector<int> candidateAddresses = {0, 1, N-2, N-1};
-        int step = std::max(1, N/100);
-        for (int i = 0; i < N; i+=step)
+        int step = std::max(1, N/10);
+        for (int i = 2; i < N; i+=step)
             candidateAddresses.push_back(i);
         
         const int VAL = 777;
@@ -91,6 +91,17 @@ namespace Standards::HardwareStandards::SequentialChipsStandards
         for (auto address:candidateAddresses) EXPECT_EQ(gate.read(address), VAL)<<"@ "<<address<<"\n";
         for (auto address:candidateAddresses) gate.write(address, address);
         for (auto address:candidateAddresses) EXPECT_EQ(gate.read(address), address)<<"@ "<<address<<"\n";
+    }
+
+    void _counter32(Hardware::SequentialChips::_counter32 gate,
+            Hardware::Bus32 in, bool inc, bool load, bool reset)
+    {
+        Hardware::Bus32 prev = gate.read();
+        Hardware::Bus32 res = gate(in, inc, load, reset);
+        if      (reset) EXPECT_EQ(res, 0);
+        else if (load)  EXPECT_EQ(res, in);
+        else if (inc)   EXPECT_EQ(res, prev+1);
+        else            EXPECT_EQ(res, prev);
     }
 }
 

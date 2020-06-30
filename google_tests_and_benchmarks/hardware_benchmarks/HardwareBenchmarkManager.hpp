@@ -11,7 +11,7 @@
 
 const int REPS_UNIMPORTANT = 1;
 const int REPS = 5; //10=3.5min for basicGates+adders+alu
-const int REPS_PRIORITY = 10 ;
+const int REPS_PRIORITY = 100 ;
 
 
 

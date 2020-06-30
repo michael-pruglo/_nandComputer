@@ -2545,6 +2545,18 @@
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/_deps/googlebenchmark-src/cmake/benchmark.pc.in">
 			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\googlebenchmark-src\cmake\"/>
 		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/_deps/googlebenchmark-src/cmake/gnu_posix_regex.cpp">
+			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\googlebenchmark-src\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/_deps/googlebenchmark-src/cmake/posix_regex.cpp">
+			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\googlebenchmark-src\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/_deps/googlebenchmark-src/cmake/std_regex.cpp">
+			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\googlebenchmark-src\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/_deps/googlebenchmark-src/cmake/steady_clock.cpp">
+			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\googlebenchmark-src\cmake\"/>
+		</Unit>
 		<Unit filename="C:/Users/mickl/ClionProjects/NandComputer/cmake-build-debug/_deps/googlebenchmark-src/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\googlebenchmark-src\src\"/>
 		</Unit>
