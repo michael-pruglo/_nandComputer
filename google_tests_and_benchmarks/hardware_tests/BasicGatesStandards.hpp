@@ -10,6 +10,8 @@ namespace Standards::HardwareStandards::BasicGatesStandards
     typedef bool(* BinaryBoolFunc)(bool, bool);
     typedef bool(*TernaryBoolFunc)(bool, bool, bool);
 
+    typedef Hardware::Bus16(*  UnaryBus16Func)(Hardware::Bus16);
+    typedef Hardware::Bus16(* BinaryBus16Func)(Hardware::Bus16, Hardware::Bus16);
     typedef Hardware::Bus32(*  UnaryBus32Func)(Hardware::Bus32);
     typedef Hardware::Bus32(* BinaryBus32Func)(Hardware::Bus32, Hardware::Bus32);
 
@@ -90,7 +92,42 @@ namespace Standards::HardwareStandards::BasicGatesStandards
         EXPECT_EQ((gate(1, 0)), (std::array<bool, 2>{1, 0}));
         EXPECT_EQ((gate(1, 1)), (std::array<bool, 2>{0, 1}));
     }
+
+
+    void _not16(UnaryBus16Func gate, Hardware::Bus16 in)
+    {
+        EXPECT_EQ(gate(in), Hardware::Bus16(~in));
+    }
+
+    void _and16(BinaryBus16Func gate, Hardware::Bus16 a, Hardware::Bus16 b)
+    {
+        EXPECT_EQ(gate(a, b), (a&b));
+    }
+
+    void _or16(BinaryBus16Func gate, Hardware::Bus16 a, Hardware::Bus16 b)
+    {
+        EXPECT_EQ(gate(a, b), (a|b));
+    }
+
+    void _mux16(Hardware::Bus16(*gate)(Hardware::Bus16,Hardware::Bus16,bool),
+                Hardware::Bus16 a,
+                Hardware::Bus16 b)
+    {
+        EXPECT_EQ(gate(a, b, 0),   a);
+        EXPECT_EQ(gate(a, b, 1),   b);
+    }
+
+    void _is_zero16(bool(*gate)(Hardware::Bus16), Hardware::Bus16 in)
+    {
+        EXPECT_EQ(gate(in), (in==0));
+    }
+
+    void _is_nzero16(bool(*gate)(Hardware::Bus16), Hardware::Bus16 in)
+    {
+        EXPECT_EQ(gate(in), (in!=0));
+    }
     
+
     void _not32(UnaryBus32Func gate, Hardware::Bus32 in)
     {
         EXPECT_EQ(gate(in), ~in);
@@ -133,6 +170,41 @@ namespace Standards::HardwareStandards::BasicGatesStandards
     {
         EXPECT_EQ(gate(in), (__builtin_popcount(in)>0));
     }
+
+    void _mux4way16(Hardware::Bus16(*gate)(Hardware::Bus16,Hardware::Bus16,Hardware::Bus16,Hardware::Bus16,bool,bool),
+                    Hardware::Bus16 a,
+                    Hardware::Bus16 b,
+                    Hardware::Bus16 c,
+                    Hardware::Bus16 d)
+    {
+        EXPECT_EQ(gate(a,b,c,d, 0, 0),   a);
+        EXPECT_EQ(gate(a,b,c,d, 0, 1),   c);
+        EXPECT_EQ(gate(a,b,c,d, 1, 0),   b);
+        EXPECT_EQ(gate(a,b,c,d, 1, 1),   d);
+    }
+
+    void _mux8way16(Hardware::Bus16(*gate)(Hardware::Bus16,Hardware::Bus16,Hardware::Bus16,Hardware::Bus16,
+                                           Hardware::Bus16,Hardware::Bus16,Hardware::Bus16,Hardware::Bus16,
+                                           bool,bool,bool),
+                    Hardware::Bus16 a,
+                    Hardware::Bus16 b,
+                    Hardware::Bus16 c,
+                    Hardware::Bus16 d,
+                    Hardware::Bus16 e,
+                    Hardware::Bus16 f,
+                    Hardware::Bus16 g,
+                    Hardware::Bus16 h)
+    {
+        EXPECT_EQ(gate(a,b,c,d,e,f,g,h, 0, 0, 0),   a);
+        EXPECT_EQ(gate(a,b,c,d,e,f,g,h, 0, 0, 1),   e);
+        EXPECT_EQ(gate(a,b,c,d,e,f,g,h, 0, 1, 0),   c);
+        EXPECT_EQ(gate(a,b,c,d,e,f,g,h, 0, 1, 1),   g);
+        EXPECT_EQ(gate(a,b,c,d,e,f,g,h, 1, 0, 0),   b);
+        EXPECT_EQ(gate(a,b,c,d,e,f,g,h, 1, 0, 1),   f);
+        EXPECT_EQ(gate(a,b,c,d,e,f,g,h, 1, 1, 0),   d);
+        EXPECT_EQ(gate(a,b,c,d,e,f,g,h, 1, 1, 1),   h);
+    }
+
 
     void _mux4way32(Hardware::Bus32(*gate)(Hardware::Bus32,Hardware::Bus32,Hardware::Bus32,Hardware::Bus32,bool,bool),
                     Hardware::Bus32 a,

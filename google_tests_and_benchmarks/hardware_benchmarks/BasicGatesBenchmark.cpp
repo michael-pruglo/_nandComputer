@@ -13,6 +13,12 @@
     BASICGATE_BENCHMARK(_xnor,      (0, 0))->Repetitions(REPS_PRIORITY)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_mux,       (0,0,0))->Repetitions(REPS_PRIORITY)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_dmux,      (0, 0))->Repetitions(REPS_PRIORITY)->DisplayAggregatesOnly(true);
+    BASICGATE_BENCHMARK(_not16,     (0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
+    BASICGATE_BENCHMARK(_and16,     (0,0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
+    BASICGATE_BENCHMARK(_or16,      (0,0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
+    BASICGATE_BENCHMARK(_mux16,     (0,0,0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
+    BASICGATE_BENCHMARK(_is_zero16, (0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
+    BASICGATE_BENCHMARK(_is_nzero16,(0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_not32,     (0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_and32,     (0,0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_or32,      (0,0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
@@ -21,6 +27,8 @@
     BASICGATE_BENCHMARK(_is_nzero32,(0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_and8way,   (0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_or8way,    (0))->Repetitions(REPS)->DisplayAggregatesOnly(true);
+    BASICGATE_BENCHMARK(_mux4way16, (0, 0, 0, 0, 0, 0))->Repetitions(REPS_UNIMPORTANT)->DisplayAggregatesOnly(true);
+    BASICGATE_BENCHMARK(_mux8way16, (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))->Repetitions(REPS_UNIMPORTANT)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_mux4way32, (0, 0, 0, 0, 0, 0))->Repetitions(REPS_UNIMPORTANT)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_mux8way32, (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))->Repetitions(REPS_UNIMPORTANT)->DisplayAggregatesOnly(true);
     BASICGATE_BENCHMARK(_dmux4way,  (0, 0, 0))->Repetitions(REPS_UNIMPORTANT)->DisplayAggregatesOnly(true);

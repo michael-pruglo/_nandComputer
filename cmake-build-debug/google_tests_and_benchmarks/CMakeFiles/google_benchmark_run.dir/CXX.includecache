@@ -39,6 +39,8 @@ BasicGates.hpp
 ../src/hardware/BasicGates.hpp
 Adders.hpp
 ../src/hardware/Adders.hpp
+cassert
+-
 
 C:/Users/mickl/ClionProjects/NandComputer/google_tests_and_benchmarks/hardware_benchmarks/ALUBenchmark.cpp
 HardwareBenchmarkManager.hpp

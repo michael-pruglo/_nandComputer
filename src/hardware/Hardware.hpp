@@ -3,11 +3,11 @@
 
 #include <cstdint>
 
-namespace Hardware {
-
+namespace Hardware
+{
     typedef uint8_t     Bus8;
+    typedef uint16_t    Bus16;
     typedef uint32_t    Bus32;
-
 }
 
 #endif //NANDCOMPUTER_HARDWARE_HPP

@@ -19,7 +19,17 @@ namespace Hardware::BasicGates
     inline                bool _mux (bool a,  bool b,   bool sel);
     inline std::array<bool, 2> _dmux(bool in, bool sel);
 
+    
+    
+    ///16bit
+    inline               Bus16 _not16(Bus16 in);
+    inline               Bus16 _and16(Bus16 a,  Bus16 b);
+    inline               Bus16 _or16 (Bus16 a,  Bus16 b);
 
+    inline               Bus16 _mux16(Bus16 a,  Bus16 b, bool sel);
+
+    inline                bool _is_zero16(Bus16 in);
+    inline                bool _is_nzero16(Bus16 in);
 
     ///32 bit
     inline               Bus32 _not32(Bus32 in);
@@ -38,6 +48,11 @@ namespace Hardware::BasicGates
     inline                bool _and8way  (Bus8 in);
     inline                bool _or8way   (Bus8 in);
 
+    inline               Bus16 _mux4way16(Bus16 a, Bus16 b, Bus16 c, Bus16 d,
+                                          bool sel0, bool sel1);
+    inline               Bus16 _mux8way16(Bus16 a, Bus16 b, Bus16 c, Bus16 d,
+                                          Bus16 e, Bus16 f, Bus16 g, Bus16 h,
+                                          bool sel0, bool sel1, bool sel2);
     inline               Bus32 _mux4way32(Bus32 a, Bus32 b, Bus32 c, Bus32 d,
                                           bool sel0, bool sel1);
     inline               Bus32 _mux8way32(Bus32 a, Bus32 b, Bus32 c, Bus32 d,
@@ -144,148 +159,264 @@ namespace Hardware::BasicGates
         };
     }
 
+
+
+    inline Bus16 _not16(Bus16 in)
+    {
+        return    _not(  in &    0x8000u  ) <<15u
+                | _not(  in &    0x4000u  ) <<14u
+                | _not(  in &    0x2000u  ) <<13u
+                | _not(  in &    0x1000u  ) <<12u
+                | _not(  in &     0x800u  ) <<11u
+                | _not(  in &     0x400u  ) <<10u
+                | _not(  in &     0x200u  ) << 9u
+                | _not(  in &     0x100u  ) << 8u
+                | _not(  in &      0x80u  ) << 7u
+                | _not(  in &      0x40u  ) << 6u
+                | _not(  in &      0x20u  ) << 5u
+                | _not(  in &      0x10u  ) << 4u
+                | _not(  in &       0x8u  ) << 3u
+                | _not(  in &       0x4u  ) << 2u
+                | _not(  in &       0x2u  ) << 1u
+                | _not(  in &       0x1u  ) << 0u
+                ;
+    }
+
+    inline Bus16 _and16(Bus16 a, Bus16 b)
+    {
+        return    _and(  a &    0x8000u,  b &    0x8000u  ) <<15u
+                | _and(  a &    0x4000u,  b &    0x4000u  ) <<14u
+                | _and(  a &    0x2000u,  b &    0x2000u  ) <<13u
+                | _and(  a &    0x1000u,  b &    0x1000u  ) <<12u
+                | _and(  a &     0x800u,  b &     0x800u  ) <<11u
+                | _and(  a &     0x400u,  b &     0x400u  ) <<10u
+                | _and(  a &     0x200u,  b &     0x200u  ) << 9u
+                | _and(  a &     0x100u,  b &     0x100u  ) << 8u
+                | _and(  a &      0x80u,  b &      0x80u  ) << 7u
+                | _and(  a &      0x40u,  b &      0x40u  ) << 6u
+                | _and(  a &      0x20u,  b &      0x20u  ) << 5u
+                | _and(  a &      0x10u,  b &      0x10u  ) << 4u
+                | _and(  a &       0x8u,  b &       0x8u  ) << 3u
+                | _and(  a &       0x4u,  b &       0x4u  ) << 2u
+                | _and(  a &       0x2u,  b &       0x2u  ) << 1u
+                | _and(  a &       0x1u,  b &       0x1u  ) << 0u
+                ;
+    }
+
+    inline Bus16 _or16(Bus16 a, Bus16 b)
+    {
+        return    _or(  a &    0x8000u,  b &    0x8000u  ) <<15u
+                | _or(  a &    0x4000u,  b &    0x4000u  ) <<14u
+                | _or(  a &    0x2000u,  b &    0x2000u  ) <<13u
+                | _or(  a &    0x1000u,  b &    0x1000u  ) <<12u
+                | _or(  a &     0x800u,  b &     0x800u  ) <<11u
+                | _or(  a &     0x400u,  b &     0x400u  ) <<10u
+                | _or(  a &     0x200u,  b &     0x200u  ) << 9u
+                | _or(  a &     0x100u,  b &     0x100u  ) << 8u
+                | _or(  a &      0x80u,  b &      0x80u  ) << 7u
+                | _or(  a &      0x40u,  b &      0x40u  ) << 6u
+                | _or(  a &      0x20u,  b &      0x20u  ) << 5u
+                | _or(  a &      0x10u,  b &      0x10u  ) << 4u
+                | _or(  a &       0x8u,  b &       0x8u  ) << 3u
+                | _or(  a &       0x4u,  b &       0x4u  ) << 2u
+                | _or(  a &       0x2u,  b &       0x2u  ) << 1u
+                | _or(  a &       0x1u,  b &       0x1u  ) << 0u
+                ;
+    }
+
+    inline Bus16 _mux16(Bus16 a, Bus16 b, bool sel)
+    {
+        return    _mux(  a &    0x8000u,  b &    0x8000u,  sel  ) <<15u
+                | _mux(  a &    0x4000u,  b &    0x4000u,  sel  ) <<14u
+                | _mux(  a &    0x2000u,  b &    0x2000u,  sel  ) <<13u
+                | _mux(  a &    0x1000u,  b &    0x1000u,  sel  ) <<12u
+                | _mux(  a &     0x800u,  b &     0x800u,  sel  ) <<11u
+                | _mux(  a &     0x400u,  b &     0x400u,  sel  ) <<10u
+                | _mux(  a &     0x200u,  b &     0x200u,  sel  ) << 9u
+                | _mux(  a &     0x100u,  b &     0x100u,  sel  ) << 8u
+                | _mux(  a &      0x80u,  b &      0x80u,  sel  ) << 7u
+                | _mux(  a &      0x40u,  b &      0x40u,  sel  ) << 6u
+                | _mux(  a &      0x20u,  b &      0x20u,  sel  ) << 5u
+                | _mux(  a &      0x10u,  b &      0x10u,  sel  ) << 4u
+                | _mux(  a &       0x8u,  b &       0x8u,  sel  ) << 3u
+                | _mux(  a &       0x4u,  b &       0x4u,  sel  ) << 2u
+                | _mux(  a &       0x2u,  b &       0x2u,  sel  ) << 1u
+                | _mux(  a &       0x1u,  b &       0x1u,  sel  ) << 0u
+                ;
+    }
+
+    inline bool _is_zero16(Bus16 in)
+    {
+        return _not(_is_nzero16(in));
+    }
+
+    inline bool _is_nzero16(Bus16 in)
+    {
+        return  _or(in & 0x8000u,
+                _or(in & 0x4000u,
+                _or(in & 0x2000u,
+                _or(in & 0x1000u,
+                _or(in & 0x800u,
+                _or(in & 0x400u,
+                _or(in & 0x200u,
+                _or(in & 0x100u,
+                _or(in & 0x80u,
+                _or(in & 0x40u,
+                _or(in & 0x20u,
+                _or(in & 0x10u,
+                _or(in & 0x8u,
+                _or(in & 0x4u,
+                _or(in & 0x2u,
+                    in & 0x1u)))))))))))))));
+    }
+
+
     inline Bus32 _not32(Bus32 in)
     {
-        return _not(in & 0x80000000u) << 31u
-               | _not(in & 0x40000000u) << 30u
-               | _not(in & 0x20000000u) << 29u
-               | _not(in & 0x10000000u) << 28u
-               | _not(in & 0x8000000u) << 27u
-               | _not(in & 0x4000000u) << 26u
-               | _not(in & 0x2000000u) << 25u
-               | _not(in & 0x1000000u) << 24u
-               | _not(in & 0x800000u) << 23u
-               | _not(in & 0x400000u) << 22u
-               | _not(in & 0x200000u) << 21u
-               | _not(in & 0x100000u) << 20u
-               | _not(in & 0x80000u) << 19u
-               | _not(in & 0x40000u) << 18u
-               | _not(in & 0x20000u) << 17u
-               | _not(in & 0x10000u) << 16u
-               | _not(in & 0x8000u) << 15u
-               | _not(in & 0x4000u) << 14u
-               | _not(in & 0x2000u) << 13u
-               | _not(in & 0x1000u) << 12u
-               | _not(in & 0x800u) << 11u
-               | _not(in & 0x400u) << 10u
-               | _not(in & 0x200u) << 9u
-               | _not(in & 0x100u) << 8u
-               | _not(in & 0x80u) << 7u
-               | _not(in & 0x40u) << 6u
-               | _not(in & 0x20u) << 5u
-               | _not(in & 0x10u) << 4u
-               | _not(in & 0x8u) << 3u
-               | _not(in & 0x4u) << 2u
-               | _not(in & 0x2u) << 1u
-               | _not(in & 0x1u) << 0u;
+        return    _not(  in &0x80000000u  ) <<31u
+                | _not(  in &0x40000000u  ) <<30u
+                | _not(  in &0x20000000u  ) <<29u
+                | _not(  in &0x10000000u  ) <<28u
+                | _not(  in & 0x8000000u  ) <<27u
+                | _not(  in & 0x4000000u  ) <<26u
+                | _not(  in & 0x2000000u  ) <<25u
+                | _not(  in & 0x1000000u  ) <<24u
+                | _not(  in &  0x800000u  ) <<23u
+                | _not(  in &  0x400000u  ) <<22u
+                | _not(  in &  0x200000u  ) <<21u
+                | _not(  in &  0x100000u  ) <<20u
+                | _not(  in &   0x80000u  ) <<19u
+                | _not(  in &   0x40000u  ) <<18u
+                | _not(  in &   0x20000u  ) <<17u
+                | _not(  in &   0x10000u  ) <<16u
+                | _not(  in &    0x8000u  ) <<15u
+                | _not(  in &    0x4000u  ) <<14u
+                | _not(  in &    0x2000u  ) <<13u
+                | _not(  in &    0x1000u  ) <<12u
+                | _not(  in &     0x800u  ) <<11u
+                | _not(  in &     0x400u  ) <<10u
+                | _not(  in &     0x200u  ) << 9u
+                | _not(  in &     0x100u  ) << 8u
+                | _not(  in &      0x80u  ) << 7u
+                | _not(  in &      0x40u  ) << 6u
+                | _not(  in &      0x20u  ) << 5u
+                | _not(  in &      0x10u  ) << 4u
+                | _not(  in &       0x8u  ) << 3u
+                | _not(  in &       0x4u  ) << 2u
+                | _not(  in &       0x2u  ) << 1u
+                | _not(  in &       0x1u  ) << 0u
+                ;
     }
 
     inline Bus32 _and32(Bus32 a, Bus32 b)
     {
-        return _and(a & 0x80000000u, b & 0x80000000u) << 31u
-               | _and(a & 0x40000000u, b & 0x40000000u) << 30u
-               | _and(a & 0x20000000u, b & 0x20000000u) << 29u
-               | _and(a & 0x10000000u, b & 0x10000000u) << 28u
-               | _and(a & 0x8000000u, b & 0x8000000u) << 27u
-               | _and(a & 0x4000000u, b & 0x4000000u) << 26u
-               | _and(a & 0x2000000u, b & 0x2000000u) << 25u
-               | _and(a & 0x1000000u, b & 0x1000000u) << 24u
-               | _and(a & 0x800000u, b & 0x800000u) << 23u
-               | _and(a & 0x400000u, b & 0x400000u) << 22u
-               | _and(a & 0x200000u, b & 0x200000u) << 21u
-               | _and(a & 0x100000u, b & 0x100000u) << 20u
-               | _and(a & 0x80000u, b & 0x80000u) << 19u
-               | _and(a & 0x40000u, b & 0x40000u) << 18u
-               | _and(a & 0x20000u, b & 0x20000u) << 17u
-               | _and(a & 0x10000u, b & 0x10000u) << 16u
-               | _and(a & 0x8000u, b & 0x8000u) << 15u
-               | _and(a & 0x4000u, b & 0x4000u) << 14u
-               | _and(a & 0x2000u, b & 0x2000u) << 13u
-               | _and(a & 0x1000u, b & 0x1000u) << 12u
-               | _and(a & 0x800u, b & 0x800u) << 11u
-               | _and(a & 0x400u, b & 0x400u) << 10u
-               | _and(a & 0x200u, b & 0x200u) << 9u
-               | _and(a & 0x100u, b & 0x100u) << 8u
-               | _and(a & 0x80u, b & 0x80u) << 7u
-               | _and(a & 0x40u, b & 0x40u) << 6u
-               | _and(a & 0x20u, b & 0x20u) << 5u
-               | _and(a & 0x10u, b & 0x10u) << 4u
-               | _and(a & 0x8u, b & 0x8u) << 3u
-               | _and(a & 0x4u, b & 0x4u) << 2u
-               | _and(a & 0x2u, b & 0x2u) << 1u
-               | _and(a & 0x1u, b & 0x1u) << 0u;
+        return    _and(  a &0x80000000u,  b &0x80000000u  ) <<31u
+                | _and(  a &0x40000000u,  b &0x40000000u  ) <<30u
+                | _and(  a &0x20000000u,  b &0x20000000u  ) <<29u
+                | _and(  a &0x10000000u,  b &0x10000000u  ) <<28u
+                | _and(  a & 0x8000000u,  b & 0x8000000u  ) <<27u
+                | _and(  a & 0x4000000u,  b & 0x4000000u  ) <<26u
+                | _and(  a & 0x2000000u,  b & 0x2000000u  ) <<25u
+                | _and(  a & 0x1000000u,  b & 0x1000000u  ) <<24u
+                | _and(  a &  0x800000u,  b &  0x800000u  ) <<23u
+                | _and(  a &  0x400000u,  b &  0x400000u  ) <<22u
+                | _and(  a &  0x200000u,  b &  0x200000u  ) <<21u
+                | _and(  a &  0x100000u,  b &  0x100000u  ) <<20u
+                | _and(  a &   0x80000u,  b &   0x80000u  ) <<19u
+                | _and(  a &   0x40000u,  b &   0x40000u  ) <<18u
+                | _and(  a &   0x20000u,  b &   0x20000u  ) <<17u
+                | _and(  a &   0x10000u,  b &   0x10000u  ) <<16u
+                | _and(  a &    0x8000u,  b &    0x8000u  ) <<15u
+                | _and(  a &    0x4000u,  b &    0x4000u  ) <<14u
+                | _and(  a &    0x2000u,  b &    0x2000u  ) <<13u
+                | _and(  a &    0x1000u,  b &    0x1000u  ) <<12u
+                | _and(  a &     0x800u,  b &     0x800u  ) <<11u
+                | _and(  a &     0x400u,  b &     0x400u  ) <<10u
+                | _and(  a &     0x200u,  b &     0x200u  ) << 9u
+                | _and(  a &     0x100u,  b &     0x100u  ) << 8u
+                | _and(  a &      0x80u,  b &      0x80u  ) << 7u
+                | _and(  a &      0x40u,  b &      0x40u  ) << 6u
+                | _and(  a &      0x20u,  b &      0x20u  ) << 5u
+                | _and(  a &      0x10u,  b &      0x10u  ) << 4u
+                | _and(  a &       0x8u,  b &       0x8u  ) << 3u
+                | _and(  a &       0x4u,  b &       0x4u  ) << 2u
+                | _and(  a &       0x2u,  b &       0x2u  ) << 1u
+                | _and(  a &       0x1u,  b &       0x1u  ) << 0u
+                ;
     }
 
     inline Bus32 _or32(Bus32 a, Bus32 b)
     {
-        return _or(a & 0x80000000u, b & 0x80000000u) << 31u
-               | _or(a & 0x40000000u, b & 0x40000000u) << 30u
-               | _or(a & 0x20000000u, b & 0x20000000u) << 29u
-               | _or(a & 0x10000000u, b & 0x10000000u) << 28u
-               | _or(a & 0x8000000u, b & 0x8000000u) << 27u
-               | _or(a & 0x4000000u, b & 0x4000000u) << 26u
-               | _or(a & 0x2000000u, b & 0x2000000u) << 25u
-               | _or(a & 0x1000000u, b & 0x1000000u) << 24u
-               | _or(a & 0x800000u, b & 0x800000u) << 23u
-               | _or(a & 0x400000u, b & 0x400000u) << 22u
-               | _or(a & 0x200000u, b & 0x200000u) << 21u
-               | _or(a & 0x100000u, b & 0x100000u) << 20u
-               | _or(a & 0x80000u, b & 0x80000u) << 19u
-               | _or(a & 0x40000u, b & 0x40000u) << 18u
-               | _or(a & 0x20000u, b & 0x20000u) << 17u
-               | _or(a & 0x10000u, b & 0x10000u) << 16u
-               | _or(a & 0x8000u, b & 0x8000u) << 15u
-               | _or(a & 0x4000u, b & 0x4000u) << 14u
-               | _or(a & 0x2000u, b & 0x2000u) << 13u
-               | _or(a & 0x1000u, b & 0x1000u) << 12u
-               | _or(a & 0x800u, b & 0x800u) << 11u
-               | _or(a & 0x400u, b & 0x400u) << 10u
-               | _or(a & 0x200u, b & 0x200u) << 9u
-               | _or(a & 0x100u, b & 0x100u) << 8u
-               | _or(a & 0x80u, b & 0x80u) << 7u
-               | _or(a & 0x40u, b & 0x40u) << 6u
-               | _or(a & 0x20u, b & 0x20u) << 5u
-               | _or(a & 0x10u, b & 0x10u) << 4u
-               | _or(a & 0x8u, b & 0x8u) << 3u
-               | _or(a & 0x4u, b & 0x4u) << 2u
-               | _or(a & 0x2u, b & 0x2u) << 1u
-               | _or(a & 0x1u, b & 0x1u) << 0u;
+        return    _or(  a &0x80000000u,  b &0x80000000u  ) <<31u
+                | _or(  a &0x40000000u,  b &0x40000000u  ) <<30u
+                | _or(  a &0x20000000u,  b &0x20000000u  ) <<29u
+                | _or(  a &0x10000000u,  b &0x10000000u  ) <<28u
+                | _or(  a & 0x8000000u,  b & 0x8000000u  ) <<27u
+                | _or(  a & 0x4000000u,  b & 0x4000000u  ) <<26u
+                | _or(  a & 0x2000000u,  b & 0x2000000u  ) <<25u
+                | _or(  a & 0x1000000u,  b & 0x1000000u  ) <<24u
+                | _or(  a &  0x800000u,  b &  0x800000u  ) <<23u
+                | _or(  a &  0x400000u,  b &  0x400000u  ) <<22u
+                | _or(  a &  0x200000u,  b &  0x200000u  ) <<21u
+                | _or(  a &  0x100000u,  b &  0x100000u  ) <<20u
+                | _or(  a &   0x80000u,  b &   0x80000u  ) <<19u
+                | _or(  a &   0x40000u,  b &   0x40000u  ) <<18u
+                | _or(  a &   0x20000u,  b &   0x20000u  ) <<17u
+                | _or(  a &   0x10000u,  b &   0x10000u  ) <<16u
+                | _or(  a &    0x8000u,  b &    0x8000u  ) <<15u
+                | _or(  a &    0x4000u,  b &    0x4000u  ) <<14u
+                | _or(  a &    0x2000u,  b &    0x2000u  ) <<13u
+                | _or(  a &    0x1000u,  b &    0x1000u  ) <<12u
+                | _or(  a &     0x800u,  b &     0x800u  ) <<11u
+                | _or(  a &     0x400u,  b &     0x400u  ) <<10u
+                | _or(  a &     0x200u,  b &     0x200u  ) << 9u
+                | _or(  a &     0x100u,  b &     0x100u  ) << 8u
+                | _or(  a &      0x80u,  b &      0x80u  ) << 7u
+                | _or(  a &      0x40u,  b &      0x40u  ) << 6u
+                | _or(  a &      0x20u,  b &      0x20u  ) << 5u
+                | _or(  a &      0x10u,  b &      0x10u  ) << 4u
+                | _or(  a &       0x8u,  b &       0x8u  ) << 3u
+                | _or(  a &       0x4u,  b &       0x4u  ) << 2u
+                | _or(  a &       0x2u,  b &       0x2u  ) << 1u
+                | _or(  a &       0x1u,  b &       0x1u  ) << 0u
+                ;
     }
 
     inline Bus32 _mux32(Bus32 a, Bus32 b, bool sel)
     {
-        return _mux(a & 0x80000000u, b & 0x80000000u, sel) << 31u
-               | _mux(a & 0x40000000u, b & 0x40000000u, sel) << 30u
-               | _mux(a & 0x20000000u, b & 0x20000000u, sel) << 29u
-               | _mux(a & 0x10000000u, b & 0x10000000u, sel) << 28u
-               | _mux(a & 0x8000000u, b & 0x8000000u, sel) << 27u
-               | _mux(a & 0x4000000u, b & 0x4000000u, sel) << 26u
-               | _mux(a & 0x2000000u, b & 0x2000000u, sel) << 25u
-               | _mux(a & 0x1000000u, b & 0x1000000u, sel) << 24u
-               | _mux(a & 0x800000u, b & 0x800000u, sel) << 23u
-               | _mux(a & 0x400000u, b & 0x400000u, sel) << 22u
-               | _mux(a & 0x200000u, b & 0x200000u, sel) << 21u
-               | _mux(a & 0x100000u, b & 0x100000u, sel) << 20u
-               | _mux(a & 0x80000u, b & 0x80000u, sel) << 19u
-               | _mux(a & 0x40000u, b & 0x40000u, sel) << 18u
-               | _mux(a & 0x20000u, b & 0x20000u, sel) << 17u
-               | _mux(a & 0x10000u, b & 0x10000u, sel) << 16u
-               | _mux(a & 0x8000u, b & 0x8000u, sel) << 15u
-               | _mux(a & 0x4000u, b & 0x4000u, sel) << 14u
-               | _mux(a & 0x2000u, b & 0x2000u, sel) << 13u
-               | _mux(a & 0x1000u, b & 0x1000u, sel) << 12u
-               | _mux(a & 0x800u, b & 0x800u, sel) << 11u
-               | _mux(a & 0x400u, b & 0x400u, sel) << 10u
-               | _mux(a & 0x200u, b & 0x200u, sel) << 9u
-               | _mux(a & 0x100u, b & 0x100u, sel) << 8u
-               | _mux(a & 0x80u, b & 0x80u, sel) << 7u
-               | _mux(a & 0x40u, b & 0x40u, sel) << 6u
-               | _mux(a & 0x20u, b & 0x20u, sel) << 5u
-               | _mux(a & 0x10u, b & 0x10u, sel) << 4u
-               | _mux(a & 0x8u, b & 0x8u, sel) << 3u
-               | _mux(a & 0x4u, b & 0x4u, sel) << 2u
-               | _mux(a & 0x2u, b & 0x2u, sel) << 1u
-               | _mux(a & 0x1u, b & 0x1u, sel) << 0u;
+        return    _mux(  a &0x80000000u,  b &0x80000000u,  sel  ) <<31u
+                | _mux(  a &0x40000000u,  b &0x40000000u,  sel  ) <<30u
+                | _mux(  a &0x20000000u,  b &0x20000000u,  sel  ) <<29u
+                | _mux(  a &0x10000000u,  b &0x10000000u,  sel  ) <<28u
+                | _mux(  a & 0x8000000u,  b & 0x8000000u,  sel  ) <<27u
+                | _mux(  a & 0x4000000u,  b & 0x4000000u,  sel  ) <<26u
+                | _mux(  a & 0x2000000u,  b & 0x2000000u,  sel  ) <<25u
+                | _mux(  a & 0x1000000u,  b & 0x1000000u,  sel  ) <<24u
+                | _mux(  a &  0x800000u,  b &  0x800000u,  sel  ) <<23u
+                | _mux(  a &  0x400000u,  b &  0x400000u,  sel  ) <<22u
+                | _mux(  a &  0x200000u,  b &  0x200000u,  sel  ) <<21u
+                | _mux(  a &  0x100000u,  b &  0x100000u,  sel  ) <<20u
+                | _mux(  a &   0x80000u,  b &   0x80000u,  sel  ) <<19u
+                | _mux(  a &   0x40000u,  b &   0x40000u,  sel  ) <<18u
+                | _mux(  a &   0x20000u,  b &   0x20000u,  sel  ) <<17u
+                | _mux(  a &   0x10000u,  b &   0x10000u,  sel  ) <<16u
+                | _mux(  a &    0x8000u,  b &    0x8000u,  sel  ) <<15u
+                | _mux(  a &    0x4000u,  b &    0x4000u,  sel  ) <<14u
+                | _mux(  a &    0x2000u,  b &    0x2000u,  sel  ) <<13u
+                | _mux(  a &    0x1000u,  b &    0x1000u,  sel  ) <<12u
+                | _mux(  a &     0x800u,  b &     0x800u,  sel  ) <<11u
+                | _mux(  a &     0x400u,  b &     0x400u,  sel  ) <<10u
+                | _mux(  a &     0x200u,  b &     0x200u,  sel  ) << 9u
+                | _mux(  a &     0x100u,  b &     0x100u,  sel  ) << 8u
+                | _mux(  a &      0x80u,  b &      0x80u,  sel  ) << 7u
+                | _mux(  a &      0x40u,  b &      0x40u,  sel  ) << 6u
+                | _mux(  a &      0x20u,  b &      0x20u,  sel  ) << 5u
+                | _mux(  a &      0x10u,  b &      0x10u,  sel  ) << 4u
+                | _mux(  a &       0x8u,  b &       0x8u,  sel  ) << 3u
+                | _mux(  a &       0x4u,  b &       0x4u,  sel  ) << 2u
+                | _mux(  a &       0x2u,  b &       0x2u,  sel  ) << 1u
+                | _mux(  a &       0x1u,  b &       0x1u,  sel  ) << 0u
+                ;
     }
 
     inline bool _is_zero32(Bus32 in)
@@ -295,50 +426,41 @@ namespace Hardware::BasicGates
 
     inline bool _is_nzero32(Bus32 in)
     {
-        return _or((in & 0x80000000u),
-                   _or((in & 0x40000000u),
-                       _or((in & 0x20000000u),
-                           _or((in & 0x10000000u),
-                               _or((in & 0x8000000u),
-                                   _or((in & 0x4000000u),
-                                       _or((in & 0x2000000u),
-                                           _or((in & 0x1000000u),
-                                               _or((in & 0x800000u),
-                                                   _or((in & 0x400000u),
-                                                       _or((in & 0x200000u),
-                                                           _or((in & 0x100000u),
-                                                               _or((in & 0x80000u),
-                                                                   _or((in & 0x40000u),
-                                                                       _or((in & 0x20000u),
-                                                                           _or((in & 0x10000u),
-                                                                               _or((in & 0x8000u),
-                                                                                   _or((in & 0x4000u),
-                                                                                       _or((in & 0x2000u),
-                                                                                           _or((in & 0x1000u),
-                                                                                               _or((in & 0x800u),
-                                                                                                   _or((in & 0x400u),
-                                                                                                       _or((in &
-                                                                                                            0x200u),
-                                                                                                           _or((in &
-                                                                                                                0x100u),
-                                                                                                               _or((in &
-                                                                                                                    0x80u),
-                                                                                                                   _or((in &
-                                                                                                                        0x40u),
-                                                                                                                       _or((in &
-                                                                                                                            0x20u),
-                                                                                                                           _or((in &
-                                                                                                                                0x10u),
-                                                                                                                               _or((in &
-                                                                                                                                    0x8u),
-                                                                                                                                   _or((in &
-                                                                                                                                        0x4u),
-                                                                                                                                       _or((in &
-                                                                                                                                            0x2u),
-                                                                                                                                           (in &
-                                                                                                                                            0x1u))))))))))))))))))))))))))))))));
+        return  _or(in & 0x80000000u,
+                _or(in & 0x40000000u,
+                _or(in & 0x20000000u,
+                _or(in & 0x10000000u,
+                _or(in & 0x8000000u,
+                _or(in & 0x4000000u,
+                _or(in & 0x2000000u,
+                _or(in & 0x1000000u,
+                _or(in & 0x800000u,
+                _or(in & 0x400000u,
+                _or(in & 0x200000u,
+                _or(in & 0x100000u,
+                _or(in & 0x80000u,
+                _or(in & 0x40000u,
+                _or(in & 0x20000u,
+                _or(in & 0x10000u,
+                _or(in & 0x8000u,
+                _or(in & 0x4000u,
+                _or(in & 0x2000u,
+                _or(in & 0x1000u,
+                _or(in & 0x800u,
+                _or(in & 0x400u,
+                _or(in & 0x200u,
+                _or(in & 0x100u,
+                _or(in & 0x80u,
+                _or(in & 0x40u,
+                _or(in & 0x20u,
+                _or(in & 0x10u,
+                _or(in & 0x8u,
+                _or(in & 0x4u,
+                _or(in & 0x2u,
+                    in & 0x1u)))))))))))))))))))))))))))))));
     }
-
+    
+    
     inline bool _nand3way(bool a, bool b, bool c)
     {
         return !(a&b&c);
@@ -367,6 +489,23 @@ namespace Hardware::BasicGates
                 _or(in & 0x2u,
                     in & 0x1u )))))));
     }
+
+
+    inline Bus16
+    _mux4way16(Bus16 a, Bus16 b, Bus16 c, Bus16 d,
+               bool sel0, bool sel1)
+    {
+        return _mux16(_mux16(a,b,sel0), _mux16(c,d,sel0), sel1);
+    }
+
+    inline Bus16
+    _mux8way16(Bus16 a, Bus16 b, Bus16 c, Bus16 d,
+               Bus16 e, Bus16 f, Bus16 g, Bus16 h,
+               bool sel0, bool sel1, bool sel2)
+    {
+        return _mux16(_mux4way16(a,b,c,d,sel0,sel1), _mux4way16(e,f,g,h,sel0,sel1), sel2);
+    }
+
 
     inline Bus32
     _mux4way32(Bus32 a, Bus32 b, Bus32 c, Bus32 d,

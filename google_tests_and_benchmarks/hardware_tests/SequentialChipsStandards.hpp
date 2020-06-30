@@ -50,11 +50,11 @@ namespace Standards::HardwareStandards::SequentialChipsStandards
         }
     }
 
-    void _register32(Hardware::SequentialChips::_register32 gate,
-            const std::vector<Hardware::Bus32>& in)
+    void _register16(Hardware::SequentialChips::_register16 gate,
+            const std::vector<Hardware::Bus16>& in)
     {
         const int T = in.size();
-        std::vector<Hardware::Bus32> tickOut(T+1); //tickOut[0] is uninit
+        std::vector<Hardware::Bus16> tickOut(T+1); //tickOut[0] is uninit
         for (bool load: {false, true})
             for (int t = 0; t < T; ++t)
             {
@@ -93,14 +93,14 @@ namespace Standards::HardwareStandards::SequentialChipsStandards
         for (auto address:candidateAddresses) EXPECT_EQ(gate.read(address), address)<<"@ "<<address<<"\n";
     }
 
-    void _counter32(Hardware::SequentialChips::_counter32 gate,
-            Hardware::Bus32 in, bool inc, bool load, bool reset)
+    void _counter16(Hardware::SequentialChips::_counter16 gate,
+            Hardware::Bus16 in, bool inc, bool load, bool reset)
     {
-        Hardware::Bus32 prev = gate.read();
-        Hardware::Bus32 res = gate(in, inc, load, reset);
+        Hardware::Bus16 prev = gate.read();
+        Hardware::Bus16 res = gate(in, inc, load, reset);
         if      (reset) EXPECT_EQ(res, 0);
         else if (load)  EXPECT_EQ(res, in);
-        else if (inc)   EXPECT_EQ(res, prev+1);
+        else if (inc)   EXPECT_EQ(res, Hardware::Bus16(prev+1));
         else            EXPECT_EQ(res, prev);
     }
 }

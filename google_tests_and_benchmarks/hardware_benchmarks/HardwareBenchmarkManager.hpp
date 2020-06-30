@@ -4,13 +4,13 @@
 #include <benchmark/benchmark.h>
 
 ///Main benchmark session
-//#define REGISTER_BM_BASICGATES
-//#define REGISTER_BM_ADDERS
-//#define REGISTER_BM_ALU
+#define REGISTER_BM_BASICGATES
+#define REGISTER_BM_ADDERS
+#define REGISTER_BM_ALU
 #define REGISTER_BM_SEQUENTIALCHIPS
 
-const int REPS_UNIMPORTANT = 1;
-const int REPS = 5; //10=3.5min for basicGates+adders+alu
+const int REPS_UNIMPORTANT = 10;
+const int REPS = 50; //10=3.5min for basicGates+adders+alu
 const int REPS_PRIORITY = 100 ;
 
 
